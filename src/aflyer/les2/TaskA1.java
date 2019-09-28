@@ -8,7 +8,7 @@ public class TaskA1 {
             System.out.println("ВВедите числа");
             int m = sc.nextInt();
             int n = sc.nextInt();
-            int c = (10-m)>(10-n)?  n : m;
+            int c = Math.abs(10-m)>Math.abs(10-n)?  n : m;
             System.out.println(c);
         }
 }
