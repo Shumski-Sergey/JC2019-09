@@ -4,13 +4,19 @@ import java.util.Scanner;
 
 public class TestA {
     public static void main(String[] args) {
-        int a = 10;
-        double b = 8.5;
-        double c= 12.45;
+        Scanner scanner=new Scanner(System.in);
+        int a ;
+        double b;
+        double c;
+        a=scanner.nextInt();
+        b=scanner.nextDouble();
+        c=scanner.nextDouble();
 
 
-        if((Math.abs(b-10))>Math.abs(c-10)){
+        if((Math.abs(b-a))>Math.abs(c-a)){
             System.out.println(c);
-        }else System.out.println(b);
+        }else if(b==a && c==a )
+        {System.out.println("They are eqal");}
+            else System.out.println(b);
     }
 }
