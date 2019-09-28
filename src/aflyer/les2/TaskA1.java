@@ -6,9 +6,11 @@ public class TaskA1 {
         public static void main(String[] args) {
             Scanner sc=new Scanner(System.in);
             System.out.println("ВВедите числа");
-            int m = sc.nextInt();
-            int n = sc.nextInt();
-            int c = Math.abs(10-m)>Math.abs(10-n)?  n : m;
-            System.out.println(c);
+            double m = sc.nextDouble();
+            double n = sc.nextDouble();
+            if (Math.abs(10-m)!=Math.abs(10-n)) {
+            double c = Math.abs(10-m)>Math.abs(10-n)?  n : m;
+            System.out.println(c);}
+            else System.out.println("Расстояние одинаковое");
         }
 }
