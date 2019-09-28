@@ -1,4 +1,4 @@
-package dmikulionak.lesson_1;
+package dmikulionak.lesson_2;
 
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ public class A1 {
 
         Scanner on = new Scanner(System.in);
         System.out.print("Введите число n: ");
-        double n = in.nextInt();
+        double n = on.nextInt();
 
         x1 = k - m;
         x2 = k - n;
