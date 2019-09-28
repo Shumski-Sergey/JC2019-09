@@ -1,4 +1,4 @@
-package Tereshko;
+package GETOUT;
 
 public class Main {
 }

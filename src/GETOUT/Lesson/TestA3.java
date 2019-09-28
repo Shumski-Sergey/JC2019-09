@@ -1,11 +1,10 @@
-package Tereshko.Lesson;
+package GETOUT.Lesson;
 
 import java.util.Scanner;
 
 public class TestA3 {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
-
         int a[]={8,49,15};
         for (int i = 0; i <3; i++) {
             for (int j = 2; j >i ; j--) {
@@ -19,9 +18,7 @@ public class TestA3 {
 
         }
         for (int i = 0; i <a.length ; i++) {
-
             System.out.println(a[i]);
-
         }
     }
 }

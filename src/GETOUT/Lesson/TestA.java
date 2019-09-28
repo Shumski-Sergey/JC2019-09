@@ -1,4 +1,4 @@
-package Tereshko.Lesson;
+package GETOUT.Lesson;
 
 import java.util.Scanner;
 
