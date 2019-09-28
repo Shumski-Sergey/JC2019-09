@@ -11,7 +11,8 @@ public class TaskA1 {
         } else if (mraz1 == mraz2){
             System.out.println("Числа " + n + " и " + m + " близки к 10");
         }
-           else {System.out.println(" Число " + m + " ближе к 10");
-        }
+           else {
+        System.out.println(" Число " + m + " ближе к 10");
+      }
     }
 }
