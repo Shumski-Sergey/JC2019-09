@@ -29,7 +29,7 @@ public class Task2 {
             System.out.println("Отрицацельный дискриминант");
         }
     }
-// здесь какой-то комментарий=)
+
     private static void oneD(double a, double b) {
         double x;
         x = -b / (2 * a);
