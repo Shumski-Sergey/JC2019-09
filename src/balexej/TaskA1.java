@@ -7,9 +7,9 @@ int a = 10;
 double b = Math.abs(a-m);
 double v = Math.abs(a-n);
 if(b == v) {
-    System.out.println("Числа" + m + "" + n + "равноудалены от числа" + a);
+    System.out.println("Числа" + m + " и " + n + "равноудалены от числа" + a);
 }    if(b > v){
-        System.out.println ( n + "ближе к " + a);
+        System.out.println ( n + " ближе к " + a);
     }
     else {
         System.out.println( m  + "ближе к " + a);
