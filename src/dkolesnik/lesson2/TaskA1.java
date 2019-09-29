@@ -10,10 +10,10 @@ public class TaskA1 {
         System.out.println("Введите два числа:");
         a = in.nextDouble();
         b = in.nextDouble();
-        if ((c - a) > (c - b)) {
+        if (Math.abs(c - a) > Math.abs(c - b)) {
             System.out.println("Число B ближе к " + c);
         } else {
-            if ((c - a) == (c - b)) {
+            if (Math.abs(c - a) == Math.abs(c - b)) {
                 System.out.println("Число А равно числу B");
             } else {
                 System.out.println("Число А ближе к " + c);
