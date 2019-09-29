@@ -1,4 +1,4 @@
-package GETOUT.Lesson;
+package Tereshko.Lesson2;
 
 public class TestB2 {
     public static void main(String[] args) {
