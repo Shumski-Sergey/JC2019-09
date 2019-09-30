@@ -5,10 +5,11 @@ package balexej;
 
     public static void main(String[] args) {
 
-        int a =7;
-        int b = 9;
+        int a =1;
+        int b = 7;
         int c = 5;
-
+     if (a < c & c < b)
+         System.out.println(a + " " + c + " " + b);
 
         if (a < b & b < c)
     System.out.println(a + " " + b + " " + c);
