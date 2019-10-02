@@ -1,4 +1,4 @@
-package AlexandraShokhan.lesson1;
+package AlexandraShokhan.lesson2;
 
 import java.util.Scanner;
 

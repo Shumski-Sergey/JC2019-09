@@ -1,4 +1,4 @@
-package AlexandraShokhan.lesson1;
+package AlexandraShokhan.lesson2;
 
 public class A2 {
     public static void main(String[] args) {
