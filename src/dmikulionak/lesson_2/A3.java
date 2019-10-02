@@ -1,7 +1,5 @@
 package dmikulionak.lesson_2;
 
-import com.sun.source.tree.IfTree;
-
 import java.util.Scanner;
 
 public class A3 {
