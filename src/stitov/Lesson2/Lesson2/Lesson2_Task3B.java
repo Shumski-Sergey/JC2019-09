@@ -1,4 +1,4 @@
-package stitov.Lesson2;
+package stitov.Lesson2.Lesson2;
 
 import java.util.Scanner;
 /**
