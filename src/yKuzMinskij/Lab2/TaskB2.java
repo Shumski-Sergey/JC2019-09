@@ -7,8 +7,8 @@ public class TaskB2 {
         System.out.println("Введите число");
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        for (int i=1; i<=num; i++){
-            if (num%i==0){
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
                 System.out.println(i);
             }
         }
