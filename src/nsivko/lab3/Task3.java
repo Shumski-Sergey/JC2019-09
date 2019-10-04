@@ -15,12 +15,12 @@ public class Task3 {
             b /= 1000;
         }
         int s = i;
-        long[] ch = new long[s];
+        int[] ch = new int[s];
         long v = a;
         for(int j = s ; j > 0 ; j--) {
             ost = v % 1000;
             v /= 1000;
-            ch[j-1] = ost;
+            ch[j-1] = (int) ost;
         }
         System.out.print(ch[0]);
         for( i = 1 ; i < s ; i++ ){
