@@ -15,6 +15,7 @@ public class Task2 {
                 break;
             }
         }
+
         System.out.println(s);
     }
 }
