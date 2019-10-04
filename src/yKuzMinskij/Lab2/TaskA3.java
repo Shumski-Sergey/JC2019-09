@@ -10,9 +10,11 @@ public class TaskA3 {
         int num = sc.nextInt();
         var1(num);
 
-        }
-    private static void var1 (int num){
+    }
+
+    private static void var1 (int num) {
         System.out.printf("%,d", num);
+
     }
 
 }
