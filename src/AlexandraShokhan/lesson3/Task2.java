@@ -1,5 +1,7 @@
 package AlexandraShokhan.lesson3;
 
+// 2. Имеется целое число, определить является ли это число простым, т.е. делится без остатка только на 1 и себя.
+
 public class Task2 {
     public static void main(String[] args) {
         int number = 6;
