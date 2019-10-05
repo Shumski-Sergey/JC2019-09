@@ -1,8 +1,5 @@
 package dkolesnik.lesson3;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class TaskA2 {
@@ -16,11 +13,13 @@ public class TaskA2 {
         for (i = 2; i < k; i++) {
             if (k % i == 0) {
                 t = false;
-                break}
+                break;
             }
-        } if (f)
-
-
+        }
+        if (t) {
+            System.out.println("Число простое");
+        } else {
+            System.out.println("Число составное");
+        }
     }
-
 }
