@@ -8,7 +8,7 @@ package AlexandraShokhan.lesson3;
 
 public class Task3 {
     public static void main(String[] args) {
-        int inputNumber = 5746000;
+        int inputNumber = 20023143;
         String str1 = Integer.toString(inputNumber);
         int length1 = str1.length();
         int numberOfSpaces = (int) Math.floor(length1 / 3);
