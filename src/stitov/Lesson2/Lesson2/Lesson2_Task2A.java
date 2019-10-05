@@ -1,4 +1,4 @@
-package stitov.Lesson2;
+package stitov.Lesson2.Lesson2;
 
 /**
  * Created by user on 28.09.2019.

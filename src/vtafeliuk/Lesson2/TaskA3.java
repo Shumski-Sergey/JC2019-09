@@ -14,38 +14,20 @@ public class TaskA3 {
         b = sc.nextInt();
         c = sc.nextInt();
 
-        if (a == b) {
-            System.out.println("The numbers a,b and c must not match!");
-        } else if (a == c) {
-            System.out.println("The numbers a,b and c must not match!");
-        }
-        if (b == c) {
-            System.out.println("The numbers a,b and c must not match!");
-        }
-
         if (a < c) {
             if (a < b) {
                 if (b < c) {
-                    System.out.println(a);
-                    System.out.println(b);
-                    System.out.println(c);
                 } else {
                     b = b + c;
                     c = c - b;
                     c = -c;
                     b = b - c;
-                    System.out.println(a);
-                    System.out.println(b);
-                    System.out.println(c);
                 }
             } else {
                 a = a + b;
                 b = b - a;
                 b = -b;
                 a = a - b;
-                System.out.println(a);
-                System.out.println(b);
-                System.out.println(c);
             }
         } else {
             if (a > b) {
@@ -54,9 +36,6 @@ public class TaskA3 {
                     c = c - a;
                     c = -c;
                     a = a - c;
-                    System.out.println(a);
-                    System.out.println(b);
-                    System.out.println(c);
                 } else {
                     b = b + c;
                     c = c - b;
@@ -66,9 +45,6 @@ public class TaskA3 {
                     c = c - a;
                     c = -c;
                     a = a - c;
-                    System.out.println(a);
-                    System.out.println(b);
-                    System.out.println(c);
                 }
             } else {
                 a = a + c;
@@ -79,10 +55,10 @@ public class TaskA3 {
                 c = c - b;
                 c = -c;
                 b = b - c;
-                System.out.println(a);
-                System.out.println(b);
-                System.out.println(c);
             }
         }
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
     }
 }
