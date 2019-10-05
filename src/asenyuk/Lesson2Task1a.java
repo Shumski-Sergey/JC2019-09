@@ -2,7 +2,6 @@ package asenyuk;
 
 public class Lesson2Task1a {
     public static void main(String[] args) {
-
         double a =Math.round(Math.random() *100);
         double b = Math.round(Math.random() *100);
        final int c =10;
