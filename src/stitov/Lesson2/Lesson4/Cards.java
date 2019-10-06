@@ -12,15 +12,6 @@ public class Cards {
     n = getting();
     String cardn[] = generating(n, card);
     printing(n,cardn);
-
-
-
-  /*  for (String i: card){
-      System.out.println(i);
-    }*/
-
-
-
   }
   public static int getting(){
     Scanner in = new Scanner(System.in);
