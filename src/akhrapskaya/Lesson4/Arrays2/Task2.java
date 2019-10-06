@@ -1,32 +1,23 @@
 package akhrapskaya.Lesson4.Arrays2;
 
+import akhrapskaya.Lesson4.Arrays.MyArrays;
+
 import java.util.Scanner;
 
 public class Task2 {
-   /* public static void  main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Введите количество элементов:");
-        int[] array = new int[n];
-        set(array);
+
+    public static void main(String[] args) {
+        MyArrays ar = new MyArrays("Введите количество элементов:");
+        ar.setIn("Введите элементы массива:");
+        System.out.println(sum(Math.min(ar.minInd(),ar.maxInd()), Math.max(ar.minInd(),ar.maxInd()), ar));
 
     }
-    private static int[] minimaxi(int[] array){
-        int [] cri = { 0,0 }
-        for(int i = 0; i < array.length; i++){
-            if (array[i] > array[cri[0]])
-                cri[0] = i;
-            if (array[i] < array[cri[1]])
-                cri[1] = i;
+    private static int sum(int mini, int maxi, MyArrays ar) {
+        int sum = 0;
+        for (int i = ++mini; i < maxi; i++) {
+            sum += ar.array[i];
         }
-        return cri;
+        return sum;
     }
-    private static void set( int[] array){
-        System.out.println("Введите оценки:");
-        Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < array.length; i++){
-            array[i] = sc.nextInt();
-        }
-
-    }*/
-
 }
+

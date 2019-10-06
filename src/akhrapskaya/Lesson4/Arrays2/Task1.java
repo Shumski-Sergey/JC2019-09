@@ -1,29 +1,25 @@
 package akhrapskaya.Lesson4.Arrays2;
 
-import java.util.Scanner;
+import akhrapskaya.Lesson4.Arrays.MyArrays;
 
 public class Task1 {
     public static void  main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Введите количество оценок:");
-        int n = sc.nextInt();
-        int[] array = new int[n];
-        set(array);
-        output(array);
+        MyArrays ar = new MyArrays("Введите количество оценок(0 -20):");
+        set(ar);
+        System.out.println("Максимальная оценка с индексом: " + ar.maxInd());
     }
-    private static void set( int[] array){
-        System.out.println("Введите оценки:");
-        Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < array.length; i++){
-            array[i] = sc.nextInt();
-        }
-
-    }
-    private static void output(int[] ar){
-        for (int i = 0; i < ar.length; i++){
-            if(i % 30 == 0)
-                System.out.print("\n");
-            System.out.print(ar[i] + " ");
-        }
+    private static void set(MyArrays ar){
+        boolean n = true;
+        do{
+            n = true;
+            ar.setIn("Введите оценки:");
+            for (int i = 0; i < ar.n; i++) {
+                if (ar.array[i] < 0 || ar.array[i] > 10) {
+                    n = false;
+                    System.out.println("Неверный ввод! Оценки по десятибальной шкале!");
+                    break;
+                }
+            }
+        }  while (!n);
     }
 }
