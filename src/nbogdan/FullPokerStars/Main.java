@@ -3,7 +3,7 @@ package nbogdan.FullPokerStars;
 import java.util.Scanner;
 /* created by PizzaDog 05.06.2019
 *
-* update 0.8:
+* update 1.0.1 pre-alpha:
 * Компьютер раздает карты из 1 колоды максимум на 10 игроков (по классике Texas Holdem)
 * Последовательность игры:
 * - задать количество игроков
@@ -19,7 +19,11 @@ public class Main {
         System.out.println("Здравствуйте! Хотите поиграть в покер?");
         String s = sc.nextLine();
         if (Check.answer(s)) {
-            System.out.println("Отлично! На данный");
+            System.out.println("Отлично! ");
+            System.out.println("Введите количество игроков: ");
+            Hand.setNumPlayers(sc.nextInt());
+            Hand.setNamePlayers();
+            Game.runFullGame();
         }
         else System.out.println("Ну и идите отсюда");
     }

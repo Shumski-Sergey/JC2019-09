@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Hand {
     private static Player p = new Player();
-    static Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
     private static Player[] players = new Player[] {new Player(), new Player(), new Player(), new Player(), new Player(), new Player(), new Player(), new Player(), new Player(), new Player()};
     private static int numPlayers = 0;
     private static String[][] koloda = {

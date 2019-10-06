@@ -2,8 +2,10 @@ package nbogdan.FullPokerStars;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Game {
+    private static Scanner sc = new Scanner(System.in);
     private static Random r = new Random();
     private static Player[] players = Hand.getPlayers();
     private static String[][] koloda = Hand.getKoloda();
