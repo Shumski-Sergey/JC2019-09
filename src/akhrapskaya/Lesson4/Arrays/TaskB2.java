@@ -1,4 +1,4 @@
-package akhrapskaya.Lesson3.Arrays;
+package akhrapskaya.Lesson4.Arrays;
 
 import java.util.Scanner;
 
