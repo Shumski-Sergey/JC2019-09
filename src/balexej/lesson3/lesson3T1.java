@@ -1,4 +1,4 @@
-package balexej;
+package balexej.lesson3;
 
 public class lesson3T1 {
     public static void main(String[] arge) {

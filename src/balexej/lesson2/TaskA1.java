@@ -1,4 +1,4 @@
-package balexej;
+package balexej.lesson2;
 public class TaskA1 {
     public static void main(String[] args) {
         double m = 8.5;
