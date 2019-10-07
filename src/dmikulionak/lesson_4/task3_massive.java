@@ -3,7 +3,7 @@ package dmikulionak.lesson_4;
 import java.util.Arrays;
 import java.util.Random;
 
-public class task1_massive {
+public class task3_massive {
     public static void main(String[] args) {
         int[] array = new int[10];
         Random random = new Random();
@@ -11,17 +11,10 @@ public class task1_massive {
             array[i] = random.nextInt(10);
         }
         System.out.println(Arrays.toString(array));             //вывод массива
-        int max;
-        max = array[0];
-        for (int value : array) {                               //what?
-            if (value > max) {
-                max = value;
-            }
-        }
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == max) {
-                System.out.println(i + " максимальный индекс");
-            }
+
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.print(" " + array[i] + " ");
         }
     }
 }
+
