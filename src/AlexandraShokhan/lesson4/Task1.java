@@ -8,11 +8,12 @@ public class Task1 {
         int firstNumber = 1000;
         int lastNumber = 9999;
 
-        for (int i = 1000 ; i < lastNumber; i+=3) {
+        for (int i = 1000 ; i <= lastNumber; i+=3) {
             counter++;
+            System.out.println(i);
         }
 
-        int [] array;
+        /* int [] array;
         array = new int[counter];
 
         for (int i = 0; i <= array.length - 1; i++) {
@@ -21,7 +22,9 @@ public class Task1 {
         }
 
         for (int i = 0; i<= array.length - 1; i++) {
-            System.out.println(array[i]);
+           System.out.println(array[i]);
         }
+
+         */
     }
 }
