@@ -13,7 +13,7 @@ public class task1_massive {
         System.out.println(Arrays.toString(array));             //вывод массива
         int max;
         max = array[0];
-        for (int value : array) {                               //what?
+        for (int value : array) {                               
             if (value > max) {
                 max = value;
             }
