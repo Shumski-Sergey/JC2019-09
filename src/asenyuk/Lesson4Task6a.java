@@ -1,5 +1,5 @@
 package asenyuk;
-
+//
 public class Lesson4Task6a {
     public static void main(String[] args)
     {
