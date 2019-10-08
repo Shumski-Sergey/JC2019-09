@@ -1,7 +1,7 @@
 package nbogdan.FullPokerStars;
 import java.util.Scanner;
 
-public class Hand {
+class Hand {
     private static Player p = new Player();
     private static Scanner sc = new Scanner(System.in);
     private static Player[] players = new Player[] {new Player(), new Player(), new Player(), new Player(), new Player(), new Player(), new Player(), new Player(), new Player(), new Player()};
@@ -12,18 +12,21 @@ public class Hand {
             {"\u26632", "\u26633", "\u26634", "\u26635", "\u26636", "\u26637", "\u26638", "\u26639", "\u266310", "\u2663J", "\u2663Q", "\u2663K", "\u2663A"},
             {"\u26602", "\u26603", "\u26604", "\u26605", "\u26606", "\u26607", "\u26608", "\u26609", "\u266010", "\u2660J", "\u2660Q", "\u2660K", "\u2660A"}};
     static String[][] getKoloda() {return koloda;}
-    public static Player[] getPlayers() {return players;}
-    public static void setNumPlayers(int n) {numPlayers = n;}
-    public static int getNumPlayers() {return numPlayers;}
-    public static void setNamePlayers(){
+    static Player[] getPlayers() {return players;}
+    static void setNumPlayers(int n) {numPlayers = n;}
+    static int getNumPlayers() {return numPlayers;}
+    static void setNamePlayers(){
         for (int i = 0; i < numPlayers; i++) {
             System.out.println("Введите имя для " + (i + 1) + " игрока:");
             players[i].setName(sc.nextLine());
         }
     }
-    public static void getNamePlayers() {
+    static void setPlayerCombination(String s, int index) {
+        players[index].setCombination(s);
+    }
+    /*public static void getNamePlayers() {
         for (int i = 0; i < numPlayers; i++) {
             System.out.println((i + 1) + " игрок: " + players[i].getName());
         }
-    }
+    }*/
 }
