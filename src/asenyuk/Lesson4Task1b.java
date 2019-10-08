@@ -1,5 +1,5 @@
 package asenyuk;
-
+//
 import java.util.Scanner;
 
 public class Lesson4Task1b {
