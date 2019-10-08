@@ -29,7 +29,6 @@ public class Task2 {
             randomArray = new int[arrayLength];
             for (int i = 0; i < randomArray.length; i++) {
                 randomArray[i] = getRandomNum(minValue, maxValue);
-                System.out.println( "Index " + i + ", grade " + randomArray[i]);
             }
             return randomArray;
         }
