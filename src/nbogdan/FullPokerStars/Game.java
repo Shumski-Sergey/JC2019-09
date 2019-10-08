@@ -1,27 +1,24 @@
 package nbogdan.FullPokerStars;
 
-import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Game {
+class Game {
     private static Scanner sc = new Scanner(System.in);
     private static Random r = new Random();
     private static Player[] players = Hand.getPlayers();
     private static String[][] koloda = Hand.getKoloda();
-    private static String[] computerHand = new String[] {"", "", "", "", ""};
+    private static String computerHand = "";
     private static int numPlayers = Hand.getNumPlayers();
-    private static int indexH = 0, indexA = 0;
     private static String getCardFromKoloda(){
         String WC;
         for (int i = 0; i <999; i ++) {
-            indexH = r.nextInt(4);
-            indexA = r.nextInt(13);
+            int indexH = r.nextInt(4);
+            int indexA = r.nextInt(13);
             if (koloda[indexH][indexA].equals("nope")) {continue;}
             else {
                 WC = koloda[indexH][indexA];
                 koloda[indexH][indexA] = "nope";
-                i = 13;
                 return WC;
             }
         }
@@ -34,34 +31,39 @@ public class Game {
     }
     static void round2(){
         for (int i = 0; i < 3; i++){
-            computerHand[i] = getCardFromKoloda();
+            computerHand += getCardFromKoloda();
         }
     }
-    static void round3(){computerHand[3] = getCardFromKoloda();}
-    static void round4(){computerHand[4] = getCardFromKoloda();}
+    static void round3(){computerHand += getCardFromKoloda();}
+    static void round4(){computerHand += getCardFromKoloda();}
     static void showComputerHand(){
         System.out.println("Раздача:");
-        for (String s: computerHand) {
+        System.out.println(computerHand);
+        /*for (String s: computerHand) {
             System.out.print(s + " ");
         }
-        System.out.print("\n");
+        System.out.print("\n");*/
     }
-    static void showPlayersCard(){
+    static void showResult() {
         for (int i = 0; i < numPlayers; i++) {
-            System.out.println("Игрок "+ (i + 1)+ " " + players[i].getName() + " :" + players[i].showHand());
+            HandChecker.setCards(computerHand, players[i].showHand(), i);
+            System.out.println("Игрок " + (i + 1) + players[i].getName() + ": " + players[i].showHand() + " " + players[i].getCombination());
         }
     }
     static void runFullGame() {
         round1();
-        showPlayersCard();
+        showResult();
+        Check.toGo();
         round2();
         showComputerHand();
-        showPlayersCard();
+        showResult();
+        Check.toGo();
         round3();
         showComputerHand();
-        showPlayersCard();
+        showResult();
+        Check.toGo();
         round4();
         showComputerHand();
-        showPlayersCard();
+        showResult();
     }
 }
