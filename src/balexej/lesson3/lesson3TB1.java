@@ -1,4 +1,4 @@
-package balexej;
+package balexej.lesson3;
 import java.util.Scanner;
 
 public class lesson3TB1 {
