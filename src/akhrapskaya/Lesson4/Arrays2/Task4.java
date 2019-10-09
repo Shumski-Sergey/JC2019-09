@@ -13,16 +13,12 @@ public class Task4 {
         }
         return n;
     }
-    private static void get(int[][] array){
-        for(int[] i : array) {
-            for (int j : i) {
-                j = 0;
-            }
-        }
-    }
     private static void butterfly(int[][] array){
         for(int i = 0; i < array.length; i++){
             for( int j = i; j < array[0].length-i; j++){
+                array[i][j]=1;
+            }
+            for( int j = array[0].length-1-i; j <= i ; j++){
                 array[i][j]=1;
             }
         }
@@ -38,9 +34,7 @@ public class Task4 {
     public static void  main(String[] args){
         int n = size();
         int[][] array = new int[n][n];
-        get(array);
         butterfly(array);
         output(array);
     }
-
 }
