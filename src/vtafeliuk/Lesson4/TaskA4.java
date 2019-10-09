@@ -1,5 +1,5 @@
 package vtafeliuk.Lesson4;
-
+//вывести узор "бабочка"
 import java.util.Scanner;
 
 public class TaskA4 {

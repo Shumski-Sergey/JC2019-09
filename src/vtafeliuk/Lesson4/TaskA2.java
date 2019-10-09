@@ -1,5 +1,5 @@
 package vtafeliuk.Lesson4;
-
+//найти сумму элементов находящихся между минимальным и максимальным значениями массива
 import java.util.Random;
 import java.util.Scanner;
 
