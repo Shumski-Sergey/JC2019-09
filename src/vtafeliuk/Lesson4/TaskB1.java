@@ -10,10 +10,10 @@ public class TaskB1 {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter");
-        int a = sc.nextInt();
-        String s = Integer.toString(a);
+        long a = sc.nextLong();
+        String s = Long.toString(a);
 
-        s = s.replaceAll("(\\d{1,3}(?=(?:\\d\\d\\d)+(?!\\d)))", "$1" + ' ');
+        s = s.replaceAll("(\\d{1,3}(?=(?:\\d\\d\\d)+(?!\\d)))", "$1"+ ' ');
         System.out.println(s);
     }
 }
