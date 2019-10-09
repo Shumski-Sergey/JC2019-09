@@ -1,4 +1,6 @@
 package yKuzMinskij.Lab4;
+//Определите сумму элементов массива, расположенных между минимальным
+//и максимальным значениями.
 
 public class TaskA2 {
     public static void main (String[] args) {
