@@ -10,9 +10,11 @@ public class Task6 {
     public static void main(String[] args) {
         String text = "Quick six blind smart, out burst. Perfectly on furniture dejection: determine my depending; an to. Add short, water - court fat.";
         int numOfPunctuationMarks = 0;
-        while(text.matches("[$&+,:;=?@#|'<>.-^*()%!]")) {
-    numOfPunctuationMarks++;
-            System.out.print("The number of punctuation marks in the text is " + numOfPunctuationMarks);
+        Pattern punctMarks = Pattern.compile("[,.?!;:-]+");
+        Matcher matcher = punctMarks.matcher(text);
+        while(matcher.find()) {
+            numOfPunctuationMarks++;
         }
+        System.out.print("The number of punctuation marks in the text is " + numOfPunctuationMarks);
     }
 }
