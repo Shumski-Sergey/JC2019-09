@@ -9,7 +9,7 @@ public class Task2 {
     }
 
     /**
-     * Disc for numbers
+     * Disc for numbers1
      * @param a parameter 1
      * @param b parameter 2
      * @param c parameter 3
