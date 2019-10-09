@@ -2,14 +2,17 @@ package ssivko.lab4;
 
 public class TaskA3 {
     public static void main(String[] args) {
-        int a,b,i,f;
-        b=90/5;
-        a=b;
-        int s[] = new int[a];
-        for (i=90; i>=0; i-=5){
-            f=0;
-            s[f]=i;
-            System.out.print(s[f]+" ");
-        }
+        int a=90;
+       int s [] = new int[50];
+       s[0]=90;
+       for (int i=1; i<50; i++){
+           a-=5;
+           s[i]=a+5;
+       }
+       int i=1;
+       while (s[i]>=0){
+           System.out.print(s[i]+" ");
+           i++;
+       }
     }
 }

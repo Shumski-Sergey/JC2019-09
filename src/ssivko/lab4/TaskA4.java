@@ -2,14 +2,15 @@ package ssivko.lab4;
 
 public class TaskA4 {
     public static void main(String[] args) {
-        int a,i,f,b;
-        b=2000000;
-        a=20;
-        int s[] = new int[a];
-        for (i=2; i<=b; i*=2){
-            f=0;
-            s[f]=i;
-            System.out.print(s[f]+" ");
+        int a=2;
+        int s [] = new int[50];
+        s[0]=2;
+        for (int i=1; i<50; i++){
+            a*=2;
+            s[i]=a;
+        }
+        for(int i = 0; i < 20; i++){
+            System.out.print(" " + s[i]);
         }
     }
 }
