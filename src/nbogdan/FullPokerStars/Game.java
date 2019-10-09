@@ -47,7 +47,7 @@ class Game {
     static void showResult() {
         for (int i = 0; i < numPlayers; i++) {
             HandChecker.setCards(computerHand, players[i].showHand(), i);
-            System.out.println("Игрок " + (i + 1) + players[i].getName() + ": " + players[i].showHand() + " " + players[i].getCombination());
+            System.out.println("Игрок " + (i + 1) + " " + players[i].getName() + ": " + players[i].showHand() + " " + players[i].getCombination());
         }
     }
     static void runFullGame() {

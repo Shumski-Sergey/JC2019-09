@@ -8,17 +8,24 @@ class HandChecker {
     private static String cards = "";
     private static int index = 0;
     static void setCards(String computerHand, String playerHand, int ind) {
-        String s;
+        String s, toRoyal;
         s = computerHand;
         s += playerHand;
+        toRoyal = s;
         char[] forSort = s.toCharArray();
         Arrays.sort(forSort);
         s = new String(forSort);
         cards = s;
         index = ind;
-        check3FourOfAKind();
+        check1RoyalFlush(toRoyal);
     }
-    //static void check1RoyalFlush(){}
+    static void check1RoyalFlush(String unsorted){
+        Pattern p = Pattern.compile("([\\u2666|\\u2665|\\u2663|\\u2660])[1AJQK].*\\1[1AJQK].*\\1[1AJQK].*\\1[1AJQK].*\\1[1AJQK]");
+        Matcher m = p.matcher(unsorted);
+        if (m.find()) {
+            Hand.setPlayerCombination("Royal Flush, congratulations!", index);
+        } else {check3FourOfAKind();}
+    }
     //static void check2StraightFlush(){}
     static void check3FourOfAKind(){
         Pattern p = Pattern.compile("([123456789JQKA])\\1\\1\\1");
