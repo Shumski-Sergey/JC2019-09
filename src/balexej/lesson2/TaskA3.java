@@ -1,4 +1,4 @@
-package balexej;
+package balexej.lesson2;
 
 
       public class TaskA3 {

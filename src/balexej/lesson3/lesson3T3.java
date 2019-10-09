@@ -1,5 +1,5 @@
 
-package balexej;
+package balexej.lesson3;
 
 import java.util.Scanner;
 
