@@ -1,4 +1,5 @@
 package yKuzMinskij.Lab4;
+// В задаче на поиск максимальной оценки, вывести не саму оценку, а ее номер.
 
 public class TaskA1 {
     public static void main (String[] args) {
