@@ -1,5 +1,7 @@
 package vtafeliuk.Lesson4;
 
+// Определить индексы максимальных элементов одномерного массива
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,7 +9,7 @@ public class TaskA1 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите число");
+        System.out.println("Введите число элементов массива:");
 
         Random mark = new Random();
 

@@ -3,9 +3,9 @@ package nsivko.lab4;
 public class Task5 {
     public static void main(String[] args) {
         int a = 2;
-        int[] ch = new int[1000];
+        int[] ch = new int[20];
         ch[0] = 2;
-        for( int j = 1; j < 1000; j++){
+        for( int j = 1; j < 20; j++){
             a = 2*a - 1;
             ch[j] = a;
         }
