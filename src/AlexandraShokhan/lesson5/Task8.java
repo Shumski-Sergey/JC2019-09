@@ -11,7 +11,7 @@ import static AlexandraShokhan.lesson5.Task2.requestStrings;
 public class Task8 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("How many strings would you like to enter?");
+        System.out.println("How many words would you like to enter?");
         int numberOfStrings = in.nextInt();
 
         String[] textArray = requestStrings(numberOfStrings);
