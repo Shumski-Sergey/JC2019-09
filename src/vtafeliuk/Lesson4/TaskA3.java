@@ -1,5 +1,5 @@
 package vtafeliuk.Lesson4;
-
+//развернуть массив
 import java.util.Random;
 import java.util.Scanner;
 
