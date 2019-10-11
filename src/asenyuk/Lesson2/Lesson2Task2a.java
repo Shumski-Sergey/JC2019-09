@@ -1,4 +1,4 @@
-package asenyuk;
+package asenyuk.Lesson2;
 public class Lesson2Task2a {
     public static void main(String[] args) {
 

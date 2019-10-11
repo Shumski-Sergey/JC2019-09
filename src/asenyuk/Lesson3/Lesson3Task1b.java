@@ -1,4 +1,4 @@
-package asenyuk;
+package asenyuk.Lesson3;
 
 import java.util.Scanner;
 
