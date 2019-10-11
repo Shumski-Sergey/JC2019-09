@@ -20,7 +20,7 @@ public class Task2 {
         System.out.println("The shortest string is: "+ shortest + ". Its length is " + shortest.length());
 
     }
-
+// Запросить ввод n-го количества строк.
     public static String[] requestStrings(int strNum) {
         String[] array = new String[strNum];
         for (int i = 0; i <= array.length - 1; i++) {
@@ -30,7 +30,7 @@ public class Task2 {
         }
         return array;
     }
-
+// Получить самое длинное значение из массива строк.
     public static String getLongestString(String[] array) {
         int maxLength = 0;
         String longestString = null;
@@ -42,7 +42,7 @@ public class Task2 {
         }
         return longestString;
     }
-
+        // Получить наименьшее значение из массива строк.
     public static String getShortestString(String[] array) {
         int minLength = 10000000;
         String shortestString = null;
