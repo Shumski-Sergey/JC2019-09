@@ -13,6 +13,7 @@ public class Task5 {
         int numberOfStrings = in.nextInt();
 
         String[] textArray = requestStrings(numberOfStrings);
+
         String goal = textArray[0]; // искомое слово
         for (int i = 1; i < textArray.length; i++){
             if (uniqueChars(textArray[i]) < uniqueChars(goal))
