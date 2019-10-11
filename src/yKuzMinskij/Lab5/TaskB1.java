@@ -33,7 +33,7 @@ public class TaskB1 {
         String testName = "Speed test #1";
         BigDecimal startTime = new BigDecimal(System.nanoTime());
         for (int i = 0; i < 10; i++) {
-            testText = testText + testText;
+            testText += testText;
             //System.out.println(testText + i + "\n");      //Тестовый вывод
             }
         BigDecimal finishTime =new BigDecimal(System.nanoTime()).subtract(startTime);
