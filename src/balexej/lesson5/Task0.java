@@ -11,11 +11,13 @@ public class Task0 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите текст");
         String text = sc.nextLine();
+        StringBuffer a = new StringBuffer();
 
-        Pattern pat = Pattern.compile(".\\b\\X*");
+        Pattern pat = Pattern.compile(".\\b");
         Matcher match = pat.matcher(text);
-       if (match.find()) {
-            System.out.println(match.group());
+       while (match.find()) {
+           a.append(match.group());
+            System.out.println(a);
         }
 
         }
