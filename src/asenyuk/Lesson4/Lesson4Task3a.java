@@ -1,4 +1,4 @@
-package asenyuk;
+package asenyuk.Lesson4;
 
 public class Lesson4Task3a {
 
