@@ -18,7 +18,7 @@ public class TaskB2 {
         for (int i=1; i<=kolvo; i++){
             System.out.print("У "+ i +"ого игрока выпала следующая колода: ");
             for (int j=1; j<=5; j++) {
-
+                
                 while (true) {
                     Random m = new Random();
                     Random k = new Random();

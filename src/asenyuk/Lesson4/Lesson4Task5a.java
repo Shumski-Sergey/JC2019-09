@@ -1,0 +1,29 @@
+package asenyuk.Lesson4;
+//
+public class Lesson4Task5a {
+    public static void main(String[] args)
+    {
+        int j=0;
+        for (int i=1000;i<=9999;i=i+3){
+           // System.out.println(i);
+            j=j+1;
+
+        }
+       // System.out.println("j" + j);
+
+        int mass []=new int [j] ;
+int t=1000;
+        for (int s=0;s<mass.length;s++){
+            mass[s]=t;
+            t=t+3;
+        }
+
+        for (int z=0; z<mass.length;z++ ){
+            System.out.println(mass[z]);
+        }
+
+    }
+
+
+
+}
