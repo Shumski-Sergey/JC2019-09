@@ -7,7 +7,6 @@ package AlexandraShokhan.lesson6;
 //два конструктора: получающий общее количество секунд, и часы, минуты и секунды
 //по отдельности. Сделать метод для вывода данных. Прочее на ваше усмотрение.
 
-
 public class Time {
     public static void main(String[] args) {
 
@@ -53,6 +52,4 @@ class TimeInterval{
         System.out.println(totalTimeInSec);
         return totalTimeInSec;
     }
-
-
 }
