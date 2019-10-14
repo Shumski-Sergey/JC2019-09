@@ -11,13 +11,7 @@ public class Dog1TestDrive {
             System.out.println("Вторая собака :" + two.getSize());
             one.bark();
             two.bark();
-            Dog1[] pets;
-            pets = new Dog1[7];
-            pets[0] = new Dog1();
-            pets[1] = new Dog1();
-            pets[0].setSize(30);
-            int x = pets[0].getSize();
-            pets[1].setSize(8);
+           
         }
     }
 
