@@ -33,7 +33,7 @@ public class Bankomat {
                 int kH = (sum.kolH(sumP));
 
                 kH = provNalKup(kupH, kH);
-                sumP = obrabSum(kup3, kupH, kH, sumP);
+                sumP = obrabSum(kup3, kH, sumP);
 
                 if (sumP == 0) {
                     System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kH + " по 100.");
@@ -42,7 +42,7 @@ public class Bankomat {
 
                         int kF = (sum.kolF(sumP));
                         kF = provNalKup(kupF, kF);
-                        sumP = obrabSum(kup2, kupF, kF, sumP);
+                        sumP = obrabSum(kup2, kF, sumP);
 
                         if (sumP == 0) {
                             System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kH + " по 100, " + kF + " по 50.");
@@ -50,14 +50,14 @@ public class Bankomat {
 
                             int kT = (sum.kolT(sumP));
                             kT = provNalKup(kupT, kT);
-                            sumP = obrabSum(kup1, kupT, kT, sumP);
+                            sumP = obrabSum(kup1, kT, sumP);
 
                             System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kH + " по 100, " + kF + " по 50, " + kT + " по 20.");
                         }
                     } else {
                         int kT = (sum.kolT(sumP));
                         kT = provNalKup(kupT, kT);
-                        sumP = obrabSum(kup1, kupT, kT, sumP);
+                        sumP = obrabSum(kup1, kT, sumP);
 
                         System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kH + " по 100, " + kT + " по 20.");
                     }
@@ -67,14 +67,14 @@ public class Bankomat {
             } else if (kupF != 0 && (sumP % kup2 != kup1 / 2) && sumP >= kup2 && ((sumP % 20 != 0 ) || (sumP % 50 == 0 ))) {
                 int kF = (sum.kolF(sumP));
                 kF = provNalKup(kupF, kF);
-                sumP = obrabSum(kup2, kupF, kF, sumP);
+                sumP = obrabSum(kup2, kF, sumP);
                 if (sumP == 0) {
                     System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kF + " по 50.");
                 } else {
 
                     int kT = (sum.kolT(sumP));
                     kT = provNalKup(kupT, kT);
-                    sumP = obrabSum(kup1, kupT, kT, sumP);
+                    sumP = obrabSum(kup1, kT, sumP);
 
                     System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kF + " по 50, " + kT + " по 20.");
                 }
@@ -82,7 +82,7 @@ public class Bankomat {
                 if (kupT != 0) {
                     int kT = (sum.kolT(sumP));
                     kT = provNalKup(kupT, kT);
-                    sumP = obrabSum(kup1, kupT, kT, sumP);
+                    sumP = obrabSum(kup1, kT, sumP);
 
                     System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kT + " по 20.");
                 }
@@ -90,7 +90,7 @@ public class Bankomat {
         }
     }
 
-    public static int obrabSum(int k, int kuH, int kkH, int sP) {
+    private static int obrabSum(int k, int kkH, int sP) {
 
         int s = kkH * k;
         int sp = 0;
@@ -126,14 +126,14 @@ public class Bankomat {
         return k2;
     }
 
-    public static int obnovS(int s, int kup) {
+    private static int obnovS(int s, int kup) {
 
         int newS = s % kup;
 
         return newS;
     }
 
-    public static boolean provVyd(int k1, int k2, int k3, int v1, int v2) {
+    private static boolean provVyd(int k1, int k2, int k3, int v1, int v2) {
         boolean p = true;
         int vy;
 
@@ -201,9 +201,9 @@ public class Bankomat {
 }
 class Bankomatik{
 
-    int twenty;
-    int fifty;
-    int hundred;
+   private int twenty;
+    private int fifty;
+    private int hundred;
 
     Bankomatik(int kup1, int kup2,int kup3) {
         twenty = kup1;
