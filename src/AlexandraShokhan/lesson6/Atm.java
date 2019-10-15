@@ -4,20 +4,21 @@ import java.util.Scanner;
 
 public class Atm {
     public static void main(String[] args) {
+        // Создаем банкомат.
         AverageAtm BelarusbankAtm = new AverageAtm(30,60,98);
+        // Добавляем купюры.
         BelarusbankAtm.depositCash(30,0,7);
         BelarusbankAtm.displayBanknotes();
 
         Scanner in = new Scanner(System.in);
-        System.out.println("How much cash would ypu like to withdraw?");
+        System.out.println("How much cash would you like to withdraw?");
         int amountToWithdraw = in.nextInt();
 
-        if (BelarusbankAtm.withdrawCash(amountToWithdraw) == true) {
+       if (BelarusbankAtm.withdrawCash(amountToWithdraw) == true) {
             System.out.println("The operation completed successfully.");
         } else {
-            System.out.println("The amount requested cannot be withdrawn.");
+           System.out.println("You can try again.");
         }
-
     }
 }
 
@@ -51,20 +52,20 @@ class AverageAtm {
     // Метод для снятия денег.
     boolean withdrawCash(int amoutToWithdraw) {
         boolean isSuccessful = false;
-        if (amoutToWithdraw % 100 == 0) {
-            if (amoutToWithdraw / 100 <= numOf100)
-                isSuccessful = true;
-        }
-        if ((amoutToWithdraw % 100) % 50 == 0) {
-            if ((amoutToWithdraw % 100) / 50 <= numOf50) {
-                isSuccessful = true;
-            }
-
+        int a = amoutToWithdraw / 100;
+        int b = (amoutToWithdraw % 100) / 50;
+        int c = ((amoutToWithdraw % 100) % 50) / 20;
         if (((amoutToWithdraw % 100) % 50) % 20 == 0) {
-                if (amoutToWithdraw <= numOf20 * 20) {
-                    isSuccessful = true;
-                }
+            if (a <= numOf100 && b <= numOf50 && c <= numOf20) {
+                isSuccessful = true;
+                System.out.println("The number of 100 banknotes is " + a);
+                System.out.println("The number of 50 banknotes is " + b);
+                System.out.println("The number of 20 banknotes is " + c);
+            } else {
+                System.out.println("There is not enough banknotes in the ATM. Try to request a different amount.");
             }
+        } else {
+            System.out.println("The requested amount cannot be withdrawn in full since the available banknotes are only 100, 50, and 20.");
         }
         return isSuccessful;
     }
