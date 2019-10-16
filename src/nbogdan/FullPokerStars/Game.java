@@ -16,11 +16,9 @@ class Game {
             int indexH = r.nextInt(4);
             int indexA = r.nextInt(13);
             if (koloda[indexH][indexA].equals("nope")) {continue;}
-            else {
                 WC = koloda[indexH][indexA];
                 koloda[indexH][indexA] = "nope";
                 return WC;
-            }
         }
         return "getCardFromKolodaError";
     }

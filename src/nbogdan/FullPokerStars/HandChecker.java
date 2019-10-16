@@ -50,7 +50,7 @@ class HandChecker {
             } else {check5Flush();}
         }
     }
-    static void check5Flush(){
+    static void     check5Flush(){
         Pattern p = Pattern.compile("([\\u2666\\u2665\\u2663\\u2660])\\1\\1\\1\\1");
         Matcher m = p.matcher(cards);
         if (m.find()) {
