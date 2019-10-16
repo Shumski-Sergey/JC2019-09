@@ -28,7 +28,7 @@ public class Time {
         else if (this.seconds.compareTo(Two.getFullSeconds())>0) System.out.println("Thirst Bigger than second");
         else System.out.println("Thirst Smaller than second" );
     }
-    public void getInfo(){
+    public  void  getInfo(){
         System.out.println(this.seconds+" "+this.min+" "+this.hours);
     }
 }
