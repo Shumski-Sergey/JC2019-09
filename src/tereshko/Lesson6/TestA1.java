@@ -9,7 +9,6 @@ public class TestA1 {
         thirst.getInfo();
         second.getInfo();
 
-
     }
 
 }
