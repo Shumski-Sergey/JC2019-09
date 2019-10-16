@@ -1,15 +1,13 @@
 package stitov.Lesson2.Lesson6.Timer;
 
 public class Main {
-    public static void main (String[] args){
-        Timer t1 = new Timer();
-        Timer t2 = new Timer( 34, 45, 3);
-        t1.setTimeInSeconds(50000);
-        t1.showTime();
+    public static void main(String[] args) {
+        Timer t1 = new Timer(32);
+        Timer t2 = new Timer(34, 45, 3);
+        //TODO out this please
+        int compare = t1.compareTo(t2);
         t2.showTimeInSeconds();
-        System.out.println(t1.compareTo(t2));
-        long s = t2.getTimeInSeconds();
-        System.out.println(s);
-
+        t1.showTimeInSeconds();
+        System.out.println(t2.getTimeInSeconds());
     }
 }
