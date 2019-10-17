@@ -1,4 +1,4 @@
-package AlexandraShokhan.lesson6;
+package AlexandraShokhan.lesson6.Task1;
 
 public class TimeInterval {
 
