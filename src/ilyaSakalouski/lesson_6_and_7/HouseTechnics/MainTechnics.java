@@ -14,7 +14,7 @@ public class MainTechnics {
         MainTechnics.Service();
         System.out.println();
 
-        Sclass rg = new Sclass(4, 45.0, "холодильник", 0);
+        Sclass rg = new Sclass(4, 45.0, "холодильник");
         rg.Say();
         rg.Off();
     }
