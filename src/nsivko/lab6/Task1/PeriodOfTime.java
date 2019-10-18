@@ -1,4 +1,4 @@
-package nsivko.lab6;
+package nsivko.lab6.Task1;
 
 import java.util.Scanner;
 
@@ -36,56 +36,11 @@ public class PeriodOfTime {
         System.out.print("\n2. ");
         time2.zapS(alls2);
 
-        sravn(alls1, alls2);
-
+        int comp = time1.likeCompareTo(time2);
+        time11.text(comp);
     }
-    public static void sravn(int time1, int time2) {
 
-        if(time1 > time2) {
-            System.out.print("\nПромежуток времени " + time1 + " больше промежутка времени " + time2);
-        }
-
-        if(time1 < time2) {
-            System.out.print("\nПромежуток времени " + time2 + " больше промежутка времени " + time1);
-        }
-
-        if(time1 == time2) {
-            System.out.print("\nПромежуток времени " + time1 + " равен промежутку времени " + time2);
-        }
-
-    }
 
 }
 
-class PeriodOfT {
-    int hours;
-    int minutes;
-    int second;
-    int allsec;
-
-    PeriodOfT(int ch, int min, int sec) {
-        this.hours = ch;
-        this.minutes = min;
-        this.second = sec;
-    }
-
-    PeriodOfT(int s) {
-
-        this.allsec = s;
-    }
-
-    public int allSec () {
-        int seсond = hours * 3600 + minutes * 60 + second;
-        return seсond;
-    }
-
-    void zapHMS(int t1, int t2, int t3) {
-        System.out.print(t1 + " ч " + t2 + " мин " + t3 + " сек");
-    }
-
-    void zapS(int t1) {
-        System.out.print(t1 + " сек");
-    }
-
-}
 

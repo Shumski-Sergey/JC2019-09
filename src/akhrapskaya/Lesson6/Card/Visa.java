@@ -4,14 +4,14 @@ public class Visa extends Card{
     private final static String S = "$";
     private final static int RATE = 2;
 
-    protected Visa(String name) {
+    Visa(String name) {
         super(name);
     }
-    protected Visa(String name, int money){
+    Visa(String name, int money){
         super(name, money);
     }
-    protected boolean moneyGet(int sum, String s){
-        if (s == S) {
+    boolean moneyGet(int sum, String s){
+        if (s.equals(S)) {
             sum = sum * RATE;
             return super.moneyGet(sum);
         }
