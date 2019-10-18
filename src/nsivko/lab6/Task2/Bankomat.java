@@ -6,13 +6,15 @@ import java.util.Scanner;
 public class Bankomat {
     public static void main(String[] args) {
 
-        int kup1 = 20;
-        int kup2 = 50;
-        int kup3 = 100;
+        final int KUP1 = 20;
+        final int KUP2 = 50;
+        final int KUP3 = 100;
 
-        int kupT = kolKup();
-        int kupF = kolKup();
-        int kupH = kolKup();
+        Bankomatik kup = new Bankomatik();
+
+        int kupT = kup.kolKup();
+        int kupF = kup.kolKup();
+        int kupH = kup.kolKup();
 
         Bankomatik sum = new Bankomatik(kupT, kupF, kupH);
 
@@ -24,65 +26,65 @@ public class Bankomat {
 
         int sumMoney = sum.kolMoney(kupT, kupF, kupH);
 
-        boolean pr = provVyd(kupH, kupF, kupT, sumP, sumMoney);
+        boolean pr = sum.provVyd(kupH, kupF, kupT, sumP, sumMoney);
 
         if (pr == true) {
 
-            if (kupH != 0 && sumP >= kup3) {
+            if (kupH != 0 && sumP >= KUP3) {
 
                 int kH = (sum.kolH(sumP));
 
-                kH = provNalKup(kupH, kH);
-                sumP = obrabSum(kup3, kH, sumP);
+                kH = sum.provNalKup(kupH, kH);
+                sumP = sum.obrabSum(KUP3, kH, sumP);
 
                 if (sumP == 0) {
                     System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kH + " по 100.");
                 } else {
-                    if (kupF != 0 && (sumP % kup2 != kup1 / 2) && sumP >= kup2 && ((sumP % 20 != 0 ) || (sumP % 50 == 0 )) ) {
+                    if (kupF != 0 && (sumP % KUP2 != KUP1 / 2) && sumP >= KUP2 && ((sumP % 20 != 0 ) || (sumP % 50 == 0 )) ) {
 
                         int kF = (sum.kolF(sumP));
-                        kF = provNalKup(kupF, kF);
-                        sumP = obrabSum(kup2, kF, sumP);
+                        kF = sum.provNalKup(kupF, kF);
+                        sumP = sum.obrabSum(KUP2, kF, sumP);
 
                         if (sumP == 0) {
                             System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kH + " по 100, " + kF + " по 50.");
                         } else {
 
                             int kT = (sum.kolT(sumP));
-                            kT = provNalKup(kupT, kT);
-                            sumP = obrabSum(kup1, kT, sumP);
+                            kT = sum.provNalKup(kupT, kT);
+                            sumP = sum.obrabSum(KUP1, kT, sumP);
 
                             System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kH + " по 100, " + kF + " по 50, " + kT + " по 20.");
                         }
                     } else {
                         int kT = (sum.kolT(sumP));
-                        kT = provNalKup(kupT, kT);
-                        sumP = obrabSum(kup1, kT, sumP);
+                        kT = sum.provNalKup(kupT, kT);
+                        sumP = sum.obrabSum(KUP1, kT, sumP);
 
                         System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kH + " по 100, " + kT + " по 20.");
                     }
 
                 }
 
-            } else if (kupF != 0 && (sumP % kup2 != kup1 / 2) && sumP >= kup2 && ((sumP % 20 != 0 ) || (sumP % 50 == 0 ))) {
+            } else if (kupF != 0 && (sumP % KUP2 != KUP1 / 2) && sumP >= KUP2 && ((sumP % 20 != 0 ) || (sumP % 50 == 0 ))) {
                 int kF = (sum.kolF(sumP));
-                kF = provNalKup(kupF, kF);
-                sumP = obrabSum(kup2, kF, sumP);
+                kF = sum.provNalKup(kupF, kF);
+                sumP = sum.obrabSum(KUP2, kF, sumP);
                 if (sumP == 0) {
                     System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kF + " по 50.");
                 } else {
 
                     int kT = (sum.kolT(sumP));
-                    kT = provNalKup(kupT, kT);
-                    sumP = obrabSum(kup1, kT, sumP);
+                    kT = sum.provNalKup(kupT, kT);
+                    sumP = sum.obrabSum(KUP1, kT, sumP);
 
                     System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kF + " по 50, " + kT + " по 20.");
                 }
             } else {
                 if (kupT != 0) {
                     int kT = (sum.kolT(sumP));
-                    kT = provNalKup(kupT, kT);
-                    sumP = obrabSum(kup1, kT, sumP);
+                    kT = sum.provNalKup(kupT, kT);
+                    sumP = sum.obrabSum(KUP1, kT, sumP);
 
                     System.out.println("\nВы получили Вашу сумму " + sumPeople + ": " + kT + " по 20.");
                 }
@@ -90,112 +92,5 @@ public class Bankomat {
         }
     }
 
-    private static int obrabSum(int k, int kkH, int sP) {
-
-        int s = kkH * k;
-        int sp = 0;
-
-        if(sP % s != 0){
-            sp = obnovS(sP, s);
-        } else if (sP / s > 1){
-            sp = sP - s;
-        }
-
-        return sp;
-    }
-
-    private static int kolKup () {
-
-        int index1 =(int) (Math.random() * 10);
-        int index2 = 11;
-
-        Random ind = new Random();
-        int index = ind.nextInt(index2);
-
-        int kolkup = index1 * index;
-
-        return kolkup;
-    }
-
-    private static int provNalKup(int k1, int k2) {
-
-        if (k1 < k2) {
-            k2 = k1;
-        }
-
-        return k2;
-    }
-
-    private static int obnovS(int s, int kup) {
-
-        int newS = s % kup;
-
-        return newS;
-    }
-
-    private static boolean provVyd(int k1, int k2, int k3, int v1, int v2) {
-        boolean p = true;
-        int vy;
-
-        if(v1 <= v2) {
-
-            if(k1 == 0){
-                if(k2 == 0){
-                    if(k3 == 0){
-                        p = false;
-                        System.out.println("Ошибка! Банкомат не можеты выдать такую сумму, не хватает нужных купюр.");
-                    } else {vy = v1 % 20;
-                    if(vy != 0){
-                        p = false;
-                        System.out.println("Ошибка! Банкомат не можеты выдать такую сумму, не хватает нужных купюр.");
-                    }
-                    }
-                } else {if(k3 == 0){
-                    vy = v1 % 50;
-                    if(vy != 0){
-                    p = false;
-                    System.out.println("Ошибка! Банкомат не можеты выдать такую сумму, не хватает нужных купюр.");
-                    }
-                } else { vy = (v1 % 50) % 20;
-                    if(vy != 0) {
-                        p = false;
-                        System.out.println("Ошибка! Банкомат не можеты выдать такую сумму, не хватает нужных купюр.");
-                    }
-                    }
-                }
-            } else if(k2 == 0){
-                if(k3 == 0){
-                    vy = v1 % 100;
-                    if(vy != 0){
-                    p = false;
-                    System.out.println("Ошибка! Банкомат не можеты выдать такую сумму, не хватает нужных купюр.");
-                    }
-                } else {vy = (v1 % 100) % 20;
-                    if(vy != 0){
-                        p = false;
-                        System.out.println("Ошибка! Банкомат не можеты выдать такую сумму, не хватает нужных купюр.");
-                    }
-                }
-            } else {if(k3 == 0){
-                vy = (v1 % 100) % 50;
-                if(vy != 0){p = false;
-                System.out.println("Ошибка! Банкомат не можеты выдать такую сумму, не хватает нужных купюр.");
-                }
-            } else { vy = ((v1 % 100) % 50) % 20;
-                if((((v1 % 100) % 50) % 20 != 0) && ((v1 % 100) % 50 != 0) && ((v1 % 100) != 0) && ((v1 % 100) % 20 != 0)) {
-                    p = false;
-                    System.out.println("Ошибка! Банкомат не можеты выдать такую сумму, не хватает нужных купюр.");
-                }
-            }
-            }
-
-        }
-          if(v1 > v2) {
-              p = false;
-              System.out.println("В банкомате нет столько денег.");
-          }
-
-        return p;
-    }
 
 }
