@@ -1,7 +1,7 @@
 package ilyaSakalouski.lesson_6_and_7.HouseTechnics;
 
-public class VacuumCleaner extends Served {
-    protected VacuumCleaner(int power, double weight, String name, int packetSize) {
+public class MainTechnics extends Served {
+    protected MainTechnics(int power, double weight, String name, int packetSize) {
         super(power, weight, name, packetSize);
     }
     private void Service(){
@@ -10,13 +10,13 @@ public class VacuumCleaner extends Served {
 
     public static void main(String[] args) {
 
-        VacuumCleaner vc = new VacuumCleaner(2,4.5,"пылесос",3);
+        MainTechnics vc = new MainTechnics(2,4.5,"пылесос",3);
         vc.Say();
         vc.On();
         vc.Service();
         System.out.println();
 
-        VacuumCleaner rg = new VacuumCleaner(4,45.0,"холодильник",0);
+        MainTechnics rg = new MainTechnics(4,45.0,"холодильник",0);
         rg.Say();
         rg.Off();
     }
