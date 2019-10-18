@@ -1,4 +1,4 @@
-package nbogdan.Lesson6.TaskA1;
+package nbogdan.Lesson6.Task3;
 
 public class Main {
     public static void main(String[] args) {

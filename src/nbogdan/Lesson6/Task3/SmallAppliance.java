@@ -1,4 +1,4 @@
-package nbogdan.Lesson6.TaskA1;
+package nbogdan.Lesson6.Task3;
 
 class SmallAppliance extends Appliance {
     private String type;
