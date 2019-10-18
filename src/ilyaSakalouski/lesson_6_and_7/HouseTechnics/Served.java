@@ -1,15 +1,21 @@
 package ilyaSakalouski.lesson_6_and_7.HouseTechnics;
 
 public class Served extends Sclass {
-private int packetSize;
+    private int packetSize;
+
     protected Served(int power, double weight, String name, int packetSize) {
-        super(power, weight,name);
+        super(power, weight, name, 0);
         this.packetSize = packetSize;
     }
+
+    void Service() {
+        System.out.println("Замените пакет!");
+    }
+
     @Override
-    protected void Say(){
+    protected void Say() {
         super.Say();
-        System.out.println("Размер мешка для мусора: " + packetSize + " кг.");
+        System.out.println("Объём пакета для мусора: " + packetSize + " л.");
     }
 }
 
