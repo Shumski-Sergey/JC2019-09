@@ -2,6 +2,7 @@ package akhrapskaya.Lesson6.Appliances;
 
 public class Fridge extends LargeSize{
     private final static String name = "Холодильник";
+    //овроарплоап
     private Fridge(int power, int enCon) {
         super(power, enCon);
     }
