@@ -5,7 +5,7 @@ public class Player {
     private String[] hand = new String[] {"", ""};
     private int point = 0;
     private String combination = "none combination";
-    Player(){};
+    Player() {}
     String getName() {return name;}
     void setName(String name) {this.name = name;}
     public int getPoint() {return point;}
