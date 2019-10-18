@@ -9,6 +9,7 @@ public class ATM {
     public static final int HUNDRET=100;
     public static final int FIFTY=50;
     public static final int TWENTY=20;
+    public static final int CASHLIMIT=1250;
 
     public ATM(){
         this.twnty=0;
@@ -80,6 +81,7 @@ public class ATM {
         if ((sum<TWENTY) || (sum%10>0)){
             System.out.println("Сумма меньше минимального номинала или минимальный номинал не позволяет выдать выбранную сумму");
             p=false;}
+        if (sum>CASHLIMIT) { System.out.println("Превышен лимит суммы!");p=false;}
         if ((p)&&(Givin1005020(hndrt, ffty, twnty, sum)>0)) {p=true;}
         else p=false;
 
