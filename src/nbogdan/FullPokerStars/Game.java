@@ -16,11 +16,9 @@ class Game {
             int indexH = r.nextInt(4);
             int indexA = r.nextInt(13);
             if (koloda[indexH][indexA].equals("nope")) {continue;}
-            else {
                 WC = koloda[indexH][indexA];
                 koloda[indexH][indexA] = "nope";
                 return WC;
-            }
         }
         return "getCardFromKolodaError";
     }
@@ -47,7 +45,7 @@ class Game {
     static void showResult() {
         for (int i = 0; i < numPlayers; i++) {
             HandChecker.setCards(computerHand, players[i].showHand(), i);
-            System.out.println("Игрок " + (i + 1) + players[i].getName() + ": " + players[i].showHand() + " " + players[i].getCombination());
+            System.out.println("Игрок " + (i + 1) + " " + players[i].getName() + ": " + players[i].showHand() + " " + players[i].getCombination());
         }
     }
     static void runFullGame() {
