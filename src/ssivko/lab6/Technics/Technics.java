@@ -13,6 +13,6 @@ public class Technics {
     }
 
     void waterUse(){
-        
+
     }
 }
