@@ -5,7 +5,7 @@ public class Sclass {
     private double weight;
     private String name;
 
-    protected Sclass(int power, double weight, String name, int i) {
+    protected Sclass(int power, double weight, String name) {
         this.power = power;
         this.weight = weight;
         this.name = name;
