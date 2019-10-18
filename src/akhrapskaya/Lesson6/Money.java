@@ -8,7 +8,8 @@ public class Money {
         this.kop = (char) kop;
     }
     private void out(){
-        System.out.println(r + "," + (int) kop);
+
+        System.out.println(r + "," + String.format("%02d", (int)kop));
     }
     private long getR(){
         return r;
@@ -51,19 +52,35 @@ public class Money {
         }
         return k;
     }
-
+    private Money div(double m){
+        long m1 = r*100+kop;
+        double res = (double)m1/(m*100);
+        return new Money((long) res,(char)((res-(int)res)*100));
+    }
+    private Money mul(double m){
+        long m1 = r*100+kop;
+        double res = (double)m1*m/100;
+        return new Money((long) res,(char)((res-(int)res)*100));
+    }
+    private Money div(Money m){
+        long m1 = r*100+kop;
+        long m2 = m.getR()*100+m.getKop();
+        double res = (double)m1/m2;
+        return new Money((long) res,(char)((res-(int)res)*100));
+    }
     public static void  main(String[] args){
-        Money m = new Money(5, 60);
+        Money m = new Money(10, 20);
         m.out();
-        Money n = new Money(5, 50);
+        Money n = new Money(0, 50);
         Money k = m.add(n);
         k.out();
         System.out.println(m.compare(n));
-        System.out.println(n.compare(m));
         k = m.minus(n);
         k.out();
-        k = n.minus(m);
-        k.out();
 
+        m.div(100).out();
+        m.div(n).out();
+        m.div(0.14).out();
+        m.mul(20).out();
     }
 }
