@@ -1,18 +1,27 @@
 package ssivko.lab6.Technics;
 
 public class Technics {
-
     String color;
-    String materisl;
-    int weight;
-    int cost;
-    boolean onOff;
+    int weigin;
+    String form;
+    String consumptionAA;
 
-    void consumption(){
+
+    Technics(String Technicscolor, int Technicsweigin, String Technicsform, String TechnicsconsumptionAA){
+        color = Technicscolor;
+        weigin =Technicsweigin;
+        form = Technicsform;
+        consumptionAA =TechnicsconsumptionAA;
+
 
     }
 
-    void waterUse(){
-
+   public void consumption(){
+       System.out.println("Потребление электричества");
     }
+
+    public void noise(){
+        System.out.println("Издаваемый шум ");
+    }
+
 }
