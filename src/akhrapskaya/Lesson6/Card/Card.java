@@ -4,15 +4,15 @@ public class Card {
     private int money;
     private String name;
 
-    protected Card(String name){
+    Card(String name){
         this.name = name;
         money = 0;
     }
-    protected Card(String name, int money){
+    Card(String name, int money){
         this.name = name;
         this.money = money;
     }
-    protected void moneyAdd(int sum){
+    void moneyAdd(int sum){
         money += sum;
         System.out.println("На счет добавлено " + sum + " рублей.");
     }
@@ -28,10 +28,10 @@ public class Card {
         }
         return b;
     }
-    protected void balance(){
+    void balance(){
         System.out.println("Баланс: " + money + " рублей.");
     }
-    protected String getName(){
+    String getName(){
         return name;
     }
 }

@@ -2,8 +2,8 @@ package akhrapskaya.Lesson6.Appliances;
 
 public class Fridge extends LargeSize{
 
-    private Fridge(int power, int enCon, int height, int width) {
-        super(power, enCon, height, width);
+    private Fridge(int power, int enCon) {
+        super(power, enCon);
     }
     @Override
     protected void turnOn(){
@@ -20,12 +20,14 @@ public class Fridge extends LargeSize{
         a1.turnOff();
         a1.match();
         System.out.println("LargeSize:");
-        LargeSize l1 = new LargeSize(500, 400, 60, 200);
+        LargeSize l1 = new LargeSize(500, 400);
+        l1.setSize(200, 60);
         l1.turnOn();
         l1.turnOff();
         l1.match();
         System.out.println("Fridge:");
-        Fridge f1 = new Fridge(500, 400, 60, 200);
+        Fridge f1 = new Fridge(500, 400);
+        f1.setSize(200, 60);
         f1.turnOn();
         f1.turnOff();
         f1.match();
