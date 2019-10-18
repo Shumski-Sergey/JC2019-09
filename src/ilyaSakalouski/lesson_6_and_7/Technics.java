@@ -1,4 +1,4 @@
-package ilyaSakalouski.lesson_6;
+package ilyaSakalouski.lesson_6_and_7;
 
 class Technics {
     String color;
