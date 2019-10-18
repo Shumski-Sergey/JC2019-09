@@ -69,11 +69,41 @@ public class ATM {
     }
 
     public void GivinMoney() {
+
         Scanner sc=new Scanner(System.in);
         System.out.println("\n");
         System.out.println("Введите сумму, которую Вы хотите обналичить:");
         long sum = Long.parseLong(sc.next());
-        if (sum>getAllCash()) System.out.println("Сумма превышает количесство купюр");
-        else if ((sum<TWENTY) || (sum-TWENTY<TWENTY) || (sum%10>0)) System.out.println("Сумма меньше минимального номинала или минимальный номинал не позволяет выдать выбранную сумму");
+        boolean p=true;
+        if ((hndrt==0)&&(ffty==0)&&(twnty==0)){ System.out.println("В банкомате нету дзенех!"); p=false;}
+        if (sum>getAllCash()) {System.out.println("Сумма превышает количество купюр"); p=false;}
+        if ((sum<TWENTY) || (sum%10>0)){
+            System.out.println("Сумма меньше минимального номинала или минимальный номинал не позволяет выдать выбранную сумму");
+            p=false;}
+        if ((p)&&(Givin1005020(hndrt, ffty, twnty, sum)>0)) {p=true;}
+        else p=false;
+
+        if (!p) System.out.println("Ничыво не дам!");
+        }
+    private int Givin1005020(int hndrt, int ffty, int twnty, long sum) {
+        int q=0;
+        for (int i=0; i<=hndrt; i++){
+            for (int j=0; j<=ffty; j++){
+                for (int k=0; k<=twnty; k++){
+                    if (i*HUNDRET+j*FIFTY+k*TWENTY==sum){
+                        if ((i!=0)&&(j!=0)&&(k!=0))System.out.println("Можем выдать "+i+" по "+HUNDRET+" + "+j+" по "+FIFTY+" + "+k+" по "+TWENTY);
+                        if ((i==0)&&(j!=0)&&(k!=0))System.out.println("Можем выдать "+j+" по "+FIFTY+" + "+k+" по "+TWENTY);
+                        if ((i!=0)&&(j==0)&&(k!=0))System.out.println("Можем выдать "+i+" по "+HUNDRET+" + "+k+" по "+TWENTY);
+                        if ((i==0)&&(j!=0)&&(k==0))System.out.println("Можем выдать "+i+" по "+HUNDRET+" + "+j+" по "+FIFTY);
+                        if ((i==0)&&(j==0)&&(k!=0))System.out.println("Можем выдать "+k+" по "+TWENTY);
+                        if ((i==0)&&(j!=0)&&(k==0))System.out.println("Можем выдать "+j+" по "+FIFTY);
+                        if ((i!=0)&&(j==0)&&(k==0))System.out.println("Можем выдать "+i+" по "+HUNDRET);
+                        q +=1;
+                    }
                 }
+            }
+        }
+        return q;
+    }
+
 }
