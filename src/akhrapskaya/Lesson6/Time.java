@@ -1,7 +1,5 @@
 package akhrapskaya.Lesson6;
 
-
-
 public class Time {
     private int sec, min, h;
     private final int k = 60;

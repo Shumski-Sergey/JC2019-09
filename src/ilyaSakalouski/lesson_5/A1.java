@@ -1,4 +1,4 @@
-package ilyaSakalouski.lesson_6;
+package ilyaSakalouski.lesson_5;
 
 public class A1 {
     public static void main(String[] args) {
