@@ -7,11 +7,6 @@ public class Served extends Sclass {
         super(power, weight, name);
         this.packetSize = packetSize;
     }
-
-    void Service() {
-        System.out.println("Замените пакет!");
-    }
-
     @Override
     protected void Say() {
         super.Say();
