@@ -11,7 +11,7 @@ public class Dog1TestDrive {
             System.out.println("Вторая собака :" + two.getSize());
             one.bark();
             two.bark();
-           
+
         }
     }
 
