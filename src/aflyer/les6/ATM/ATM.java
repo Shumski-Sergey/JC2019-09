@@ -31,9 +31,13 @@ public class ATM {
         return ffty;
     }
 
-    public int getHndrt() { return hndrt; }
+    public int getHndrt() {
+        return hndrt;
+    }
 
-    public void setTwnty(int twnty) { this.twnty = twnty; }
+    public void setTwnty(int twnty) {
+        this.twnty = twnty;
+    }
 
     public void setFfty(int ffty) {
         this.ffty = ffty;
@@ -93,9 +97,7 @@ public class ATM {
             System.out.println("Превышен лимит суммы!");
             p = false;
         }
-        if ((p) && (Givin1005020(hndrt, ffty, twnty, sum) > 0)) {
-            p = true;
-        } else p = false;
+        p = (p) && (Givin1005020(hndrt, ffty, twnty, sum) > 0);
 
         if (!p) System.out.println("Ничыво не дам!");
     }
