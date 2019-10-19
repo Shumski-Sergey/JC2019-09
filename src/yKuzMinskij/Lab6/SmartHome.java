@@ -49,11 +49,8 @@ class Household_Appliances {
         public String getBrand (){return brand;}
         public String getColor (){return color;}
         public double getPower (){return power;}
-        public String getModel () {
-            return model;
-        }
-        public double getHeight(){return height;
-        }
+        public String getModel (){return model;}
+        public double getHeight(){return height;}
         @Override
         public void act () throws IOException {
             System.out.println("Вкулючить холодильник " + Refrigerator.this.model + "?");
