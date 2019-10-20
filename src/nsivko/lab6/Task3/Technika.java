@@ -3,14 +3,15 @@ package nsivko.lab6.Task3;
 public class Technika {
     String color;
     double P;
+    int kol;
 
     Technika(int kolPrib) {
-        int kol = kolPrib;
+        this.kol = kolPrib;
     }
 
     Technika(String tColor, double tP) {
-        color = tColor;
-        P = tP;
+        this.color = tColor;
+        this.P = tP;
     }
 
     public void techName(int k, String[] name) {
