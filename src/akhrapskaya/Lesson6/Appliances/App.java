@@ -1,20 +1,26 @@
 package akhrapskaya.Lesson6.Appliances;
 
-public class App {
+public abstract class App {
     private int power;
-    private int enCon;
-
-    protected App(int power, int enCon){
+    private boolean on;
+    protected App(int power){
         this.power = power;
-        this.enCon = enCon;
+
     }
-    protected void match(){
-        System.out.println("Моя мощность: " + power + ". Энергопотребление: " + enCon + ".");
+    protected boolean getOn(){
+        return on;
+    }
+    protected void info() {
+        System.out.println("Моя мощность: " + power  + ".");
+        if (on)
+            System.out.println("Включен в розетку и готов к работе!");
+        else
+            System.out.println("Выключен!");
     }
     protected void turnOn(){
-        System.out.println("Я включен в розетку.");
+        on = true;
     }
     protected void turnOff(){
-        System.out.println("Я выключен.");
+        on = false;
     }
 }

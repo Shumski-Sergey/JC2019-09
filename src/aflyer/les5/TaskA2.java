@@ -10,11 +10,9 @@ public class TaskA2 {
         int n=sc.nextInt();
         String [] str=new String[n];
         String StrSort="";
-
         for (int i=0;i<n; i++){
             System.out.println("Введите строку №"+ (i+1));
-            str[i]=sc.next();
-        }
+            str[i]=sc.next();}
         for (int i=0; i<n; i++){
             for (int j=n-1; j>=i; --j ){
                 if (str[i].length()>str[j].length()){ StrSort=str[i]; str[i]=str[j]; str[j]=StrSort;}
@@ -24,6 +22,7 @@ public class TaskA2 {
         for (String x: str)
              { System.out.print(x+" ");
         }
+        System.out.println("");
         for (int i=n-1; i>=0; --i){
              System.out.print(str[i]+" ");
         }
