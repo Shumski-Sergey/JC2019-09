@@ -14,6 +14,13 @@ package balexej.lesson6.Task2;
          this.cash = cash;
 
      }
+
+
+     public Card() {
+
+     }
+
+
      public String getName(){
          return this.name;
      }
