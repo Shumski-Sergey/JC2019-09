@@ -23,11 +23,11 @@ public class TaskA1 {
     }
 }
 class universalArray<T> {
-    T [] arr;
-    ArrayList<T> arrayList = new ArrayList<>();
+    private T [] arr;
+    private ArrayList<T> arrayList = new ArrayList<>();
 
 
-    public universalArray (T []arr) {
+    universalArray (T[] arr) {
         this.arr = arr;
         this.arrayList.addAll(Arrays.asList(this.arr));
     }
