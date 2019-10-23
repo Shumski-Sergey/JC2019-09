@@ -11,23 +11,26 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Container<ArrayList> Box = new Container<>();
-        ArrayList list=new ArrayList();
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        Scanner sc=new Scanner(System.in);
+        ArrayList list = new ArrayList();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Scanner sc = new Scanner(System.in);
         System.out.println("Введите количество элеметов массива:");
-        int k=sc.nextInt();
-        for(int i=0; i<k; i++){
-            int n = i+1;
-            System.out.println("Введите "+ n +"тый элемент");
-            try {list.add(br.readLine());}
-            catch (IOException e) {e.printStackTrace();
+        int k = sc.nextInt();
+        for (int i = 0; i < k; i++) {
+            int n = i + 1;
+            System.out.println("Введите " + n + "тый элемент");
+            try {
+                list.add(br.readLine());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-        }}
+        }
         Box.setItem(list);
         System.out.println("Введите индекс элемента массива");
-        int j=sc.nextInt();
+        int j = sc.nextInt();
 
-        getItemByIndex(Box.getItem(), j-1);
+        getItemByIndex(Box.getItem(), j - 1);
 
 
     }
