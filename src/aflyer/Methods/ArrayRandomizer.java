@@ -1,6 +1,7 @@
 package aflyer.Methods;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Random;
 
 public class ArrayRandomizer {
@@ -30,15 +31,28 @@ public class ArrayRandomizer {
     public static ArrayList fillArray(ArrayList list, int size, int range) {
         Random m = new Random();
         for (int i = 0; i < size; i++) {
-            list.add(i, m.nextInt(range));
+            list.add(i,Math.abs(m.nextInt(range)));
         }
         return list;
 
     }
 
     /**
+     * @param list given LinkedList for fillin
+     * @param size size of LinkedList or number of elements to fill by random numbers
+     * @param range range of taking random numbers
+     * @return LinkedList with "size" elements filled randomizely from "range"
+     */
+    public static LinkedList fillLinkArray(LinkedList list, int size, int range){
+        Random m = new Random();
+        for (int i=0; i<size; i++){
+            list.add(i, m.nextInt(range));
+        }
+        return list;
+    }
+
+    /**
      * OutPuts each element of Arraylist in one line with spaces and takes new line when ends
-     *
      * @param list given ArrayList for output to console     *
      */
     public static void OutputArray(ArrayList<Integer> list) {
@@ -47,6 +61,18 @@ public class ArrayRandomizer {
         System.out.print("\n");
 
     }
+
+    /**
+     * OutPuts each element of Linkedlist in one line with spaces and takes new line when ends
+     * @param list given LinkedList for output to console     *
+     */
+    public static void OutputArray(LinkedList<Integer> list) {
+        for (int x : list)
+            System.out.print(x + " ");
+        System.out.print("\n");
+
+    }
+
 
 
 }
