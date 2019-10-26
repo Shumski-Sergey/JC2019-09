@@ -14,13 +14,17 @@ public class TaskA3 {
         Random r = new Random();
         int size = r.nextInt(Byte.MAX_VALUE);
         int range = r.nextInt(Byte.MAX_VALUE);
-        int max = 0;
         Journal = ArrayRandomizer.fillArray(Journal, size, range);
+        int max= (int) Journal.get(0);
         Iterator<Integer> iterator = Journal.iterator();
         while (iterator.hasNext()) {
-            if (iterator.next() > max) max = iterator.next();
+            int i = (int) iterator.next();
+            if (i > max) max = i;
         }
         ArrayRandomizer.OutputArray(Journal);
         System.out.println(max);
+        Journal.sort(null);
+        ArrayRandomizer.OutputArray(Journal);
+        System.out.println(Journal.get(Journal.size()-1));
     }
 }
