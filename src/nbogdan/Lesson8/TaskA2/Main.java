@@ -1,6 +1,6 @@
-package nbogdan.FullPokerStars;
+package nbogdan.Lesson8.TaskA2;
 
-public class Test {
+public class Main {
     public static void main(String[] args) {
     }
 }

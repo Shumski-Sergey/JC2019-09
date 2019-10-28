@@ -20,9 +20,9 @@ public class TaskA5 {
         String latin = "[a-zA-Z]+";
         int amountOfLatins = 0;
 
-        for (int i = 0; i < words.length; i++) {
-            if (words[i].matches(latin)) {
-                amountOfLatins +=1;
+        for (String s : words) {
+            if (s.matches(latin)) {
+                amountOfLatins += 1;
             }
         }
 
@@ -30,33 +30,33 @@ public class TaskA5 {
 
         int amountEquals = 0;
 
-        for (int i = 0; i <words.length ; i++) {
+        for (String word : words) {
             int vowels = 0;
             int consonants = 0;
-            for(int j =0; j < words[i].length(); j++){
-            switch (words[i].charAt(j)){
-                case 'a':
-                    vowels ++;
-                    break;
-                case 'o':
-                    vowels ++;
-                    break;
-                case 'i':
-                    vowels ++;
-                    break;
-                case 'e':
-                    vowels ++;
-                    break;
-                case 'u':
-                    vowels ++;
-                    break;
-                default:
-                    consonants++;
-                    break;
+            for (int j = 0; j < word.length(); j++) {
+                switch (word.charAt(j)) {
+                    case 'a':
+                        vowels++;
+                        break;
+                    case 'o':
+                        vowels++;
+                        break;
+                    case 'i':
+                        vowels++;
+                        break;
+                    case 'e':
+                        vowels++;
+                        break;
+                    case 'u':
+                        vowels++;
+                        break;
+                    default:
+                        consonants++;
+                        break;
+                }
             }
-        }
-            if(vowels == consonants){
-                amountEquals ++;
+            if (vowels == consonants) {
+                amountEquals++;
             }
         }
         System.out.println("Количество слов с равным количеством гласных и согласных: " + amountEquals);
