@@ -10,7 +10,7 @@ class Game {
     private static String[][] koloda = Hand.getKoloda();
     private static String computerHand = "";
     private static int numPlayers = Hand.getNumPlayers();
-    private static String getCardFromKoloda(){
+    private static String getCardFromKoloda() {
         String WC;
         for (int i = 0; i <999; i ++) {
             int indexH = r.nextInt(4);
@@ -27,14 +27,14 @@ class Game {
             players[i].setHand(new String[]{getCardFromKoloda(), getCardFromKoloda()});
         }
     }
-    static void round2(){
-        for (int i = 0; i < 3; i++){
+    static void round2() {
+        for (int i = 0; i < 3; i++) {
             computerHand += getCardFromKoloda();
         }
     }
-    static void round3(){computerHand += getCardFromKoloda();}
-    static void round4(){computerHand += getCardFromKoloda();}
-    static void showComputerHand(){
+    static void round3() {computerHand += getCardFromKoloda();}
+    static void round4() {computerHand += getCardFromKoloda();}
+    static void showComputerHand() {
         System.out.println("Раздача:");
         System.out.println(computerHand);
         /*for (String s: computerHand) {
@@ -44,8 +44,8 @@ class Game {
     }
     static void showResult() {
         for (int i = 0; i < numPlayers; i++) {
-            HandChecker.setCards(computerHand, players[i].showHand(), i);
-            System.out.println("Игрок " + (i + 1) + " " + players[i].getName() + ": " + players[i].showHand() + " " + players[i].getCombination());
+            HandChecker.setCards(computerHand, players[i].getHand(), i);
+            System.out.println("Игрок " + (i + 1) + " " + players[i].getName() + ": " + players[i].getHand() + " " + players[i].getCombination());
         }
     }
     static void runFullGame() {

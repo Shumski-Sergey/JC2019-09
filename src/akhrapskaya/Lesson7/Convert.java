@@ -7,7 +7,6 @@ import java.util.Arrays;
 
 public class Convert<T> {
     private T[] array;
-    private ArrayList<T> list;
 
     private Convert(T[] array) {
         this.array = array;
@@ -15,19 +14,18 @@ public class Convert<T> {
     public T getArrayIn(int i) {
         return array[i];
     }
-    private void setList() {
+    private ArrayList<T> getList() {
+    ArrayList<T>  list = new ArrayList<>();
     list = new ArrayList<>();
         list.addAll(Arrays.asList(array));
-    }
-    private ArrayList<T> getList(){
         return list;
     }
 
-    public static void  main(String[] args){
-        Integer[] ar = {20,50,30,45,80,90,200,55};
+    public static void  main(String[] args) {
+        Integer[] ar = {20, 50, 30, 45, 80, 90, 200, 55};
         Convert<Integer> c = new Convert<>(ar);
-        c.setList();
-        for (Integer k : c.getList() )
+
+        for (Integer k : c.getList())
             System.out.print(k + " ");
         System.out.println(" ");
 
@@ -43,8 +41,9 @@ public class Convert<T> {
         cats[3].setName("Kisa");
         cats[3].setAge(4);
         Convert<Cats> catsConvert = new Convert<>(cats);
-        catsConvert.setList();
+
         for(Cats k : catsConvert.getList())
             System.out.println(k.getName() + " " + k.getAge());
+
     }
 }
