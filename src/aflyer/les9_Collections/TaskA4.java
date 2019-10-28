@@ -25,31 +25,33 @@ public class TaskA4 {
         arlist = ArrayRandomizer.fillArray(arlist, SIZE_BIG, range);
         arlist = pickElements(arlist, SIZE_BIG);
         timearend = System.currentTimeMillis();
-        System.out.println("ArrayList: "+timearbegin + " " + timearend + " или "+ (timearend-timearbegin) + " милисекунд");
+        System.out.println("ArrayList: " + timearbegin + " " + timearend + " или " + (timearend - timearbegin) + " милисекунд");
         timelkbegin = System.currentTimeMillis();
         lklist = ArrayRandomizer.fillLinkArray(lklist, SIZE_BIG, range);
         lklist = pickElements(lklist, SIZE_BIG);
         timelkend = System.currentTimeMillis();
-        System.out.println("LinkedList: "+timelkbegin +" "+ timelkend+ " или "+ (timelkend-timelkbegin) + " милисекунд");}
+        System.out.println("LinkedList: " + timelkbegin + " " + timelkend + " или " + (timelkend - timelkbegin) + " милисекунд");
+    }
 
 
-        public static ArrayList pickElements (ArrayList arlist,int range){
-            ArrayList newArList = new ArrayList();
-            Random r = new Random();
-            for (int i = 0; i < SIZE_SMALL; i++) {
-                int pickUp = r.nextInt(range);
-                newArList.add(i, arlist.get(pickUp));
-            }
-            return newArList;
+    public static ArrayList pickElements(ArrayList arlist, int range) {
+        ArrayList newArList = new ArrayList();
+        Random r = new Random();
+        for (int i = 0; i < SIZE_SMALL; i++) {
+            int pickUp = r.nextInt(range);
+            newArList.add(i, arlist.get(pickUp));
         }
-        public static LinkedList pickElements (LinkedList lklist,int range){
-            LinkedList newLkList = new LinkedList();
-            Random r = new Random();
-            for (int i = 0; i < SIZE_SMALL; i++) {
-                int pickUp = r.nextInt(range);
-                newLkList.add(i, lklist.get(pickUp));
-            }
-            return newLkList;
+        return newArList;
+    }
+
+    public static LinkedList pickElements(LinkedList lklist, int range) {
+        LinkedList newLkList = new LinkedList();
+        Random r = new Random();
+        for (int i = 0; i < SIZE_SMALL; i++) {
+            int pickUp = r.nextInt(range);
+            newLkList.add(i, lklist.get(pickUp));
         }
+        return newLkList;
+    }
 
 }
