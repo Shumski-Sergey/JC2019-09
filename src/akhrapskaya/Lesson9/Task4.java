@@ -22,7 +22,7 @@ public class Task4 {
         Random rand = new Random();
         long start = System.nanoTime();
         for (int i = 0; i < N; i++){
-           list.get(rand.nextInt((MAX-MIN) + MIN));
+           list.get(rand.nextInt(MAX_EL));
         }
         long time = System.nanoTime() - start;
         System.out.println(time);
