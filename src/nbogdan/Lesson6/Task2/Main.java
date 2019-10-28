@@ -12,10 +12,10 @@ package nbogdan.Lesson6.Task2;
  */
 public class Main {
     public static void main(String[] args) {
-        Atm kek = new Atm("Alpha", 1, 0, 4);
-        int[] str = kek.sraniiKalculator(kek, 330);
-        for (int a: str) {
-            System.out.println(a);
-        }
+//        Atm kek = new Atm("Alpha", 1, 0, 4);
+//        int[] str = kek.sraniiKalculator(kek, 330);
+//        for (int a: str) {
+//            System.out.println(a);
+//        }
     }
 }

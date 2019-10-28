@@ -14,7 +14,7 @@ class Hand {
     static Player[] getPlayers() {return players;}
     static void setNumPlayers(int n) {numPlayers = n;}
     static int getNumPlayers() {return numPlayers;}
-    static void setNamePlayers(){
+    static void setNamePlayers() {
         for (int i = 0; i < numPlayers; i++) {
             System.out.println("Введите имя для " + (i + 1) + " игрока:");
             players[i].setName(sc.nextLine());
