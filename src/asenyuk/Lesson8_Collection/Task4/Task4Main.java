@@ -25,7 +25,7 @@ public class Task4Main {
 
         System.out.println(" TIME_ArrayList =" + (endTime1 -startTime1));
 
-
+//
         long startTime2 = System.currentTimeMillis();
 
         LinkedList <Integer> linkedList4= new LinkedList<>();
