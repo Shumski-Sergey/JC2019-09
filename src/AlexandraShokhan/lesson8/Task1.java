@@ -15,7 +15,6 @@ public class Task1 {
         int arrayListLength = 10;
         ArrayList<Integer> grades = new ArrayList<>();
         grades = createRandomArrayList(arrayListLength, 0, 10);
-        ArrayList<Integer> badGrades = new ArrayList<>();
 
         System.out.println("Initial grades are:" + grades);
 
