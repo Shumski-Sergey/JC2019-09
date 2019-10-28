@@ -35,17 +35,17 @@ public class Task4 {
         for (int x=0;x<sizeGet;x++) {
                arraylist4.get(genericGet ());
         }
-    // return arraylist4;
+
     }
 
 
-    //
+
 
     void getNumbers4l(LinkedList<Integer> linkedList4) {
         for (int y=0;y<sizeGet;y++) {
             linkedList4.get(genericGet ());
         }
-        // return arraylist4;
+
     }
 
     LinkedList <Integer> ganericNumbers4L() {

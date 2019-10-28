@@ -1,6 +1,6 @@
 package asenyuk.Lesson8_Collection.Task4;
 
-import asenyuk.Lesson8_Collection.Task3.Task3;
+
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -25,7 +25,7 @@ public class Task4Main {
 
         System.out.println(" TIME_ArrayList =" + (endTime1 -startTime1));
 
-//
+
         long startTime2 = System.currentTimeMillis();
 
         LinkedList <Integer> linkedList4= new LinkedList<>();
