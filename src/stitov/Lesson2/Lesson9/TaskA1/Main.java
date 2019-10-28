@@ -16,7 +16,7 @@ public class Main {
     int length = rnd.nextInt(100)+1;
     System.out.println("Длина массива: " + length);
    ArrayList<Integer> arrayOfMarks = new ArrayList<Integer>();
-   arrayOfMarks = gen.generateMarks(length);
+   arrayOfMarks = gen.generateIntegerArray(length);
    printArray.printArray(arrayOfMarks);
    System.out.println();
    arrayOfMarks = deleteBad(arrayOfMarks);
