@@ -12,7 +12,7 @@ public class Player {
     public void setPoint(int point) {this.point = point;}
     String getCombination() {return combination;}
     void setCombination(String combination) {this.combination = combination;}
-    String showHand(){
+    String getHand(){
         String s;
         s = this.hand[0];
         s += this.hand[1];
