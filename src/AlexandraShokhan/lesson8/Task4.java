@@ -6,12 +6,13 @@ package AlexandraShokhan.lesson8;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+
 import static AlexandraShokhan.Utils.*;
 
 public class Task4 {
     public static void main(String[] args) {
-        ArrayList<Integer> randomArrayList = createRandomArrayList(1000000,0,1000000);
-        LinkedList<Integer> randomLinkedList = createRandomLinkedList(1000000,0,1000000);
+        ArrayList<Integer> randomArrayList = createRandomArrayList(1000000, 0, 1000000);
+        LinkedList<Integer> randomLinkedList = createRandomLinkedList(1000000, 0, 1000000);
 
         // Measuring the time for selecting values from ArrayList:
         long startArraySelection = System.currentTimeMillis();
