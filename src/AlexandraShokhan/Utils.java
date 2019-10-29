@@ -19,4 +19,15 @@ public class Utils {
         }
         return randomArray;
     }
+
+    // Метод, который возврашает максимальное значеник ArrayList<Integer>.
+    public static int getMaxIntInArrayList (ArrayList<Integer> arrayList) {
+        int max = 0;
+        for (int i = 0; i < arrayList.size(); i++) {
+            if (arrayList.get(i) > max) {
+                max = arrayList.get(i);
+            }
+        }
+        return max;
+    }
 }
