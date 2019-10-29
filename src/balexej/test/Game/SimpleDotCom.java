@@ -1,5 +1,6 @@
 package balexej.test.Game;
 
+
 public  class SimpleDotCom {
     int[] locationCells;   //хранение адреса ячеек
     int numOfHits = 0;    //хранение количества попаданий
