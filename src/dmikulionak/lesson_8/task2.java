@@ -8,13 +8,13 @@ import java.util.Set;
 //повторяющиеся числа.
 public class task2  {
     public static void main (String[] args) {
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
         for(int i=0; i<10000; i++) {
             int a = (int)(Math.random()*100);
             list.add(i,a);
         }
         System.out.println(list);
-        Set<Integer> nr = new HashSet<Integer>(list);
+        Set<Integer> nr = new HashSet<>(list);
         System.out.println(nr);
     }
 }

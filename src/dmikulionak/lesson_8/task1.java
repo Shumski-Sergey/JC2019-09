@@ -9,7 +9,7 @@ import java.util.Iterator;
 public class task1 {
     public static void main (String[] args) {
         int neg = 5;
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
         for(int i=0; i<10; i++) {
             int a = (int)(Math.random() * 11);
             list.add(i,a);
