@@ -1,4 +1,4 @@
-package AlexandraShokhan.lesson8.TaskB1;
+package AlexandraShokhan.lesson8Collections.TaskB1;
 
 // B1.Имеется текст. Следует составить для него частотный словарь
 
@@ -8,36 +8,24 @@ import java.util.*;
 
 public class B1 {
     public static void main(String[] args) throws FileNotFoundException {
-        String path = "/Users/alexandra/IdeaProjects/JC2019-09/src/AlexandraShokhan/lesson8/TaskB1/input.txt";
+        String path = "src/AlexandraShokhan/lesson8Collections/TaskB1/input.txt";
         String content = new Scanner(new File(path)).useDelimiter("\\Z").next();
         List<String> wordsList = new ArrayList<>(Arrays.asList(content.split("(\\s|\\.|\\,)+")));
-        System.out.println(wordsList);
 
         for (int i = 0; i < wordsList.size(); i++) {
             wordsList.set(i, wordsList.get(i).toLowerCase());
         }
 
-        System.out.println(wordsList);
-
-        LinkedList<Word> words = new LinkedList<>();
-
+        Map<String, Integer> treeMap = new TreeMap<>();
         for (int i = 0; i < wordsList.size(); i++) {
-            words.add(new Word(wordsList, i));
+            treeMap.put(wordsList.get(i), calculateFrequency(wordsList, i));
         }
 
-        for (int i = 0; i < words.size(); i++) {
-            words.get(i).printWord();
+        treeMap = sortByValues(treeMap);
+
+        for (Map.Entry<String, Integer> entry : treeMap.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
         }
-    }
-}
-
-class Word {
-    String word;
-    int frequency;
-
-    public Word(List<String> list, int index) {
-        this.word = list.get(index);
-        this.frequency = calculateFrequency(list, index);
     }
 
     public static int calculateFrequency(List<String> wordsList, int index) {
@@ -56,7 +44,14 @@ class Word {
         return counter;
     }
 
-    public void printWord() {
-        System.out.println("The word " + word + " repeats " + frequency + " time(s)");
+    public static <K, V extends Comparable<V>> Map<K, V> sortByValues(final Map<K, V> map) {
+        Comparator<K> valueComparator = (k1, k2) -> {
+            int compare = map.get(k2).compareTo(map.get(k1));
+            if (compare == 0) return 1;
+            else return compare;
+        };
+        Map<K, V> sortedByValues = new TreeMap<K, V>(valueComparator);
+        sortedByValues.putAll(map);
+        return sortedByValues;
     }
 }

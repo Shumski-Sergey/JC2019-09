@@ -1,4 +1,4 @@
-package AlexandraShokhan.lesson8;
+package AlexandraShokhan.lesson8Collections;
 
 // 4.Напишите метод, который добавляет 1000000 элементов в ArrayList и LinkedList. Напишите еще один метод,
 // который выбирает из заполненного списка элемент наугад 10000 раз. Замерьте время, которое потрачено на это.

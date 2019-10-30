@@ -1,4 +1,4 @@
-package AlexandraShokhan.lesson8;
+package AlexandraShokhan.lesson8Collections;
 
 // 3.Создать список оценок учеников с помощью ArryList, заполнить случайными
 //оценками. Найти самую высокую оценку с использованием итератора.
