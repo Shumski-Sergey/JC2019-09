@@ -14,7 +14,7 @@ public class TaskA4 {
                 if (i <= j) {
                     array[i][j] = 1;
                 } else {
-                    array[i][j] = 9;
+                    array[i][j] = 0;
                 }
             }
         }
@@ -29,9 +29,9 @@ public class TaskA4 {
 
         //вывод массива на экран
         System.out.println("");
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                System.out.print(array[i][j] + " ");
+        for (int[] ints : array) {
+            for (int j = 0; j < ints.length; j++) {
+                System.out.print(ints[j] + " ");
             }
             System.out.println();
         }

@@ -1,6 +1,5 @@
 package nbogdan.FullPokerStars;
 import java.util.Scanner;
-
 class Hand {
     private static Player p = new Player();
     private static Scanner sc = new Scanner(System.in);
@@ -15,15 +14,13 @@ class Hand {
     static Player[] getPlayers() {return players;}
     static void setNumPlayers(int n) {numPlayers = n;}
     static int getNumPlayers() {return numPlayers;}
-    static void setNamePlayers(){
+    static void setNamePlayers() {
         for (int i = 0; i < numPlayers; i++) {
             System.out.println("Введите имя для " + (i + 1) + " игрока:");
             players[i].setName(sc.nextLine());
         }
     }
-    static void setPlayerCombination(String s, int index) {
-        players[index].setCombination(s);
-    }
+    static void setPlayerCombination(String s, int index) {players[index].setCombination(s);}
     /*public static void getNamePlayers() {
         for (int i = 0; i < numPlayers; i++) {
             System.out.println((i + 1) + " игрок: " + players[i].getName());
