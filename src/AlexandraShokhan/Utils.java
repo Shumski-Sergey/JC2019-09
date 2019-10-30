@@ -10,8 +10,7 @@ public class Utils {
 
     // Метод, который возврашает случайное число от min до max.
     public static int getRandomNum(int min, int max) {
-        int i = ThreadLocalRandom.current().nextInt(min, max + 1);
-        return i;
+        return ThreadLocalRandom.current().nextInt(min, max + 1);
     }
 
     // Метод, который возврашает ArrayList<Integer> случайных чисел определенной длины.
@@ -34,19 +33,19 @@ public class Utils {
 
     // Метод, который выбирает случайное значение из List<Integer> n количество раз.
     public static void getRandomNTimes(List<Integer> anyList, int numberOfTimes) {
-        Integer random;
         Random getRandom = new Random();
         for (int i = 1; i <= numberOfTimes; i++) {
-            random = anyList.get(getRandom.nextInt(anyList.size()));
+            anyList.get(getRandom.nextInt(anyList.size()));
         }
     }
 
     // Метод, который возврашает максимальное значеник ArrayList<Integer>.
-    public static int getMaxIntInArrayList (ArrayList<Integer> arrayList) {
+    //TODO iterator!
+    public static int getMaxIntInArrayList(ArrayList<Integer> arrayList) {
         int max = 0;
-        for (int i = 0; i < arrayList.size(); i++) {
-            if (arrayList.get(i) > max) {
-                max = arrayList.get(i);
+        for (Integer integer : arrayList) {
+            if (integer > max) {
+                max = integer;
             }
         }
         return max;

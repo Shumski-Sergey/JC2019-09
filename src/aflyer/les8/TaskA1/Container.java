@@ -2,8 +2,8 @@ package aflyer.les8.TaskA1;
 
 import java.util.ArrayList;
 
-class Container <T> {
-   private T item;
+class Container<T> {
+    private T item;
 
     public T getItem() {
         return item;

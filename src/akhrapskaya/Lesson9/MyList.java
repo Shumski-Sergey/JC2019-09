@@ -31,7 +31,6 @@ public class MyList {
         return list.iterator();
     }
     HashSet<Integer> getSet(){
-        HashSet set = new HashSet(list);
-        return set;
+        return new HashSet(list);
     }
 }

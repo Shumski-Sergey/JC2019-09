@@ -9,15 +9,15 @@ import java.util.Random;
 
 
 public class TaskA1 {
-    private static final Integer BADMARK = 30;
+    private static final Integer BAD_MARK = 30;
 
     public static void main(String[] args) {
-        int kolvo = 25;
-        int marksrange = 100;
+        int kolvo = 25;// private static final
+        int marksrange = 100;// private static final
         ArrayList SchoolJournal = new ArrayList();
-        SchoolJournal = ArrayRandomizer.fillArray(SchoolJournal, kolvo, marksrange);
+        SchoolJournal = ArrayRandomizer.fillArray(SchoolJournal, kolvo, marksrange);//new ArrayList
         ArrayRandomizer.OutputArray(SchoolJournal);
-        deletinUnGood(SchoolJournal);
+        deleteUnGood(SchoolJournal);
         ArrayRandomizer.OutputArray(SchoolJournal);
 
 
@@ -31,9 +31,9 @@ public class TaskA1 {
         System.out.print("\n");
     }
 
-    private static void deletinUnGood(ArrayList<Integer> list) {
+    private static void deleteUnGood(ArrayList<Integer> list) {
         for (int i = 0; i < list.size(); ) {
-            if (list.get(i) <= BADMARK) {
+            if (list.get(i) <= BAD_MARK) {
                 list.remove(i);
             } else i++;
 
