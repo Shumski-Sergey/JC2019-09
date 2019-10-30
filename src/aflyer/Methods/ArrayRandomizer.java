@@ -23,6 +23,7 @@ public class ArrayRandomizer {
     }
 
     /**
+     *
      * @param list  given ArrayList for filling
      * @param size  size of ArrayList or number of elements for filling by random numbers
      * @param range range of taking random numbers

@@ -32,7 +32,7 @@ public class Task4 {
             System.out.println("ArrayList works " + (timeLinked / timeArray) + " times quicker than LinkedList.");
         } else if (timeArray > timeLinked) {
             System.out.println("LinkedList works " + (timeArray / timeLinked) + " times quicker than ArrayList.");
-        } else if (timeArray == timeLinked) {
+        } else {
             System.out.println("LinkedList and ArrayList work at the same speed.");
         }
     }

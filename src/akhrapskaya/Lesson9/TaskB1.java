@@ -9,7 +9,7 @@ public class TaskB1 {
     public static void main(String[] args) {
         TreeMap<String, Integer> voc = new TreeMap<>();
         try {
-            File file = new File("/home/lapulik/IdeaProjects/JC2019-09/src/akhrapskaya/Lesson9/Text.txt");
+            File file = new File("src/akhrapskaya/Lesson9/Text.txt");
             Scanner  sc = new Scanner(file);
             while(sc.hasNext()) {
                 String s = sc.nextLine();
