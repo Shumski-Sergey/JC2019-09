@@ -1,9 +1,6 @@
 package vtafeliuk.Lesson9;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class TaskA2 {
     public static void main(String[] args) {
@@ -19,14 +16,17 @@ public class TaskA2 {
         }
         System.out.println(marks);
 
+        List<Integer> marksUnique = new ArrayList<Integer>(new LinkedHashSet<Integer>(marks));
+        System.out.println(marksUnique);
 
-        for (int i = arraySize-1; i >= 0; i--) {
-            for (int  j = 0; j < i; j++)
-            if (marks.get(i) == marks.get(j)) {
-                marks.remove(i);
-            }
-        }
-        System.out.println(marks);
-///доделать
+
+    //    for (int i = 0; i < marks.size(); i++) {
+     //       if (!marksUnique.contains(marks.get(i)))
+     //           marksUnique.add(i);
+     //   }
+      //  System.out.println(marksUnique);
     }
+
+
+///доделать
 }

@@ -1,5 +1,7 @@
 package vtafeliuk.Lesson6.Tech;
-
+//Создать иерархию классов, описывающих бытовую технику. Создать
+//несколько объектов описанных классов, часть из них включить в розетку.
+//Иерархия должна иметь хотя бы три уровня.
 public class Action {
     public static void main(String[] args) {
         Item fridge = new Item("Bosh", 1500,1500,true,36,"Freezing", "Iron", "fridge");
@@ -7,7 +9,7 @@ public class Action {
         Item okKettle = new Item("LG", 1500, 260,true,12,"boiling", "Ceramics", "okKettle");
         Item oven = new Item("Atlant", 3500,1560,false,24,"warming up", "Iron", "oven");
 
-        System.out.println("Состояние питиния " + oven.name + " от сети: ");
+        System.out.println("Состояние питания " + oven.name + " от сети: ");
         oven.isPluggedIn(oven.plugIn);
         oven.turnOffItem(oven.plugIn);
         oven.isPluggedIn(oven.plugIn);
