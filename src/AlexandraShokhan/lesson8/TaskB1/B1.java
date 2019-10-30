@@ -28,27 +28,7 @@ public class B1 {
         for (int i = 0; i < words.size(); i++) {
             words.get(i).printWord();
         }
-
-
-
-//        System.out.println(calculateFrequency(wordsList, 4));
-}
-
-//    public static int calculateFrequency(List<String> wordsList, int index) {
-//        int counter = 1;
-//        String word = wordsList.get(index);
-//        for (int i = index; i < wordsList.size() - 1; i++) {
-//            if (word.equals(wordsList.get(i + 1))) {
-//                counter++;
-//            }
-//        }
-//        for (int i = index; i > 0; i--) {
-//            if (word.equals(wordsList.get(i - 1))) {
-//                counter++;
-//            }
-//        }
-//        return counter;
-//    }
+    }
 }
 
 class Word {
@@ -59,6 +39,7 @@ class Word {
         this.word = list.get(index);
         this.frequency = calculateFrequency(list, index);
     }
+
     public static int calculateFrequency(List<String> wordsList, int index) {
         int counter = 1;
         String word = wordsList.get(index);
@@ -74,6 +55,7 @@ class Word {
         }
         return counter;
     }
+
     public void printWord() {
         System.out.println("The word " + word + " repeats " + frequency + " time(s)");
     }
