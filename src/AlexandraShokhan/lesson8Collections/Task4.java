@@ -6,7 +6,6 @@ package AlexandraShokhan.lesson8Collections;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-
 import static AlexandraShokhan.Utils.*;
 
 public class Task4 {
