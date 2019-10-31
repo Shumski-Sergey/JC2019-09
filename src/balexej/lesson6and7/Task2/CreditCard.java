@@ -1,4 +1,4 @@
-package balexej.lesson6.Task2;
+package balexej.lesson6and7.Task2;
 
 public class CreditCard extends Salary {
     private  int creditLimit;
