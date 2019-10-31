@@ -2,19 +2,22 @@ package tereshko.NewCollection;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static tereshko.NewCollection.Scan.setScanner;
-import static tereshko.RANDOM.MyRandom.randomMark;
+import static tereshko.NewCollection.MyRandom.randomMark;
 
-public final class Marks extends Child {
-  public  ArrayList<Integer> marks = new ArrayList<>();
-  public void getMarks(){
-      System.out.println("How many students");
-      setChild(setScanner());
-      for (int i = 0; i <getChild() ; i++) {
-          marks.add(randomMark());
-      }
-  }
-
+final class Marks {
+    public static final int BADMARK=4;
+    static List<Integer> setMark(){
+     List<Integer> marks = new ArrayList<>();
+        System.out.println("How many students?");
+        int students=setScanner();
+        for (int i = 0; i < students; i++) {
+            marks.add(randomMark());
+        }
+        return marks;
+    }
 }
+
 

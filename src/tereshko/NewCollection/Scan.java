@@ -2,10 +2,10 @@ package tereshko.NewCollection;
 
 import java.util.Scanner;
 
-public class Scan {
+class Scan {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static int setScanner() {
+    static int setScanner() {
         int number;
         do {
             while (!scanner.hasNextInt()) {

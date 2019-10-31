@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;;
 import java.util.List;
 import java.util.Scanner;
-import static tereshko.RANDOM.MyRandom.randomMark;
+import static tereshko.NewCollection.MyRandom.randomMark;
 
 
 public class Test3 {
