@@ -11,22 +11,22 @@ import static AlexandraShokhan.Utils.*;
 
 public class Task4 {
     public static void main(String[] args) {
-        ArrayList<Integer> randomArrayList = createRandomArrayList(1000000, 0, 1000000);
-        LinkedList<Integer> randomLinkedList = createRandomLinkedList(1000000, 0, 1000000);
+        final int LIST_LENGTH = 1000000;
+        final int MIN_VALUE = 0;
+        final int MAX_VALUE = 1000000;
+        final int SELECT_NUM_OF_ELEMENTS = 10000;
+        ArrayList<Integer> randomArrayList = createRandomArrayList(LIST_LENGTH, MIN_VALUE, MAX_VALUE);
+        LinkedList<Integer> randomLinkedList = createRandomLinkedList(LIST_LENGTH, MIN_VALUE, MAX_VALUE);
 
         // Measuring the time for selecting values from ArrayList:
-        long startArraySelection = System.currentTimeMillis();
-        getRandomNTimes(randomArrayList, 10000);
-        long endArrayselection = System.currentTimeMillis();
-        long timeArray = endArrayselection - startArraySelection;
-        System.out.println(timeArray);
+        long timeArray = calculateOperationTime(randomArrayList, SELECT_NUM_OF_ELEMENTS);
+        System.out.println("It took " + timeArray + " milliseconds to select " + SELECT_NUM_OF_ELEMENTS + " elements " +
+                "from ArrayList.");
 
         // Measuring the time for selecting values from ArrayList:
-        long startLinkedSelection = System.currentTimeMillis();
-        getRandomNTimes(randomLinkedList, 10000);
-        long endLinkedSelection = System.currentTimeMillis();
-        long timeLinked = endLinkedSelection - startLinkedSelection;
-        System.out.println(timeLinked);
+        long timeLinked = calculateOperationTime(randomLinkedList, SELECT_NUM_OF_ELEMENTS);
+        System.out.println("It took " + timeLinked + " milliseconds to select " + SELECT_NUM_OF_ELEMENTS + " elements " +
+                "from LinledList.");
 
         if (timeArray < timeLinked) {
             System.out.println("ArrayList works " + (timeLinked / timeArray) + " times quicker than LinkedList.");

@@ -39,6 +39,14 @@ public class Utils {
         }
     }
 
+    // Метод, который возвращает слкорость выбора n элементов в случайном порядке из List<Integer>.
+    public static long calculateOperationTime(List<Integer> anyList, int numberOfTimes) {
+        long startTime = System.currentTimeMillis();
+        getRandomNTimes(anyList,numberOfTimes);
+        long finishTime = System.currentTimeMillis();
+        return finishTime - startTime;
+    }
+
     // Метод, который возврашает максимальное значеник ArrayList<Integer>.
     //TODO iterator!
     public static int getMaxIntInArrayList(ArrayList<Integer> arrayList) {
