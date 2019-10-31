@@ -5,11 +5,13 @@ package ilyaSakalouski.lesson_8;
 public class Catalog<M> {
     private M[] mass;
 
-    public void setMass(M[] mass) {
+    public void setMass(M[] mass)
+    {
         this.mass = mass;
     }
 
-    M getMass(int id) {
+    M getMass(int id)
+    {
         return mass[id];
     }
 }

@@ -10,21 +10,23 @@ import java.util.HashMap;
  */
 
 public class TaskB1 {
-    public static void main (String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
         File file = new File("src\\yKuzMinskij\\Lab8\\FrequencyDictionary\\HPandPS");
         FileInputStream fis = new FileInputStream(file);
         InputStreamReader isr = new InputStreamReader(fis, "windows-1251");
         BufferedReader br = new BufferedReader(isr);
-        HashMap <String, Integer>dictionary = new HashMap<>();
-        while (br.ready()){
+        HashMap<String, Integer> dictionary = new HashMap<>();
+        ArrayList<String> list;
+        while (br.ready()) {
             String line = br.readLine();
-            ArrayList list = new ArrayList();
-            list.addAll(Arrays.asList(line.split("\\s+")));
-            for (int i = 0; i< list.size(); i++){
-            if(dictionary.containsKey(list.get(i))){
-                Integer value = (dictionary.get(list.get(i)))+1;
-                dictionary.put((String) list.get(i), value);
-            }else {dictionary.put((String) list.get(i), 1);}
+            list = (ArrayList<String>) Arrays.asList(line.split("\\s+"));
+            for (String s : list) {
+                if (dictionary.containsKey(s)) {
+                    Integer value = (dictionary.get(s)) + 1;
+                    dictionary.put(s, value);
+                } else {
+                    dictionary.put(s, 1);
+                }
             }
         }
         br.close();
