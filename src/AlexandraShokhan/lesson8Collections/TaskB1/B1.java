@@ -4,6 +4,7 @@ package AlexandraShokhan.lesson8Collections.TaskB1;
 
 import java.io.*;
 import java.util.*;
+import static AlexandraShokhan.Utils.*;
 
 
 public class B1 {
@@ -12,9 +13,7 @@ public class B1 {
         String content = new Scanner(new File(path)).useDelimiter("\\Z").next();
         List<String> wordsList = new ArrayList<>(Arrays.asList(content.split("(\\s|\\.|\\,)+")));
 
-        for (int i = 0; i < wordsList.size(); i++) {
-            wordsList.set(i, wordsList.get(i).toLowerCase());
-        }
+        stringListToLowerCase(wordsList);
 
         Map<String, Integer> treeMap = new TreeMap<>();
         for (int i = 0; i < wordsList.size(); i++) {
