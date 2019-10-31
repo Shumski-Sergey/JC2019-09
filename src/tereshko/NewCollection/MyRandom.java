@@ -1,4 +1,4 @@
-package tereshko.RANDOM;
+package tereshko.NewCollection;
 
 import java.util.Random;
 
