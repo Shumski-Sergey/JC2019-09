@@ -58,4 +58,11 @@ public class Utils {
         }
         return max;
     }
+
+    public static List<String> stringListToLowerCase (List<String> list) {
+        for (int i = 0; i < list.size(); i++) {
+            list.set(i, list.get(i).toLowerCase());
+        }
+        return list;
+    }
 }
