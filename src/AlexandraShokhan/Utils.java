@@ -1,9 +1,6 @@
 package AlexandraShokhan;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Utils {
@@ -51,9 +48,11 @@ public class Utils {
     //TODO iterator!
     public static int getMaxIntInArrayList(ArrayList<Integer> arrayList) {
         int max = 0;
-        for (Integer integer : arrayList) {
-            if (integer > max) {
-                max = integer;
+        Iterator<Integer> iterator = arrayList.iterator();
+        while (iterator.hasNext()) {
+            int var = iterator.next();
+            while (var > max) {
+                max = var;
             }
         }
         return max;
