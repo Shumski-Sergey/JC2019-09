@@ -1,26 +1,20 @@
 package ilyaSakalouski.lesson_9;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import static ilyaSakalouski.Different_Utility.UtilityForCollections.GetRandArr;
 
 public class A2
 {
     public static void main(String[] args)
     {
-        int top = 10;
-        ArrayList<Integer> mark = new ArrayList<>();
+        ArrayList<Integer> arrayList;
+        arrayList = GetRandArr(15,10);  // ДОБАВЛЮ ЕЩЁ SCANNER C ПРОВЕРКОЙ.
+        System.out.println(arrayList);
 
-        for (int i = 0; i < top; i++)
-        {
-            int a = (int) (Math.random() * 10 + 1);
-            mark.add(a);
-        }
-
-        System.out.println(mark);
-
-        Set<Integer> set = new HashSet<>(mark);
-        mark.clear();
-        mark.addAll(set);
-
+        Set<Integer> set = new HashSet<>(arrayList);
+        arrayList.addAll(set);
         System.out.println(set);
     }
 }
