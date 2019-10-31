@@ -2,9 +2,7 @@ package ilyaSakalouski.lesson_9;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-
 import static ilyaSakalouski.Different_Utility.UtilityForCollections.*;
-
 
 public class A4
 {
