@@ -1,4 +1,4 @@
-package AlexandraShokhan.lesson8;
+package AlexandraShokhan.lesson8Collections;
 
 // 2.Создать коллекцию, наполнить ее случайными числами. Удалить
 //повторяющиеся числа.

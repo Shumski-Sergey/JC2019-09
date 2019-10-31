@@ -1,5 +1,6 @@
 package vtafeliuk.Lesson6.BankingCards;
-
+//Создать иерархию классов, описывающих банковские карточки.
+//Иерархия должна иметь хотя бы три уровня.
 import java.util.Scanner;
 
 public class CardVisaElectron extends CardVisa {
