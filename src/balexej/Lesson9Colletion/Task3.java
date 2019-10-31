@@ -1,4 +1,4 @@
-package balexej.Lesson8Colletion;
+package balexej.Lesson9Colletion;
 //3.Создать список оценок учеников с помощью ArrayList, заполнить случайными
 //        оценками. Найти самую высокую оценку с использованием итератора.
 

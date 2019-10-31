@@ -1,4 +1,4 @@
-package balexej.Lesson8Colletion;
+package balexej.Lesson9Colletion;
 //2.Создать коллекцию, наполнить ее случайными числами. Удалить
    //     повторяющиеся числа.
 

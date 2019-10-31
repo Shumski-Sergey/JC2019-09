@@ -1,4 +1,4 @@
-package balexej.Lesson8Colletion;
+package balexej.Lesson9Colletion;
 //1. Создать список оценок учеников с помощью ArrayList, заполнить
 //случайными оценками. Удалить неудовлетворительные оценки из списка.
 
