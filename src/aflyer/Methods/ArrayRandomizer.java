@@ -2,7 +2,6 @@ package aflyer.Methods;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Random;
 
 public class ArrayRandomizer {
@@ -24,43 +23,11 @@ public class ArrayRandomizer {
     }
 
     /**
-     * Creates new ArrayList (Integer) filled randomly from "range"
-     *
-     * @param size  size of new ArrayList
-     * @param range range of taking random numbers
-     * @return new sized ArrayList(Integer) filled random elemenst
-     */
-    public static ArrayList newArrayList(int size, int range) {
-        Random m = new Random();
-        ArrayList newList = new ArrayList();
-        for (int i = 0; i < size; i++) {
-            newList.add(i, Math.abs(m.nextInt(range)));
-        }
-        return newList;
-    }
-    /**
-     * Creates new LinkedList (Integer) filled randomly from "range"
-     *
-     * @param size  size of new ArrayList
-     * @param range range of taking random numbers
-     * @return new sized LinkedList(Integer) filled random elemenst
-     */
-    public static LinkedList newLinkedList(int size, int range) {
-        Random m = new Random();
-        LinkedList newList = new LinkedList();
-        for (int i = 0; i < size; i++) {
-            newList.add(i, Math.abs(m.nextInt(range)));
-        }
-        return newList;
-    }
-
-    /**
-     * Fill in given ArrayList randomly from "range"
      *
      * @param list  given ArrayList for filling
      * @param size  size of ArrayList or number of elements for filling by random numbers
      * @param range range of taking random numbers
-     * @return ArrayList with "size" elements filled randomely from "range"
+     * @return ArrayList with "size" elements filled randomizely from "range"
      */
     public static ArrayList fillArray(ArrayList list, int size, int range) {
         Random m = new Random();
@@ -72,12 +39,10 @@ public class ArrayRandomizer {
     }
 
     /**
-     * Fill in given LinkedList randomly from "range"
-     *
      * @param list  given LinkedList for filling
      * @param size  size of LinkedList or number of elements to fill by random numbers
      * @param range range of taking random numbers
-     * @return LinkedList with "size" elements filled randomly from "range"
+     * @return LinkedList with "size" elements filled randomizely from "range"
      */
     public static LinkedList fillLinkArray(LinkedList list, int size, int range) {
         Random m = new Random();
@@ -88,14 +53,27 @@ public class ArrayRandomizer {
     }
 
     /**
-     * OutPuts each element of List in one line with spaces and takes new line when ends
+     * OutPuts each element of Arraylist in one line with spaces and takes new line when ends
      *
-     * @param list given List for output to console     *
+     * @param list given ArrayList for output to console     *
      */
-    public static void OutputArray(List<Integer> list) {
+    public static void OutputArray(ArrayList<Integer> list) {
         for (int x : list)
             System.out.print(x + " ");
         System.out.print("\n");
+
+    }
+
+    /**
+     * OutPuts each element of Linkedlist in one line with spaces and takes new line when ends
+     *
+     * @param list given LinkedList for output to console     *
+     */
+    public static void OutputArray(LinkedList<Integer> list) {
+        for (int x : list)
+            System.out.print(x + " ");
+        System.out.print("\n");
+
     }
 
 
