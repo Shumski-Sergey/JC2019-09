@@ -2,7 +2,7 @@ package aflyer.les6.ATM;
 
 import java.util.Scanner;
 
-public class ATM {
+public class ATMBank {
     private int twnty;
     private int ffty;
     private int hndrt;
@@ -11,13 +11,13 @@ public class ATM {
     public static final int TWENTY = 20;
     public static final int CASHLIMIT = 1250;
 
-    public ATM() {
+    public ATMBank () {
         this.twnty = 0;
         this.ffty = 0;
         this.hndrt = 0;
     }
 
-    public ATM(int tws, int ffs, int hns) {
+    public ATMBank ( int tws, int ffs, int hns) {
         this.twnty = tws;
         this.ffty = ffs;
         this.hndrt = hns;

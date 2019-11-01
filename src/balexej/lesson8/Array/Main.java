@@ -1,4 +1,4 @@
-package balexej.lesson7.Array;
+package balexej.lesson8.Array;
 
 public class Main {
     public static void main(String[] args) {

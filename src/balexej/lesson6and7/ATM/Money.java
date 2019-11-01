@@ -1,4 +1,4 @@
-package balexej.lesson6.ATM;
+package balexej.lesson6and7.ATM;
 
 public class Money {
   private int n1 = 20;
