@@ -23,7 +23,7 @@ public class Main {
         return Answer;
     }
     public static void main(String[] args)  {
-        ATM atm = new ATM();
+        ATMBank atm = new ATMBank();
         String x="";
         while (!x.equals("0")) {
             x = GetStarted();
