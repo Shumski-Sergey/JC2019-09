@@ -9,21 +9,23 @@ import java.util.Random;
 
 public class TaskA2 {
     public static void main(String[] args) {
-        ArrayList list = new ArrayList();
         Random m = new Random();
         int r = m.nextInt(Byte.MAX_VALUE);
         int size = m.nextInt(r);
         int range = m.nextInt(r);
-        list = ArrayRandomizer.fillArray(list, size, range);
+        ArrayList list = ArrayRandomizer.newArrayList(size, range);
+        System.out.println("НаRandomили вот так:");
+        ArrayRandomizer.OutputArray(list);
         list = deleteEqualNumbers(list);
+        System.out.println("Скидыщь!");
         ArrayRandomizer.OutputArray(list);
     }
 
     private static ArrayList deleteEqualNumbers(ArrayList list) {
         ArrayList uniqueList = new ArrayList();
-        for (int i = 0; i < list.size(); i++) {
-            if (!uniqueList.contains(list.get(i))) {
-                uniqueList.add(list.get(i));
+        for (Object o : list) {
+            if (!uniqueList.contains(o)) {
+                uniqueList.add(o);
             }
         }
         return uniqueList;
