@@ -13,8 +13,10 @@ public class Task1 {
 
         int minBadGrade = 4;
         int arrayListLength = 10;
+        final int MIN_GRADE = 0;
+        final int MAX_GRADE = 10;
         ArrayList<Integer> grades = new ArrayList<>();
-        grades = createRandomArrayList(arrayListLength, 0, 10);
+        grades = createRandomArrayList(arrayListLength, MIN_GRADE, MAX_GRADE);
 
         System.out.println("Initial grades are:" + grades);
 
