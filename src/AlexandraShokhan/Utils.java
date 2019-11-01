@@ -92,4 +92,35 @@ public class Utils {
         }
         return list;
     }
+
+    public static String wordToAlphabeticOrder(String word) {
+        char [] wordToSymbols = word.toCharArray();
+        Arrays.sort(wordToSymbols);
+        String wordInAlphabeticOrder = new String(wordToSymbols);
+        return wordInAlphabeticOrder;
+    }
+
+    /**
+     * @param list is a List collection of values.
+     * @param <T> String or Integer
+     */
+    public static <T> void printList (List<T> list) {
+        Iterator iterator = list.iterator();
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + " ");
+        }
+    }
+
+    /**
+     * @param set is a Set collection of Strings.
+     * @return Converts Set to ArrayList with the same Strings in it.
+     */
+    public static ArrayList<String> convertSetToArrayList (Set<String> set) {
+        List<String> arrayList = new ArrayList<>();
+        Iterator iterator = set.iterator();
+        while (iterator.hasNext()) {
+            arrayList.add((String) iterator.next());
+        }
+        return (ArrayList<String>) arrayList;
+    }
 }
