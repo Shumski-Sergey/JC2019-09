@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 import static nsivko.utils.CreateArrayListRandom.createNumberRandom;
-import static nsivko.utils.CreateArrayListRandom.createRandomList;
+import static nsivko.utils.CreateArrayListRandom.tapRandomNumberList;
 
 public class Task4 {
     private static final int NUMBER = 1000000;
@@ -19,12 +19,12 @@ public class Task4 {
         createNumberRandom(linkedList, NUMBER);
 
         timerStart1 = System.currentTimeMillis();
-        createRandomList(arrayList);
+        tapRandomNumberList(arrayList);
         timerEnd1 = System.currentTimeMillis();
         timer1 = timerEnd1 - timerStart1;
 
         timerStart2 = System.currentTimeMillis();
-        createRandomList(linkedList);
+        tapRandomNumberList(linkedList);
         timerEnd2 = System.currentTimeMillis();
         timer2 = timerEnd2 - timerStart2;
 
