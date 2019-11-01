@@ -1,4 +1,4 @@
-package stitov.Lesson2.Lesson9.TaskB1;
+package stitov.Lesson2.Lesson9_Collections.TaskB1;
 
 class PairForFreqDictionary {
     private String word;

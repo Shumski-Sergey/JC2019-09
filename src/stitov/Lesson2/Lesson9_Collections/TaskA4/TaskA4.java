@@ -1,4 +1,4 @@
-package stitov.Lesson2.Lesson9.TaskA4;
+package stitov.Lesson2.Lesson9_Collections.TaskA4;
 
 
 import stitov.Lesson2.utilsST.Generator;
@@ -10,14 +10,11 @@ import java.util.List;
 public class TaskA4 {
     private static final int MILLION = 1000000;
     private static final int TENTHOUSAND = 10000;
+    private static final int MAX_VALUE = 100;
     public static void main(String[] args){
-        Generator gen = new Generator();
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
-        arrayList = gen.generateIntegerArray(MILLION);
-        LinkedList<Integer> linkedList = new LinkedList<Integer>();
-        linkedList = gen.generateIntegerLinkedList(MILLION);
-        int[] indexarray = new int[TENTHOUSAND];
-        indexarray = gen.generateIntArray(TENTHOUSAND,MILLION);
+        ArrayList<Integer> arrayList = Generator.generateIntegerArray(MILLION, MAX_VALUE);
+        LinkedList<Integer> linkedList = Generator.generateIntegerLinkedList(MILLION, MAX_VALUE);
+        int[] indexarray = Generator.generateIntArray(TENTHOUSAND,MILLION);
         long time1 = System.currentTimeMillis();
         request(arrayList,indexarray);
         long time2 = System.currentTimeMillis();
@@ -27,7 +24,7 @@ public class TaskA4 {
         System.out.println("Time ArrayList = "+ (time2-time1));
         System.out.println("Time LinkedList = "+ (time4-time3));
     }
-    static void request (List<Integer> array, int[] indexaray){
+    private static void request(List<Integer> array, int[] indexaray){
     int value;
         for (int item : indexaray) {
             value = array.get(item);
