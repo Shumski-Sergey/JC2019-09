@@ -1,9 +1,6 @@
 package AlexandraShokhan;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Utils {
@@ -39,15 +36,32 @@ public class Utils {
         }
     }
 
+    // Метод, который возвращает слкорость выбора n элементов в случайном порядке из List<Integer>.
+    public static long calculateOperationTime(List<Integer> anyList, int numberOfTimes) {
+        long startTime = System.currentTimeMillis();
+        getRandomNTimes(anyList,numberOfTimes);
+        long finishTime = System.currentTimeMillis();
+        return finishTime - startTime;
+    }
+
     // Метод, который возврашает максимальное значеник ArrayList<Integer>.
     //TODO iterator!
     public static int getMaxIntInArrayList(ArrayList<Integer> arrayList) {
         int max = 0;
-        for (Integer integer : arrayList) {
-            if (integer > max) {
-                max = integer;
+        Iterator<Integer> iterator = arrayList.iterator();
+        while (iterator.hasNext()) {
+            int var = iterator.next();
+            while (var > max) {
+                max = var;
             }
         }
         return max;
+    }
+
+    public static List<String> stringListToLowerCase (List<String> list) {
+        for (int i = 0; i < list.size(); i++) {
+            list.set(i, list.get(i).toLowerCase());
+        }
+        return list;
     }
 }
