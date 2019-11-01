@@ -5,30 +5,25 @@ package aflyer.les9_Collections;
 import aflyer.Methods.ArrayRandomizer;
 
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.Scanner;
 
 
 public class TaskA1 {
     private static final Integer BAD_MARK = 30;
 
     public static void main(String[] args) {
-        int kolvo = 25;// private static final
-        int marksrange = 100;// private static final
-        ArrayList SchoolJournal = new ArrayList();
-        SchoolJournal = ArrayRandomizer.fillArray(SchoolJournal, kolvo, marksrange);//new ArrayList
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите количество учеников в классе:");
+        int kolvo = sc.nextInt();
+        System.out.println("Какая система оценок действует на данный момент?");
+        int marksrange = sc.nextInt();
+        ArrayList SchoolJournal = ArrayRandomizer.newArrayList(kolvo, marksrange);
+        System.out.println("Вот все оценки:");
         ArrayRandomizer.OutputArray(SchoolJournal);
         deleteUnGood(SchoolJournal);
+        System.out.println("Вот оценки для Министерства образования:");
         ArrayRandomizer.OutputArray(SchoolJournal);
 
-
-    }
-
-    private static void ouPut(ArrayList<Integer> list) {
-        for (int i = 0; i < list.size(); i++) {
-            System.out.print(list.get(i) + " ");
-
-        }
-        System.out.print("\n");
     }
 
     private static void deleteUnGood(ArrayList<Integer> list) {
@@ -37,14 +32,6 @@ public class TaskA1 {
                 list.remove(i);
             } else i++;
 
-        }
-
-    }
-
-    private static void filinIn(ArrayList<Integer> list, int kolvo) {
-        Random m = new Random();
-        for (int i = 0; i < kolvo; i++) {
-            list.add(i, m.nextInt(100));
         }
 
     }

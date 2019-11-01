@@ -7,23 +7,24 @@ import java.util.Random;
  * Created by user on 26.10.2019.
  */
 public class Generator {
-  public ArrayList<Integer> generateIntegerArray (int length){
-    ArrayList<Integer> array = new ArrayList<Integer>();
+  public static ArrayList<Integer> generateIntegerArray (int length, int maxValue){
+    ArrayList<Integer> array = new ArrayList<>();
     Random rnd = new Random();
     for (int i = 0; i<length;i++){
-      array.add(rnd.nextInt(100)+1);
+      array.add(rnd.nextInt(maxValue)+1);
     }
     return array;
   }
-  public LinkedList<Integer> generateIntegerLinkedList (int length){
-    LinkedList<Integer> array = new LinkedList<Integer>();
+
+  public static LinkedList<Integer> generateIntegerLinkedList (int length, int maxValue){
+    LinkedList<Integer> array = new LinkedList<>();
     Random rnd = new Random();
     for (int i=0;i<length;i++){
-      array.add(rnd.nextInt(100)+1);
+      array.add(rnd.nextInt(maxValue)+1);
     }
     return array;
   }
-  public int[] generateIntArray(int length, int maxValue){
+  public static int[] generateIntArray(int length, int maxValue){
     int[] array = new int[length];
     Random rnd = new Random();
     for (int i = 0; i< length;i++){
