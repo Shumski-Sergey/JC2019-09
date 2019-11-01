@@ -26,10 +26,10 @@ public class CreateArrayListRandom {
         return arrayNumber;
     }
 
-    public static void createRandomList(List<Integer> linkedList) {
+    public static void tapRandomNumberList(List<Integer> numberList) {
         for (int i = 0; i < SEARCH_NUMBER; i++) {
             int random = (int) (Math.random() * NUMBER_TAP);
-            linkedList.get(random);
+            numberList.get(random);
         }
     }
 

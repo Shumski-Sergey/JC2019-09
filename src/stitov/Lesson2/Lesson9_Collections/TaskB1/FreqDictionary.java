@@ -1,4 +1,4 @@
-package stitov.Lesson2.Lesson9.TaskB1;
+package stitov.Lesson2.Lesson9_Collections.TaskB1;
 
 import java.util.ArrayList;
 import java.util.Collections;
