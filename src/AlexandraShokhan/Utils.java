@@ -92,4 +92,20 @@ public class Utils {
         }
         return list;
     }
+
+    public static <T> void printList (List<T> list) {
+        Iterator iterator = list.iterator();
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + " ");
+        }
+    }
+
+    public static ArrayList<String> convertSetToArrayList (Set<String> set) {
+        List<String> arrayList = new ArrayList<>();
+        Iterator iterator = set.iterator();
+        while (iterator.hasNext()) {
+            arrayList.add((String) iterator.next());
+        }
+        return (ArrayList<String>) arrayList;
+    }
 }
