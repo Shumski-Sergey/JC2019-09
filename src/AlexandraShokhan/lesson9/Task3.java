@@ -28,17 +28,13 @@ public class Task3 {
 
         Map<String, String> anagram = new HashMap<>();
         for (int i = 0; i < wordsList.size(); i++) {
-            String var = wordsList.get(i);
-            char [] wordToSymbols = wordsList.get(i).toCharArray();
-            Arrays.sort(wordToSymbols);
-            String pattern = new String(wordToSymbols);
-
+            String thisWord = wordsList.get(i);
+            String pattern = wordToAlphabeticOrder(thisWord);
             String value = anagram.get(pattern);
-
             if (value == null) {
-                anagram.put(pattern, var);
+                anagram.put(pattern, thisWord);
             } else {
-                anagram.put(pattern, value + " " + var);
+                anagram.put(pattern, value + " " + thisWord);
             }
         }
         for(String str : anagram.values()) {
