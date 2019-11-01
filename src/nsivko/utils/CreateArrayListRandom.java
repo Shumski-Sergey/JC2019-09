@@ -64,6 +64,13 @@ public class CreateArrayListRandom {
         return size.nextInt();
     }
 
+    public static String[] createWordsFromText() {
+        Scanner size = new Scanner(System.in);
+        String text = size.nextLine();
+        text = text.toLowerCase();
+        return text.split(" +");
+    }
+
     public static Integer maxElements(ArrayList<Integer> assessmentArray) {
         Iterator<Integer> iterator = assessmentArray.iterator();
         Integer max = 0;
@@ -74,5 +81,27 @@ public class CreateArrayListRandom {
             }
         }
         return max;
+    }
+
+    public static void printHashMapValues(Map<String, String> listWords) {
+        for (String k : listWords.values()) {
+            System.out.print("\n" + k);
+        }
+    }
+
+    public static Map<String, String> getListWords(String[] words) {
+        Map<String, String> listWords = new HashMap<>();
+        for (String word : words) {
+            char[] symbolsWord = word.toCharArray();
+            Arrays.sort(symbolsWord);
+            String wordNew = new String(symbolsWord);
+            String value = listWords.get(wordNew);
+            if (value == null) {
+                listWords.put(wordNew, word);
+            } else {
+                listWords.put(wordNew, value + " " + word);
+            }
+        }
+        return listWords;
     }
 }
