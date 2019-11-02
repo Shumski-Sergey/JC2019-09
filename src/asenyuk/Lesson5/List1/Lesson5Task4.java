@@ -2,7 +2,7 @@ package asenyuk.Lesson5.List1;
 
 
 
-public class Lesson5Task4 {
+public class  Lesson5Task4 {
     public static void main(String[] args) {
 
         String str = "abcd aabc abbb ddff ddddd dd";
