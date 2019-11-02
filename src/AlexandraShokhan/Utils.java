@@ -93,6 +93,10 @@ public class Utils {
         return list;
     }
 
+    /**
+     * @param word is a String value.
+     * @return String which contains the letters of the word in alphabetic order.
+     */
     public static String wordToAlphabeticOrder(String word) {
         char [] wordToSymbols = word.toCharArray();
         Arrays.sort(wordToSymbols);
