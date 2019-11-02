@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-public class Test5 {
+public class Text4 {
     public static void main(String[] args) {
         List<Integer> array = new ArrayList<>();
         List<Integer> link = new LinkedList<>();
@@ -14,7 +14,6 @@ public class Test5 {
 
         equalsGetLists(list1, linkliste1, array, link);
         equalsAddLists(list2, linklist2, array, link);
-
     }
 
     private static void equalsAddLists(Add a, Add b, List<Integer> array, List<Integer> link) {
