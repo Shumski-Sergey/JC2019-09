@@ -1,10 +1,12 @@
-package tereshko.NewCollection;
+package tereshko.Collection;
+
+;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import static tereshko.NewCollection.Numbs.setMark;
+import static tereshko.Collection.Numbs.setMark;
 
 public class Test3 {
     public static void main(String[] args) {

@@ -1,9 +1,9 @@
-package tereshko.NewCollection;
+package tereshko.Collection;
 
 import java.util.List;
 
-import static tereshko.NewCollection.Numbs.TENTHOUSAND;
-import static tereshko.NewCollection.MyRandom.randomTenThousand;
+import static tereshko.Collection.Numbs.TENTHOUSAND;
+import static tereshko.Collection.MyRandom.randomTenThousand;
 
 
 public class Get extends Times implements Measure {

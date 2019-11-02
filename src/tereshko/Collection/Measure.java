@@ -1,4 +1,4 @@
-package tereshko.NewCollection;
+package tereshko.Collection;
 
 import java.util.List;
 

@@ -1,11 +1,11 @@
-package tereshko.NewCollection;
+package tereshko.Collection;
 
 
 import java.util.List;
 
-import static tereshko.NewCollection.Numbs.ONEMILLION;
+import static tereshko.Collection.Numbs.ONEMILLION;
 
-public  class Times {
+  class Times {
     private long start;
     private long end;
     void addList(List<Integer> list){
@@ -18,7 +18,7 @@ public  class Times {
         this.start = System.currentTimeMillis();
     }
 
-    public long getStart() {
+     long getStart() {
         return this.start;
     }
 

@@ -1,6 +1,6 @@
-package tereshko.NewCollection;
+package tereshko.Collection;
 
-import static tereshko.NewCollection.Scan.setScanner;
+import static tereshko.Collection.Scan.setScanner;
 
 abstract class School {
     private static int students;

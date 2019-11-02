@@ -1,11 +1,11 @@
-package tereshko.NewCollection;
+package tereshko.Collection;
 
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static tereshko.NewCollection.MyRandom.randomMark;
+import static tereshko.Collection.MyRandom.randomMark;
 
 class Numbs extends School {
     final static int BADMARK = 4;

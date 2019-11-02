@@ -1,8 +1,8 @@
-package tereshko.NewCollection;
+package tereshko.Collection;
 
 import java.util.*;
 
-import static tereshko.NewCollection.Numbs.setMark;
+import static tereshko.Collection.Numbs.setMark;
 
 public class Test2 {
     public static void main(String[] args) {

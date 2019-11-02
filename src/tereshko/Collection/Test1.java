@@ -1,12 +1,10 @@
-package tereshko.NewCollection;
-//Создать список оценок учеников с помощью ArrayList, заполнить
-// случайными оценками. Удалить неудовлетворительные оценки из списка.
+package tereshko.Collection;// случайными оценками. Удалить неудовлетворительные оценки из списка.
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static tereshko.NewCollection.Numbs.BADMARK;
-import static tereshko.NewCollection.Numbs.setMark;
+import static tereshko.Collection.Numbs.BADMARK;
+import static tereshko.Collection.Numbs.setMark;
 
 public class Test1 {
     public static void main(String[] args) {
