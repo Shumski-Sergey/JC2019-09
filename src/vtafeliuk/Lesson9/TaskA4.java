@@ -15,6 +15,7 @@ public class TaskA4 {
 
         List<Integer> linkedMarks = fillCollection(new LinkedList<>());
 
+        //считаем время arrayList
         long linkedListStartTime = System.currentTimeMillis();
 
         getElementsFromList(linkedMarks);
