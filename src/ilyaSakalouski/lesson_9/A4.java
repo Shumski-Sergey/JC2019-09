@@ -6,11 +6,11 @@ import static ilyaSakalouski.Different_Utility.UtilityForCollections.*;
 
 public class A4
 {
-    public static void main(String[] args) 
+    private static final int MILLION = 1000000;
+    private static final int TEN_THOUSAND = 10000;
+     
+    public static void main(String[] args)
     {
-        final int MILLION = 1000000;     // НЕ ПОМНЮ КАК СДЕЛАТЬ final ПЕРЕМЕННЫЕ КУРСИВОМ(ФИОЛ.ЦВЕТА)
-        final int TEN_THOUSAND = 10000;
-
         ArrayList<Integer> arrayList;
         arrayList = GetRandArr(MILLION,TEN_THOUSAND);
 
