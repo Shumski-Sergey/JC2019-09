@@ -6,9 +6,12 @@ import static tereshko.NewCollection.Marks.TENTHOUSAND;
 import static tereshko.NewCollection.MyRandom.randomTenThousand;
 
 
-public class Get extends Time implements Measure {
-
+public class Getss extends Times implements Measure {
+    /** Метод измеряет время, при котором выбирает элемент из списка
+     * @author Rtreresh;
+     */
     @Override
+
     public void measureTime(List<Integer> list) {
         addList(list);
         setStart();
