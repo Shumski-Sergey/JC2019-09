@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import static tereshko.NewCollection.Marks.setMark;
+import static tereshko.NewCollection.Numbs.setMark;
 
 public class Test3 {
     public static void main(String[] args) {

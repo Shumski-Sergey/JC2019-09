@@ -2,8 +2,8 @@ package tereshko.NewCollection;
 
 import java.util.Random;
 
-import static tereshko.NewCollection.Marks.GRADE;
-import static tereshko.NewCollection.Marks.TENTHOUSAND;
+import static tereshko.NewCollection.Numbs.GRADE;
+import static tereshko.NewCollection.Numbs.TENTHOUSAND;
 
 public class MyRandom {
     private static Random random = new Random();

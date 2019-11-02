@@ -2,11 +2,11 @@ package tereshko.NewCollection;
 
 import java.util.List;
 
-import static tereshko.NewCollection.Marks.TENTHOUSAND;
+import static tereshko.NewCollection.Numbs.TENTHOUSAND;
 import static tereshko.NewCollection.MyRandom.randomTenThousand;
 
 
-public class Getss extends Times implements Measure {
+public class Get extends Times implements Measure {
     /** Метод измеряет время, при котором выбирает элемент из списка
      * @author Rtreresh;
      */

@@ -3,7 +3,7 @@ package tereshko.NewCollection;
 
 import java.util.List;
 
-import static tereshko.NewCollection.Marks.ONEMILLION;
+import static tereshko.NewCollection.Numbs.ONEMILLION;
 
 public  class Times {
     private long start;

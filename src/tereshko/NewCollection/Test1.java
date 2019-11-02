@@ -5,8 +5,8 @@ package tereshko.NewCollection;
 import java.util.ArrayList;
 import java.util.List;
 
-import static tereshko.NewCollection.Marks.BADMARK;
-import static tereshko.NewCollection.Marks.setMark;
+import static tereshko.NewCollection.Numbs.BADMARK;
+import static tereshko.NewCollection.Numbs.setMark;
 
 public class Test1 {
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package tereshko.NewCollection;
 
 import java.util.List;
 
-public class Addss extends Times implements Measure {
+public class Add extends Times implements Measure {
 
     @Override
     public void measureTime(List<Integer> list) {

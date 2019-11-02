@@ -2,7 +2,7 @@ package tereshko.NewCollection;
 
 import java.util.*;
 
-import static tereshko.NewCollection.Marks.setMark;
+import static tereshko.NewCollection.Numbs.setMark;
 
 public class Test2 {
     public static void main(String[] args) {
