@@ -15,6 +15,7 @@ public class TaskA4 {
 
         List<Integer> linkedMarks = fillCollection(new LinkedList<>());
 
+        //считаем время arrayList
         long linkedListStartTime = System.currentTimeMillis();
 
         getElementsFromList(linkedMarks);
@@ -46,4 +47,4 @@ public class TaskA4 {
         }
     }
 }
-//Структурно рабоатет в несколько раз быстрей ????!!!!
+//Структурно работает в несколько раз быстрей?
