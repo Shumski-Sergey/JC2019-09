@@ -5,7 +5,7 @@ import java.util.List;
 
 import static tereshko.NewCollection.Marks.ONEMILLION;
 
-public  class Time  {
+public  class Times {
     private long start;
     private long end;
     void addList(List<Integer> list){
