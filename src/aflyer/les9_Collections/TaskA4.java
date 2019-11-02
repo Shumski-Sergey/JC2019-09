@@ -14,7 +14,7 @@ public class TaskA4 {
     private static final int SIZE_BIG = 1000000;
     private static final int SIZE_SMALL = 10000;
 
-    public static void main(String[] args) {
+    public static void main ( String[] args ) {
         Random r = new Random();
         int range = Math.abs(r.nextInt());
         long timearbegin, timearend, timelkbegin, timelkend;
@@ -31,7 +31,7 @@ public class TaskA4 {
     }
 
 
-    private static ArrayList pickElements(ArrayList arlist, int range) {
+    private static ArrayList pickElements ( ArrayList arlist, int range ) {
         ArrayList newArList = new ArrayList();
         Random r = new Random();
         for (int i = 0; i < SIZE_SMALL; i++) {
@@ -41,7 +41,7 @@ public class TaskA4 {
         return newArList;
     }
 
-    private static LinkedList pickElements(LinkedList lklist, int range) {
+    private static LinkedList pickElements ( LinkedList lklist, int range ) {
         LinkedList newLkList = new LinkedList();
         Random r = new Random();
         for (int i = 0; i < SIZE_SMALL; i++) {

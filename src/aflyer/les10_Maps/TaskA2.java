@@ -18,7 +18,7 @@ public class TaskA2 {
         ArrayList SomeList = ArrayRandomizer.newArrayList(size, range);
         HashMap <Object, Integer> mapa = new HashMap <>();
         ArrayRandomizer.OutputArray(SomeList);
-        for (int i=0; i<SomeList.size(); i++) {
+        for (int i = 0; i < SomeList.size(); i++) {
             int count = 1;
             if (!mapa.containsKey(SomeList.get(i))) {
                 mapa.put(SomeList.get(i), count);
