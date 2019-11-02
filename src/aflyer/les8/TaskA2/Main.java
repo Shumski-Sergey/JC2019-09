@@ -13,7 +13,6 @@ public class Main {
     public static void main(String[] args) {
         Catalog<ArrayList> Box = new Catalog<>();
         ArrayList massiv = new ArrayList();
-//        ArrayList newMass = new ArrayList();
         Scanner sc = new Scanner(System.in);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите количество элементов массива:");
@@ -30,7 +29,6 @@ public class Main {
         System.out.println("Введите количество элементов для вывода:");
         int j = sc.nextInt();
         showFirstElements(Box.getItem(), j - 1);
-
 
     }
 

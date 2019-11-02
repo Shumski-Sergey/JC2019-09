@@ -23,14 +23,21 @@ public class Main {
         return Answer;
     }
     public static void main(String[] args)  {
-        ATM atm = new ATM();
+        ATMBank atm = new ATMBank();
         String x="";
-        while (!x.equals("0")){
-            x=GetStarted();
-        switch (x){
-            case "1": {atm.AddinMoney(); break;}
-            case "2": {atm.GivinMoney(); break;}
-            }}
+        while (!x.equals("0")) {
+            x = GetStarted();
+            switch (x) {
+                case "1": {
+                    atm.AddinMoney();
+                    break;
+                }
+                case "2": {
+                    atm.GivinMoney();
+                    break;
+                }
+            }
+        }
         System.out.println("Спасибо!");
 
 
