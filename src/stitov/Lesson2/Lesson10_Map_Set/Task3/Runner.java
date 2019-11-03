@@ -1,7 +1,7 @@
 package stitov.Lesson2.Lesson10_Map_Set.Task3;
 
 import java.util.*;
-import stitov.Lesson2.utilsST.PrintArray;
+import stitov.Lesson2.utilsST.Printer;
 
 public class Runner {
     public static void main (String[] args){
@@ -11,7 +11,7 @@ public class Runner {
         line = line.toLowerCase();
         ArrayList<String> arrayFromLine = Words.getStringArray(line);
         ArrayList<ArrayList<String>> finalArray = Words.getGroups(arrayFromLine);
-        PrintArray.printArrayOfArray(finalArray);
+        Printer.printArrayOfArray(finalArray);
     }
 
 

@@ -7,11 +7,13 @@ import java.util.Collections;
 
 public class Task1 {
     public static void main(String[] args){
+
         ArrayList<Integer> grade = new ArrayList<Integer>();
         for (int i = 0; i<10; i++){
             int a = (int)(Math.random()*10);
             grade.add(a);
         }
+
         Collections.shuffle(grade);
         System.out.println(grade);
 

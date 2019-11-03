@@ -8,7 +8,7 @@ public class Task3 {
     final  int minSatisfiedGrade=4;
     int Grade;
     int genericGrades () {
-        return Grade=(int)( Math.random() *10) ;
+        return Grade=(int)( Math.random() *sizeClass) ;
     }
 
     ArrayList<Integer> doContralTest2() {
