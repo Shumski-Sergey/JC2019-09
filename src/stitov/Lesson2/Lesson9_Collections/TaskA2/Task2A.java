@@ -1,6 +1,6 @@
 package stitov.Lesson2.Lesson9_Collections.TaskA2;
 import stitov.Lesson2.utilsST.Generator;
-import stitov.Lesson2.utilsST.PrintArray;
+import stitov.Lesson2.utilsST.Printer;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -15,13 +15,13 @@ public class Task2A {
         ArrayList<Integer> rndArray = Generator.generateIntegerArray(rnd.nextInt(RNDLENGTH)+1,MAX_RANDOM);
         Collections.sort(rndArray);
         System.out.println("Первоначальный массив: ");
-        PrintArray.printArray(rndArray);
+        Printer.printArray(rndArray);
         HashSet<Integer> hashSet = new HashSet<>(rndArray);
         rndArray.clear();
         rndArray.addAll(hashSet);
         System.out.println();
         System.out.println("Уникальный массив: ");
-        PrintArray.printArray(rndArray);
+        Printer.printArray(rndArray);
     }
 
 }

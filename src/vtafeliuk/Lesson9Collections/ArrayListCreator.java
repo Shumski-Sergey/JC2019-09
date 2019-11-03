@@ -1,16 +1,16 @@
-package vtafeliuk.Lesson9;
+package vtafeliuk.Lesson9Collections;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class ArrayListCreator {
-    public static List<Integer> getRandomList(Integer valuesLimit) {
+class ArrayListCreator {
+    static List<Integer> getRandomList(Integer valuesLimit) {
         List<Integer> marks = new ArrayList<>();
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите лимит: ");
+        System.out.println("Введите количество значений: ");
         int arraySize = sc.nextInt();
         Random rd = new Random();
 

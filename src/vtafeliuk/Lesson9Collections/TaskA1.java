@@ -1,11 +1,8 @@
-package vtafeliuk.Lesson9;
+package vtafeliuk.Lesson9Collections;
 //1. Создать список оценок учеников с помощью ArrayList, заполнить
 //        случайными оценками. Удалить неудовлетворительные оценки из списка.
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
 
 public class TaskA1 {
 
