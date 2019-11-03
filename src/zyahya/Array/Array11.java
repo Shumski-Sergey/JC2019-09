@@ -1,4 +1,4 @@
-package zyahya;
+package zyahya.Array;
 
 import java.text.NumberFormat;
 import java.util.Scanner;

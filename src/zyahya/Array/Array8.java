@@ -1,4 +1,4 @@
-package zyahya;
+package zyahya.Array;
 
 import java.util.Scanner;
 

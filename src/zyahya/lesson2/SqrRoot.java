@@ -1,4 +1,4 @@
-package zyahya;
+package zyahya.lesson2;
 
 public class SqrRoot {
     public static void main(String[] args){
