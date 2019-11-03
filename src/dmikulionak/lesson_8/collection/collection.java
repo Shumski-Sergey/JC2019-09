@@ -1,6 +1,5 @@
 package dmikulionak.lesson_8.collection;
 
-
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -36,4 +35,5 @@ public class collection {
         }
         return max;
     }
+
 }
