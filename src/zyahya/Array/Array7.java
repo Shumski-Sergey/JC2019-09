@@ -1,4 +1,4 @@
-package zyahya;
+package zyahya.Array;
 
 public class Array7 {
     public static void main(String[] args) {

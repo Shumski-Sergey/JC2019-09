@@ -1,4 +1,4 @@
-package zyahya;
+package zyahya.lesson2;
 
 import java.util.Scanner;
 
