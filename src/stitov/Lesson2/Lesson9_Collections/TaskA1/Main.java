@@ -1,6 +1,6 @@
 package stitov.Lesson2.Lesson9_Collections.TaskA1;
 import stitov.Lesson2.utilsST.Generator;
-import stitov.Lesson2.utilsST.PrintArray;
+import stitov.Lesson2.utilsST.Printer;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -14,10 +14,10 @@ public class Main {
      Random rnd = new Random();
      int length = rnd.nextInt(MAX_MARK)+1;
      ArrayList<Integer> arrayOfMarks = Generator.generateIntegerArray(length, MAX_MARK);
-     PrintArray.printArray(arrayOfMarks);
+     Printer.printArray(arrayOfMarks);
      System.out.println();
      deleteBad(arrayOfMarks);
-     PrintArray.printArray(arrayOfMarks);
+     Printer.printArray(arrayOfMarks);
  }
  private static void deleteBad(ArrayList<Integer> array){
 for (int i = 0; i<array.size();i++){

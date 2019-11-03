@@ -1,7 +1,7 @@
 package stitov.Lesson2.Lesson9_Collections.TaskA3;
 
 import stitov.Lesson2.utilsST.Generator;
-import stitov.Lesson2.utilsST.PrintArray;
+import stitov.Lesson2.utilsST.Printer;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args){
         Random rnd = new Random();
         ArrayList<Integer> arrayOfMarks = Generator.generateIntegerArray(rnd.nextInt(RND_LENGTH)+1, MAX_MARK);
-        PrintArray.printArray(arrayOfMarks);
+        Printer.printArray(arrayOfMarks);
         int maxValue = getMax(arrayOfMarks);
         System.out.println("Max value = "+maxValue);
         }
