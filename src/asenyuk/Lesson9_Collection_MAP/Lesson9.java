@@ -27,7 +27,7 @@ String [] words=line.split(" ");
       String[] ArrSymbol = word.split("");
     for (String symbol : ArrSymbol) {
           for (Map.Entry<String,Integer> map0Word: map0.entrySet() ) {
-            if (map0Word.getValue()==1) {
+            if (map0Word.getValue()==1 ) {
                 if (map0Word.getKey().indexOf(symbol)==-1) {
                     map0Word.setValue(x);
                 }
@@ -35,7 +35,7 @@ String [] words=line.split(" ");
             }
         }
     for (Map.Entry<String,Integer> map0Word: map0.entrySet() ) {
-        if (map0Word.getValue()==1) {
+        if ((map0Word.getValue()==1) && (map0Word.getKey().length()==word.length())) {
                     System.out.println("имеет следующие анаграммы " + map0Word.getKey() );
                    }
             }
