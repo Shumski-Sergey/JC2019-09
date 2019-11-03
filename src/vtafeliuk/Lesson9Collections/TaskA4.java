@@ -1,7 +1,9 @@
-package vtafeliuk.Lesson9;
+package vtafeliuk.Lesson9Collections;
 //Напишите метод, который добавляет 1000000 элементов в ArrayList и LinkedList. Напишите еще один метод, который
 // выбирает из заполненного списка элемент наугад 10000 раз. Замерьте время, которое потрачено на это.
 // Сравните результаты и предположите, почему они именно такие.
+
+//Херня какая-то. Результата ждать почти три минуты на моём ПК. Структурно та же задача показывает решение за 20 сек.
 
 import java.util.*;
 
@@ -12,31 +14,25 @@ public class TaskA4 {
 
     public static void main(String[] args) {
         List<Integer> marks = fillCollection(new ArrayList<>());
-
         List<Integer> linkedMarks = fillCollection(new LinkedList<>());
 
-        //считаем время arrayList
-        long linkedListStartTime = System.currentTimeMillis();
-
-        getElementsFromList(linkedMarks);
-
-        long linkedListFinishTime = System.currentTimeMillis();
-        long linkedListResultTime = linkedListFinishTime - linkedListStartTime;
-
-
-        long arrayListStartTime = System.currentTimeMillis();
-
-        getElementsFromList(marks);
-        long arrayListFinishTime = System.currentTimeMillis();
-        long arrayListResultTime = arrayListFinishTime - arrayListStartTime;
+        long arrayListResultTime = getListResultTime(marks);
+        long linkedListResultTime = getListResultTime(linkedMarks);
 
         System.out.println("Время ArrayList: " + arrayListResultTime + " ms");
         System.out.println("Время LinkedList: " + linkedListResultTime + " ms");
     }
 
+    private static long getListResultTime(List<Integer> list) {
+        long ListStartTime = System.currentTimeMillis();
+        getElementsFromList(list);
+        long ListFinishTime = System.currentTimeMillis();
+        return ListFinishTime - ListStartTime;
+    }
+
     private static List<Integer> fillCollection(List<Integer> list) {
         for (int i = 0; i < arraySize; i++) {
-            list.add(random.nextInt(Integer.MAX_VALUE));
+            list.add(random.nextInt());
         }
         return list;
     }
@@ -47,4 +43,3 @@ public class TaskA4 {
         }
     }
 }
-//Структурно работает в несколько раз быстрей?
