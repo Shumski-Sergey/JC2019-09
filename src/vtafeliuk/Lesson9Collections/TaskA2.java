@@ -19,6 +19,6 @@ public class TaskA2 {
                 listWithUniqueNumbers.add(integer);
             }
         }
-        System.out.println("Результат через добавление только уникальных элементов в новый лист" + listWithUniqueNumbers);
+        System.out.println("Результат через добавление только уникальных элементов в новый лист: " + listWithUniqueNumbers);
     }
 }
