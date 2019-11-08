@@ -17,6 +17,6 @@ public class Task1 {
         }
     }
     public static void main(String[] args) throws FileNotFoundException {
-        readFile("jhbjhb");
+        System.out.println(readFile("jhbjhb"));
     }
 }
