@@ -16,7 +16,7 @@ public class Printer {
    */
   public static <T> void printArray (ArrayList<T> arrayList){
     for (T item : arrayList) {
-      System.out.print(item + "  ");
+      System.out.println(item );
     }
     System.out.println();
   }
