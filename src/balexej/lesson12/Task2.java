@@ -5,16 +5,18 @@ package balexej.lesson12;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
+
 
 public class Task2 {
-    public static void main(System[] args){
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите текст");
         String text = sc.nextLine();
-     Stream<String> textSplit = Arrays.stream(text.split(" + "));
-     System.out.println(textSplit);
-
+        String splitText = Arrays.stream(text.split(" +"))
+                  .filter(x -> x.length() > 6)
+                 .collect(Collectors.joining(", "));
+         System.out.println(splitText);
 
     }
 }
