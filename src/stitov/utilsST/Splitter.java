@@ -22,6 +22,23 @@ public class Splitter {
      */
     public static ArrayList<String> splitNumbers(String str){
         Pattern pattern = Pattern.compile("\\D");
-        return new ArrayList<String>(Arrays.asList(pattern.split(str)));
+        return new ArrayList<>(Arrays.asList(pattern.split(str)));
+    }
+
+    /**
+     * Split string to Array with day, month and year
+     * @param date Date in String format
+     * @return 3 elements: days, months, years
+     */
+    public static String[] getDate(String date){
+        Pattern pattern = Pattern.compile("[-_.,/ ]");
+        return pattern.split(date);
+    }
+
+    public static ArrayList<String> splitRequest (String str){
+        Pattern pattern = Pattern.compile("[ \",{}]+");
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(pattern.split(str)));
+        arrayList.remove(0);
+       return arrayList;
     }
 }
