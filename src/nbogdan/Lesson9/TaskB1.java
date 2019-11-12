@@ -15,15 +15,6 @@ public class TaskB1 {
         int count;
         String text = Files.readString(Paths.get("src\\\\nbogdan\\\\Lesson9\\\\B1.txt"));
         HashSet<String> uniqueWords = new HashSet<>(Arrays.asList(p.split(text)));
-  /*      uniqueWords.forEach(word -> {
-            count = 0;
-            p = Pattern.compile(word);
-            m = p.matcher(text);
-            while (m.find()) {
-                count++;
-            }
-            System.out.print("Слово " + word + " повторяется в тексте " + count + " раз(а).\n");});
-*/
         for (String word : uniqueWords) {
             count = 0;
             p = Pattern.compile(word);
