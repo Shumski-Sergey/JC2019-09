@@ -9,11 +9,14 @@ public class Task3 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите данные:");
         String str = sc.nextLine();
-        String ans = Arrays.stream(str.split(" +"))
-                .filter(s -> s.matches("\\d+"))
-                .map(Integer::parseInt)
-                .map(String::valueOf)
-                .collect(Collectors.joining(" "));
-        System.out.println(ans);
+        System.out.println(getString(str));
+    }
+
+    private static String getString(String str) {
+        return Arrays.stream(str.split(" +"))
+                    .filter(s -> s.matches("\\d+"))
+                    .map(Integer::parseInt)
+                    .map(String::valueOf)
+                    .collect(Collectors.joining(" "));
     }
 }
