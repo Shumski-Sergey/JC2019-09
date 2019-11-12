@@ -21,15 +21,15 @@ public class Task3 {
         String text = sc.nextLine();
        String[] array = text.split("\\^");
        Stream<String> stream = Arrays.stream(array);
-        String output = stream.filter(value -> {
-            Pattern pattern = Pattern.compile("\\d");
-            Matcher matcher = pattern.matcher(value);
-            if (matcher.matches()) {
+        String out = stream.filter(value -> {
+            Pattern pat = Pattern.compile("\\d");
+            Matcher mat = pat.matcher(value);
+            if (mat.matches()) {
                 return true;
             } else
                 return false;
         }).collect(Collectors.joining(" "));
-        System.out.println(output);
+        System.out.println(out);
     }
     }
 
