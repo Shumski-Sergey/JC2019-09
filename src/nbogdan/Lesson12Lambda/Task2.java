@@ -20,12 +20,7 @@ public class Task2 {
             System.out.println("Введите " + (i + 1) + " слово:");
             list.add(sc.next());
         }
-        list = (ArrayList<String>)list.stream()
-                .filter(s -> s.length() <= 6)
-                .collect(Collectors.toList());
-        for (String s: list) {
-            System.out.print(s + ", ");
-        }
+        list.stream().filter(s -> s.length() <= 6).forEach((String s) -> System.out.print(s + ", "));
         System.out.print("\b\b.");
     }
 }

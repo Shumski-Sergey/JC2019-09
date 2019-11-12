@@ -16,6 +16,7 @@ public class Task3 {
             text.add(textadd);
         }
         Pattern p = Pattern.compile("^\\d+$");
-        text.stream().filter(p.asPredicate()).forEach(System.out::println);
+        text.stream().filter(p.asPredicate()).forEach((String s) -> System.out.print(s + ", "));
+        System.out.print("\b\b.");
     }
 }
