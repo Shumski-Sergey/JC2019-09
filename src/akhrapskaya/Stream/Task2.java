@@ -10,10 +10,13 @@ public class Task2 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите слова:");
         String str = sc.nextLine();
-        String ans = Arrays.stream(str.split(" +"))
-                .filter(x -> x.length() > 6)
-                .collect(Collectors.joining(", "));
-        System.out.println(ans);
+        System.out.println(getString(str));
 
+    }
+
+    private static String getString(String str) {
+        return Arrays.stream(str.split(" +"))
+                    .filter(x -> x.length() > 6)
+                    .collect(Collectors.joining(", "));
     }
 }
