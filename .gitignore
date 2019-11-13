@@ -9,4 +9,6 @@
 /dist
 /tmp
 /out
-/Users/domo/IdeaProjects/2/src/tereshko/File/Ignore.java
+/Ignore.java
+!/src/tereshko/File/GJjhkjh.java
+src/tereshko/Exceptions/
