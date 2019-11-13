@@ -8,9 +8,14 @@ import static AlexandraShokhan.Utils.*;
 
 
 public class B1 {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         String path = "src/AlexandraShokhan/lesson8Collections/TaskB1/input.txt";
-        String content = new Scanner(new File(path)).useDelimiter("\\Z").next();
+        String content = null;
+        try {
+            content = new Scanner(new File(path)).useDelimiter("\\Z").next();
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found.");
+        }
         List<String> wordsList = new ArrayList<>(Arrays.asList(content.split("(\\s|\\.|\\,)+")));
 
         stringListToLowerCase(wordsList);

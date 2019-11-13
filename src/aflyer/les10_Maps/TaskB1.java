@@ -4,6 +4,8 @@ package aflyer.les10_Maps;
 // в котором они встречаются в строке. При этом допускается выводить одинаковые слова в одной строке анаграмм.
 //Слова состоящие из разного количества одинаковых букв анаграммами не являются.
 
+import aflyer.Methods.SetMethod;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -15,22 +17,22 @@ public class TaskB1 {
         Scanner sc = new Scanner(System.in);
         String InputString = sc.nextLine();
         Pattern pattern = Pattern.compile("\\s");
-        String [] WordsArray = pattern.split(InputString);
+        String[] WordsArray = pattern.split(InputString);
         HashMap <String, String> mapa = new HashMap <>();
-        for (String x:WordsArray) {
-            char [] letters = x.toCharArray();
+        for (String x : WordsArray) {
+            char[] letters = x.toCharArray();
             Arrays.sort(letters);
-            if (mapa.containsKey(Arrays.toString(letters))){
-                mapa.put(Arrays.toString(letters), mapa.get(Arrays.toString(letters))+" "+ x);
-                }
-            else{
+            if (mapa.containsKey(Arrays.toString(letters))) {
+                mapa.put(Arrays.toString(letters), mapa.get(Arrays.toString(letters)) + " " + x);
+            } else {
                 mapa.put(Arrays.toString(letters), x);
             }
 
 
         }
-        for (HashMap.Entry<String, String> item : mapa.entrySet()) {
-            System.out.println(item.getValue());}
+        SetMethod.HashMapStrStrOutput(mapa);
+
+
 
     }
 }

@@ -13,29 +13,18 @@ public class Task3Main {
 
     public static void main(String[] args) {
          Integer max=0;
-
         Task3 controlTest2 = new Task3();
         ArrayList<Integer> currentGrades2 = new ArrayList<>();
-
         currentGrades2 = controlTest2.doContralTest2();
-
         ListIterator<Integer> listIter = currentGrades2.listIterator();
-
-
-
-
-
         while (listIter.hasNext() ) {
             System.out.println("---- " );
             Integer n= listIter.next();
             System.out.println("n =" +n );
 if (n >max) max=n;
 else max=max;
-
-
         }
 System.out.println("MAX = " +max);
-
 
     }
 }

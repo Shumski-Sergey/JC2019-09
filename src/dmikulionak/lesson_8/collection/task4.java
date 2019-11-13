@@ -11,7 +11,7 @@ public class task4 {
         collection list = new collection();
 
         LinkedList<Integer> listLink = new LinkedList<>();
-        ArrayList<Integer> listArr = new ArrayList<Integer>();
+        ArrayList<Integer> listArr = new ArrayList<>();
         list.randomList(listArr, 100000, 1000000);
         list.randomList(listLink, 100000, 1000000);
 

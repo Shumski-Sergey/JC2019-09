@@ -13,7 +13,7 @@ public class Task4Main {
 
         ArrayList<Integer> arraylist4;
         arraylist4 = Test4A.ganericNumbers4();
-        Test4A.getNumbers4(arraylist4);
+        Test4A.getNumbers4A(arraylist4);
         long endTime1 = System.currentTimeMillis();
         System.out.println(" TIME_ArrayList =" + (endTime1 - startTime1));
         long startTime2 = System.currentTimeMillis();

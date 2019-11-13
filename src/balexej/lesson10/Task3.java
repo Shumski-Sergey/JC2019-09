@@ -9,5 +9,33 @@ package balexej.lesson10;
 //Слова с разным регистром букв  не будут являться анаграммами. Решается данная проблема с помощью комманды которая переводит всю строку к строчному виду.
 //    text = text.toLowerCase;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 public class Task3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         System.out.println("Введите текст: ");
+          String   text = sc.nextLine();
+           String[] words = text.split(" ");
+
+        Map<String, String> map = new HashMap<String,String>();
+        for(int i = 0; i <= words.length - 1; i++){
+            String tmpWord = words[i];
+            char [] sym = words[i].toCharArray();
+
+            Arrays.sort(sym);
+
+            String wordKey = new String(sym);
+
+            map.merge(wordKey, tmpWord, (a, b) -> a + " " + b);
+        }
+        System.out.println();
+        for(String k2 : map.values()){
+            System.out.println(k2);
+        }
+    }
+
 }

@@ -48,10 +48,9 @@ public class task3 {
 
         ArrayList<Integer> temp = new ArrayList<>();
         for (ArrayList<Integer> integers : wordsMap.values()) {
-            ArrayList<Integer> tempp = new ArrayList<>();
-            tempp = integers;
-            for (int i = 0; i < tempp.size(); i++) {
-                int a = tempp.get(i);
+            ArrayList<Integer> indexMap = new ArrayList<>();
+            indexMap = integers;
+            for (int a : indexMap) {
                 System.out.print(words[a] + " ");
             }
             System.out.println(" ");
