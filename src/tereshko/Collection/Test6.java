@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Test6 {
     public static void main(String[] args) throws IOException {
-        FileReader reader = new FileReader("Text6.txt");
+        FileReader reader = new FileReader("src/tereshko/Collection/Text6.txt");
         Scanner scanner=new Scanner(reader);;
         String text = scanner.nextLine();
         Map<String, Integer> wordsMap = new HashMap<>();

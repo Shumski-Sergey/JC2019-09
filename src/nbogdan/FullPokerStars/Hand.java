@@ -21,9 +21,4 @@ class Hand {
         }
     }
     static void setPlayerCombination(String s, int index) {players[index].setCombination(s);}
-    /*public static void getNamePlayers() {
-        for (int i = 0; i < numPlayers; i++) {
-            System.out.println((i + 1) + " игрок: " + players[i].getName());
-        }
-    }*/
 }
