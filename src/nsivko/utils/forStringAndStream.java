@@ -21,9 +21,7 @@ public class forStringAndStream {
 
     public static void printMax(String name) throws IOException {
         HashMap<Byte, Integer> map = createMap(name);
-        System.out.println(map);
         int max = searchMax(map);
-        System.out.println(max);
         int i = 0;
         for (Integer value : map.values()) {
             if (value == max) {
