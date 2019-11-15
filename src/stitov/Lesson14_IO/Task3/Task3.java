@@ -1,7 +1,4 @@
 package stitov.Lesson14_IO.Task3;
-
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -11,13 +8,13 @@ import java.util.Scanner;
  */
 public class Task3 {
   private static final String ESC = "#ESC";
-  public static void main (String[] args) throws IOException{
+  public static void main (String[] args) {
     try{
       FileWriter writer = new FileWriter("src\\stitov\\Lesson14_IO\\Task3\\output.txt");
       readAndWrite(writer);
       writer.close();
     } catch (Exception e){
-      System.out.println("File not found");
+      System.out.println("The file haven't been found");
     }
 
   }
@@ -34,12 +31,14 @@ public class Task3 {
        }
     }
   }
-  private static void deleteEsc(String line){
-    line.replaceAll(ESC, "");
+  private static String deleteEsc(String line)
+  {
+    return line.replaceAll(ESC, "");
   }
   private static boolean checker (String line, FileWriter writer) throws IOException{
     if (line.contains(ESC)) {
-      deleteEsc(line);
+
+      line = deleteEsc(line);
       writer.write(line);
       return true;
     }

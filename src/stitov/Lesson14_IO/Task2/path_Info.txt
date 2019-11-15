@@ -1,0 +1,15 @@
+Path: src\stitov\Lesson9_Collections\TaskB1
+Name: FreqDictionary.java
+Creation date: 2019-11-05T18:22:21.384525Z
+
+
+Path: src\stitov\Lesson9_Collections\TaskB1
+Name: PairForFreqDictionary.java
+Creation date: 2019-11-05T18:22:20.243741Z
+
+
+Path: src\stitov\Lesson9_Collections\TaskB1
+Name: Runner.java
+Creation date: 2019-11-05T18:22:21.618672Z
+
+
