@@ -1,11 +1,10 @@
 package akhrapskaya.Lesson6.Appliances;
 
-public class LargeSize extends App {
+public abstract class LargeSize extends App {
     private int height;
     private int width;
-    protected LargeSize(int power, int enCon) {
-        super(power, enCon);
-
+    protected LargeSize(int power) {
+        super(power);
     }
     protected void setSize(int height, int width){
         this.height = height;
@@ -18,9 +17,9 @@ public class LargeSize extends App {
         return width;
     }
     @Override
-    protected void match(){
-        super.match();
+    protected void info(){
         System.out.println("Мои размеры: " + getH() + " - высота и " + getW() + " - ширина.");
+        super.info();
     }
 
 }

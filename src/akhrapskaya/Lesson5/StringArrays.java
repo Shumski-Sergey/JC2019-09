@@ -14,7 +14,7 @@ public class StringArrays {
         this.len = len;
         sArray = new String[len];
     }
-    StringArrays(String s){
+     public StringArrays(String s){
         final int MAX_LINE = 20;
         Scanner sc = new Scanner(System.in);
         len = -1;
@@ -31,14 +31,14 @@ public class StringArrays {
             sArray[i] = sc.nextLine();
         }
     }
-    void setWords(String s){
+     public void setWords(String s){
         Scanner sc = new Scanner(System.in);
         System.out.println(s);
         for(int i = 0; i < len; i++){
             sArray[i] = sc.next();
         }
     }
-    String get(int i){
+     public String get(int i){
         return sArray[i];
     }
     void putOut(){

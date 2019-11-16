@@ -2,22 +2,25 @@ package ssivko.lab6.Technics;
 
 public class Technics {
     String color;
-    int weigin;
+    int weight;
     String form;
     String consumptionAA;
 
 
-    Technics(String Technicscolor, int Technicsweigin, String Technicsform, String TechnicsconsumptionAA){
-        color = Technicscolor;
-        weigin =Technicsweigin;
-        form = Technicsform;
-        consumptionAA =TechnicsconsumptionAA;
-
+    Technics(String Technicscolor, int Technicsweight, String Technicsform, String TechnicsconsumptionAA){
+        this.color = Technicscolor;
+        this.weight = Technicsweight;
+        this.form = Technicsform;
+        this.consumptionAA = TechnicsconsumptionAA;
 
     }
 
-   public void consumption(){
-       System.out.println("Потребление электричества");
+    String metod(){
+        return "цвет: " + color + ", вес: " + weight + "кг,  форма: " + form + ", энергопотребление: " + consumptionAA + ".";
+    }
+
+   public void boiling(){
+       System.out.println("Подогрев воды ");
     }
 
     public void noise(){

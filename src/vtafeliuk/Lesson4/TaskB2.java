@@ -44,7 +44,7 @@ public class TaskB2 {
                 int a = r.nextInt(4);
                 int b = r.nextInt(13);
 
-                while (cardPack[a][b] == "Card has been already choosen") {
+                while (cardPack[a][b].equals("Card has been already choosen")) {
                     a = r.nextInt(4);
                     b = r.nextInt(13);
                 }
