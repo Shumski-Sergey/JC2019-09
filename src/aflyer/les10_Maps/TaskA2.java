@@ -16,19 +16,19 @@ public class TaskA2 {
         int size = r.nextInt(Byte.MAX_VALUE);
         int range = r.nextInt(Byte.MAX_VALUE);
         ArrayList SomeList = ArrayRandomizer.newArrayList(size, range);
-        HashMap <Object, Integer> mapa = new HashMap <>();
+        HashMap <Integer, Integer> mapa = new HashMap <>();
         ArrayRandomizer.OutputArray(SomeList);
         for (int i=0; i<SomeList.size(); i++) {
             int count = 1;
             if (!mapa.containsKey(SomeList.get(i))) {
-                mapa.put(SomeList.get(i), count);
+                mapa.put((Integer) SomeList.get(i), count);
             } else {
                 count += mapa.get(SomeList.get(i));
-                mapa.replace(SomeList.get(i), count);
+                mapa.replace((Integer) SomeList.get(i), count);
             }
 
         }
-        SetMethod.HashMapOutput(mapa);
+        SetMethod.HashMapIntIntOutput(mapa);
 
     }
 

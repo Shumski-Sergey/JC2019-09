@@ -8,7 +8,6 @@ package nbogdan.Lesson12Lambda;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class Task2 {
     public static void main(String[] args) {
@@ -20,7 +19,7 @@ public class Task2 {
             System.out.println("Введите " + (i + 1) + " слово:");
             list.add(sc.next());
         }
-        list.stream().filter(s -> s.length() <= 6).forEach((String s) -> System.out.print(s + ", "));
+        list.stream().filter(s -> s.length() > 6).forEach((String s) -> System.out.print(s + ", "));
         System.out.print("\b\b.");
     }
 }

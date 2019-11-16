@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class TaskA2 {
-    public static void main(String[] args) {
+    public static void main ( String[] args ) {
         Random m = new Random();
         int r = m.nextInt(Byte.MAX_VALUE);
         int size = m.nextInt(r);
@@ -21,7 +21,7 @@ public class TaskA2 {
         ArrayRandomizer.OutputArray(list);
     }
 
-    private static ArrayList deleteEqualNumbers(ArrayList list) {
+    private static ArrayList deleteEqualNumbers (ArrayList list) {
         ArrayList uniqueList = new ArrayList();
         for (Object o : list) {
             if (!uniqueList.contains(o)) {

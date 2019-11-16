@@ -9,13 +9,13 @@ import java.util.Iterator;
 import java.util.Random;
 
 public class TaskA3 {
-    public static void main(String[] args) {
+    public static void main ( String[] args ) {
         Random r = new Random();
         int size = r.nextInt(Byte.MAX_VALUE);
         int range = r.nextInt(Byte.MAX_VALUE);
         ArrayList Journal = ArrayRandomizer.newArrayList(size, range);
         int max = (int) Journal.get(0);
-        Iterator<Integer> iterator = Journal.iterator();
+        Iterator <Integer> iterator = Journal.iterator();
         while (iterator.hasNext()) {
             int i = (int) iterator.next();
             if (i > max) max = i;

@@ -4,41 +4,28 @@ package AlexandraShokhan.lesson11;
 // запрос. Пример: {"name", "Ivanov", "country", "Ukraine", "city", "Kiev", "age", null} Результат: "name = 'Ivanov'
 // and country = 'Ukraine' and city = 'Kiev'"
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class Task1 {
     public static void main(String[] args) {
-        String parameter1 = "name";
-        String parameter2 = "country";
-        String parameter3 = "city";
-        String parameter4 = "age";
+        LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
+        map.put("name", "Ivanov");
+        map.put("country", "Ukraine");
+        map.put("city", "Kiev");
+        map.put("age", null);
 
-        Map<String, String> data = new HashMap<>();
-        data.put("name", requestValue(parameter1));
-        data.put("country", requestValue(parameter2));
-        data.put("city", requestValue(parameter3));
-        data.put("age", requestValue(parameter4));
-
-        StringBuilder query = new StringBuilder("SELECT * FROM table WHERE ");
-
-        int counter = 0;
-        for(Map.Entry<String, String> entry : data.entrySet()) {
-            counter++;
-            if (!entry.getValue().equals("")) {
-                query.append(String.format("%s = \'%s\'", entry.getKey(), entry.getValue()));
-                if (counter != data.size()) {
-                    query.append(" AND ");
-                } else query.append(";");
-            }
-        }
-        System.out.println(query);
+        System.out.println(whereReturn(map));
     }
-    public static String requestValue(String parameter){
-        Scanner in = new Scanner(System.in);
-        System.out.println("Please enter " + parameter + ":");
-        String value = in.nextLine();
-        return value;
+
+    private static String whereReturn(LinkedHashMap<String, String> map) {
+        StringBuilder stringBuilder = new StringBuilder();
+        Stream<Map.Entry<String, String>> stream = map.entrySet().stream(); //Преобразуем данные из map в поток
+
+        stream.filter(x -> x.getValue() != null).forEach(x -> stringBuilder.append(x.getKey()).append(" = '").append(x.getValue()).append("' and "));
+        stringBuilder.setLength(stringBuilder.length() - 5);
+
+        return String.valueOf(stringBuilder);
     }
 }
