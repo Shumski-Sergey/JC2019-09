@@ -9,7 +9,7 @@ public class Task_4 {
         int b;
         try {
             fis = new FileInputStream("C:/Users/Илья/Desktop/Text.txt"); // ФАЙЛ С КОТОРОГО ЧИТАТЬ
-            fos = new FileOutputStream("C:/Users/Илья/Desktop/Text_2.txt"); // НОВЫЙ ФАЙЛ В КОТОРЫЙ ЗАЛИВАЕМ
+            fos = new FileOutputStream("C:/Users/Илья/Desktop/Text_2.txt"); // НОВЫЙ ФАЙЛ КОТОРЫЙ СОЗДАСТСЯ И В КОТОРЫЙ ЗАЛИВАЕМ
             while ((b = fis.read()) != (-1)) {
                 fos.write((char) b);
             }
