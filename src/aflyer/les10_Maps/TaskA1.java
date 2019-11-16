@@ -10,16 +10,16 @@ import java.util.regex.Pattern;
 public class TaskA1 {
     public static void main ( String[] args ) {
         String input;
-        Scanner sc = new Scanner ( System.in );
-        System.out.println ( "Введите набор чисел" );
-        input = sc.nextLine ( );
-        Pattern pattern = Pattern.compile ( ", " );
-        String[] Numbers = pattern.split ( input );
-        HashSet NumbSet = new HashSet ();
-        for (String x: Numbers) {
-            NumbSet.add(Integer.parseInt (x));
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите набор чисел");
+        input = sc.nextLine();
+        Pattern pattern = Pattern.compile(", ");
+        String[] Numbers = pattern.split(input);
+        HashSet NumbSet = new HashSet();
+        for (String x : Numbers) {
+            NumbSet.add(Integer.parseInt(x));
         }
-        SetMethod.setOutput ( NumbSet );
+        SetMethod.setOutput(NumbSet);
     }
 
 }

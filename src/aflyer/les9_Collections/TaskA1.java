@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class TaskA1 {
     private static final Integer BAD_MARK = 30;
 
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите количество учеников в классе:");
         int kolvo = sc.nextInt();
@@ -26,7 +26,7 @@ public class TaskA1 {
 
     }
 
-    private static void deleteUnGood(ArrayList<Integer> list) {
+    private static void deleteUnGood (ArrayList <Integer> list) {
         for (int i = 0; i < list.size(); ) {
             if (list.get(i) <= BAD_MARK) {
                 list.remove(i);
