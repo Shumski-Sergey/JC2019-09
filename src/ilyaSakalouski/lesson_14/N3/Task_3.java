@@ -10,7 +10,7 @@ public class Task_3 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter some text strings:");
         String text = scanner.nextLine();
-        System.out.println("Enter way to create and save your text in file:");
+        System.out.println("Enter way to create and save your text in new file:");
         String way = scanner.nextLine();
 
         FileWriter fw = null;
