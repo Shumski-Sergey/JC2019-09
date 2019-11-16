@@ -17,7 +17,7 @@ import static java.lang.String.*;
 
 //Написать программу, которая создаст текстовый файл и запишет в него список файлов (путь, имя, дата создания) из заданного каталога.
 public class task2 {
-    public static void main(String[] args) throws IOException, ParseException {
+   /* public static void main(String[] args) throws IOException, ParseException {
 
         PrintWriter writer = new PrintWriter("fileInfo.txt", StandardCharsets.UTF_8);
         File myFolder = new File("C:\\Users\\mikulionk\\Google Диск\\JC2019-09\\src\\dmikulionak\\IO"); //Укажите каталог
@@ -39,6 +39,6 @@ public class task2 {
             }
 
         writer.close();
-        }
+        }*/
     }
 
