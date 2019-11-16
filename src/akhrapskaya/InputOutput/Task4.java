@@ -1,6 +1,7 @@
 package akhrapskaya.InputOutput;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class Task4 {
     private static final File FILER = new File("/home/lapulik/Рабочий стол/text.doc");
@@ -10,16 +11,12 @@ public class Task4 {
         try {
             Reader reader = new InputStreamReader(new FileInputStream(FILER), "Cp1251");
 
-            Writer writer = new OutputStreamWriter(new FileOutputStream(FILEW), "UTF-8");
-            int c = 0;
+            Writer writer = new OutputStreamWriter(new FileOutputStream(FILEW), StandardCharsets.UTF_8);
+            int c;
             while ((c = reader.read()) >= 0)
                 writer.write(c);
             reader.close();
             writer.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
