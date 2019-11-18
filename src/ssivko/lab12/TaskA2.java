@@ -2,8 +2,6 @@ package ssivko.lab12;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-
 import static ssivko.Ulils.callString;
 
 
