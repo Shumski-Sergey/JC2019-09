@@ -14,7 +14,7 @@ public class Task2 {
     }
 
     public static void listFilesForFolder(File folder) throws FileNotFoundException {
-        PrintStream out = new PrintStream(new FileOutputStream("filename.txt"));
+        PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
         for (File item : folder.listFiles()) {
             if (item.isDirectory()) {
                 listFilesForFolder(item);
