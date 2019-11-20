@@ -21,7 +21,7 @@ public class utils {
     public static void print(Integer max, HashMap<Integer, Integer> numbers, Integer[] key) {
         for (int i = 0; i < numbers.size(); i++) {
             if (numbers.get(key[i]).equals(max)) {
-                System.out.println("Число " + key[i] + " встречается " + numbers.get(key[i] + " раза"));
+                System.out.println("Число " + key[i] + " встречается " + numbers.get(key[i]) + " раза");
             }
         }
     }
