@@ -35,7 +35,7 @@ public class Task1 {
         Integer maxV = Collections.max(map.values());
         map.entrySet().stream()
                 .filter(x -> x.getValue().equals(maxV))
-                .forEach(x -> System.out.print(x.getValue() +" "));
+                .forEach(x -> System.out.print((x.getKey()) +" "));
     }
 
     private static HashMap<Integer, Integer> getMap(FileInputStream reader) throws IOException {
@@ -47,6 +47,6 @@ public class Task1 {
              else
                  map.put(i, 1);
         }
-       return map;
+        return map;
     }
 }
