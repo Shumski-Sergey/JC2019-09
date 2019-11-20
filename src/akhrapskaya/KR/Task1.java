@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class Task1 {
 
     public static void  main(String[] args){
-         System.out.println("Введите элементы массива:");
+        System.out.println("Введите элементы массива:");
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         ArrayList<Integer> array = getArrayList(str);
@@ -22,7 +22,6 @@ public class Task1 {
 
         }
     }
-
     private static Integer getSumOfArray(ArrayList<Integer> array) {
         return array.stream().reduce(0, Integer::sum);
     }
