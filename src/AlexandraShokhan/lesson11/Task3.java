@@ -5,21 +5,25 @@ package AlexandraShokhan.lesson11;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Task3 {
-    private static final String SPLIT_REGEX = " +";
-    private static final String MATCH_REGEX = "\\d+";
-    private static final String SPACE = " ";
-
     public static void main(String[] args) {
-
         Scanner in = new Scanner(System.in);
         System.out.println("Enter data: ");
+        String input = in.nextLine();
 
-        String strRow = Arrays.stream(in.nextLine().split(SPLIT_REGEX)) //разбиваем на слова
-                .filter(s -> s.matches(MATCH_REGEX)) //оставляем только числа
-                .collect(Collectors.joining(SPACE)); //форматируем вывод согласно условию
-        System.out.println(strRow);
+        String [] array = input.split(" +");
+
+        Stream <String> stream = Arrays.stream(array);
+        String output = stream.filter(value -> {
+            Pattern pattern = Pattern.compile("\\d+");
+            Matcher matcher = pattern.matcher(value);
+            return matcher.matches();
+        }).collect(Collectors.joining(" "));
+        System.out.println(output);
     }
 }
