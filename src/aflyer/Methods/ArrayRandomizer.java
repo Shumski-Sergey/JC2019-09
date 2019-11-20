@@ -97,6 +97,29 @@ public class ArrayRandomizer {
             System.out.print(x + " ");
         System.out.print("\n");
     }
+    public static int FindMax(List <Integer> list) {
+        int max = list.get(0);
+        for (int x : list) {
+            if (x > max) max = x;
+        }
+        return max;
+    }
+    public static int FindMin(List <Integer> list) {
+        int min = list.get(0);
+        for (int x : list) {
+            if (x < min) min = x;
+        }
+        return min;
+    }
+
+    public static int GetSum(List <Integer> list) {
+            int sum = 0;
+            for (int x : list) {
+                sum += x;
+            }
+            return sum;
+    }
 
 
 }
+
