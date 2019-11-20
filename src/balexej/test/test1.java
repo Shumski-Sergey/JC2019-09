@@ -2,7 +2,7 @@ package balexej.test;
 
 public class test1 {
     public static void main(String [] args){
-        int x=0;
+         int  x=0;
         int y = 0;
         while (x<5){
 
