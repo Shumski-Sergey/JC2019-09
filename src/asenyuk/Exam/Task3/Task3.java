@@ -39,7 +39,7 @@ int y=0;
            System.out.println(item.getKey() + "  -  " + item.getValue());
         }
 
-
+       System.out.println("MAX " +map.entrySet().stream().max(Map.Entry.comparingByValue()).map(Map.Entry::getKey));
 
     }
 
