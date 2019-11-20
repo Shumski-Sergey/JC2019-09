@@ -6,11 +6,27 @@ public class Ulils {
     private static final int MIN_POSITIVE_RATING = 40;
     private static final int RANDOM_ELEMENT = 10000;
     private static final int ELEMENT = 1000000;
-    public static final int MAX_RATING = 100;
+    private static final int MAX_RATING = 100;
+    private static final int DIAPAZON = 40;
+
+    public static Integer[] scanMassiv() {
+        System.out.println("Введите размер массива: ");
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        Integer [] mass = new Integer[size];
+        for (int i = 0; i < mass.length; i++ ) {
+            mass[i] = (int) (Math.random()* DIAPAZON);
+        }
+        return mass;
+    }
 
     public static void deleteElement(ArrayList<Integer> rating) {
+        deleteElementControl(rating, MIN_POSITIVE_RATING);
+    }
+
+    public static void deleteElementControl(ArrayList<Integer> rating, int minPositiveRating) {
         for (int i = 0; i < rating.size(); i++){
-            if (rating.get(i) < MIN_POSITIVE_RATING){
+            if (rating.get(i) < minPositiveRating){
                 rating.remove(i);
                 i--;
             }
@@ -89,11 +105,15 @@ public class Ulils {
             Arrays.sort(word);
             String resolution  = new String(word);
             String value = map.get(resolution);
-            if(value == null){
-                map.put(resolution, elements );
-            }else{
-                map.put(resolution, value + " " + elements);
-            }
+            conversionPlus(map, elements, resolution, value);
+        }
+    }
+
+    private static void conversionPlus(Map<String, String> map, String elements, String resolution, String value) {
+        if(value == null){
+            map.put(resolution, elements );
+        }else{
+            map.put(resolution, value + " " + elements);
         }
     }
 
