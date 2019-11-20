@@ -9,7 +9,7 @@ public class Task4 {
 
     public static void  main(String[] args) {
         try {
-            Reader reader = new InputStreamReader(new FileInputStream(FILER), "Cp1251");
+            Reader reader = new InputStreamReader(new FileInputStream(FILER), StandardCharsets.US_ASCII);
 
             Writer writer = new OutputStreamWriter(new FileOutputStream(FILEW), StandardCharsets.UTF_8);
             int c;
