@@ -11,9 +11,9 @@ import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 public class task3 {
-    private static String path = "D:\\testTEXT\\text.txt";
 
     public static void main(String[] args) throws IOException {
+        String path = "D:\\testTEXT\\text.txt";
         File text = new File(path);
         boolean newFile = text.createNewFile();
         System.out.println(" новый файл создан ? : " + text.exists());
