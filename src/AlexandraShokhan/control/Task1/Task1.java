@@ -1,8 +1,10 @@
 package AlexandraShokhan.control.Task1;
 
+// 1.Найти в массиве чисел элементы с наибольшим(max) и наименьшим(min) значениями. Вывести эти 2 элемента на экран,
+// а также посчитать и вывести сумму всех остальных элементов (min и max в сумму не входят).
+
 import java.util.ArrayList;
 import java.util.Collections;
-
 import static AlexandraShokhan.Utils.createRandomArrayList;
 
 public class Task1 {
