@@ -1,9 +1,7 @@
 package ssivko.Exam;
 
 import java.util.HashMap;
-
 import static ssivko.Ulils.scanMassiv;
-
 
 public class Task3 {
     public static void main(String[] args) {
