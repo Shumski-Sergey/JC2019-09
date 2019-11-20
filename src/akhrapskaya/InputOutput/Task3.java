@@ -3,15 +3,15 @@ package akhrapskaya.InputOutput;
 import java.io.*;
 
 public class Task3 {
-    private static final String QUIT = "".concat("!q");
+    private static final String QUIT = "!q";
     private static final File FILE = new File("src/akhrapskaya/InputOutput/lnes.txt");
 
     public static void  main(String[] args) {
         System.out.println("Введите текст. Для завершения введите: !q");
-        inFile();
+        fromConsoleToFile();
     }
 
-    private static void inFile() {
+    private static void fromConsoleToFile() {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         FileWriter writer = null;
         String s;

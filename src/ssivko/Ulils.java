@@ -103,4 +103,10 @@ public class Ulils {
         }
     }
 
+    public static String [] callString(){
+        System.out.println("Вводите здесь: ");
+        Scanner text = new Scanner(System.in);
+        return text.nextLine().split(" ");
+    }
+
 }
