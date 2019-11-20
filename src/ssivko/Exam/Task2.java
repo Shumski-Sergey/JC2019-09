@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
-        System.out.println("Введите номер месяца: ");
+        System.out.println("Введите число соответствующее названию месяца: ");
         Scanner scanner = new Scanner(System.in);
         int m = scanner.nextInt();
         String[] month = {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
