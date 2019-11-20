@@ -16,11 +16,13 @@ public class TestB {
         }
         if (m>12){
             System.out.println("ты лошара, месяцев двенадцать!");
-            if (m<=0){
-                System.out.println("болван не может быть месяц нулевым или отрицательным");
-            }
+        } else if (m<=0){
+            System.out.println("Не может быть отрицательным или нулевым!");
+        } else {
+            System.out.println("Ты выбрал " + hashMap.get(m));
         }
-        System.out.println(hashMap.get(m));
+
+
 
 
         /*System.out.println("Введите число от 1 до 12: ");
