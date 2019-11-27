@@ -100,58 +100,63 @@ public class Task1 {
             int numOfBooks = getRandomNum(MIN_NUM_OF_BOOKS, MAX_NUM_OF_BOOKS);
             for (int i = 1; i <= numOfBooks; i++) {
                 int bookIndex = getRandomBook((ArrayList) listOfBooks);
-                if (listOfBooks.get(bookIndex).status == BookStatus.BORROWED) {
-                    System.out.println("We are sorry, " + userName + ", " + listOfBooks.get(bookIndex).getName() +
-                            " is not available. " + listOfBooks.get(bookIndex).getUserName() + " borrowed this book.");
-                } else if (listOfBooks.get(bookIndex).status == BookStatus.AT_READING_ROOM) {
-                    System.out.println("We are sorry, " + userName + ", " + listOfBooks.get(bookIndex).getName() +
-                            " is not available. " + listOfBooks.get(bookIndex).getUserName() + " is now reading this book at the reading room.");
-                } else if (listOfBooks.get(bookIndex).status == BookStatus.AVAILABLE) {
-                    if (listOfBooks.get(bookIndex).isAvailableToBorrow == true) {
-                        try {
-                            synchronized (listOfBooks) {
-                                borrowBook(bookIndex);
+                Book thisBook = listOfBooks.get(bookIndex);
+                
+
+                    if (thisBook.status == BookStatus.BORROWED) {
+                        System.out.println("We are sorry, " + userName + ", " + thisBook.getName() +
+                                " is not available. " + thisBook.getUserName() + " borrowed this book.");
+                    }
+                    if (thisBook.status == BookStatus.AT_READING_ROOM) {
+                        System.out.println("We are sorry, " + userName + ", " + thisBook.getName() +
+                                " is not available. " + thisBook.getUserName() + " is now reading this book at the reading room.");
+                    }
+                    if (thisBook.status == BookStatus.AVAILABLE) {
+                        if (thisBook.isAvailableToBorrow == true) {
+                            try {
+                                synchronized (listOfBooks) {
+                                    borrowBook(thisBook);
+                                }
+                                Thread.sleep(BORROW_TIME);
+                                synchronized (listOfBooks) {
+                                    returnBook(thisBook);
+                                }
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
                             }
-                            Thread.sleep(BORROW_TIME);
+                        } else if (thisBook.isAvailableAtReadingRoom == true) {
                             synchronized (listOfBooks) {
-                                returnBook(bookIndex);
+                                takeBookToReadingRoom(thisBook);
                             }
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    } else if (listOfBooks.get(bookIndex).isAvailableAtReadingRoom == true) {
-                        synchronized (listOfBooks) {
-                            takeBookToReadingRoom(bookIndex);
-                        }
-                        try {
-                            Thread.sleep(TIME_TO_READ_AT_READING_ROOM);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                        synchronized (listOfBooks) {
-                            returnBook(bookIndex);
+                            try {
+                                Thread.sleep(TIME_TO_READ_AT_READING_ROOM);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            synchronized (listOfBooks) {
+                                returnBook(thisBook);
+                            }
                         }
                     }
                 }
             }
+
+        public void borrowBook(Book thisBook) {
+            thisBook.status = BookStatus.BORROWED;
+            thisBook.setUserName(userName);
+            System.out.println(userName + " borrowed " + thisBook.getName() + " from the library.");
         }
 
-        public void borrowBook(int bookIndex) {
-            listOfBooks.get(bookIndex).status = BookStatus.BORROWED;
-            listOfBooks.get(bookIndex).setUserName(userName);
-            System.out.println(userName + " borrowed " + listOfBooks.get(bookIndex).getName() + " from the library.");
+        public void returnBook(Book thisBook) {
+            thisBook.status = BookStatus.AVAILABLE;
+            thisBook.setUserName(null);
+            System.out.println(userName + " returned " + thisBook.getName() + " to the library.");
         }
 
-        public void returnBook(int bookIndex) {
-            listOfBooks.get(bookIndex).status = BookStatus.AVAILABLE;
-            listOfBooks.get(bookIndex).setUserName(null);
-            System.out.println(userName + " returned " + listOfBooks.get(bookIndex).getName() + " to the library.");
-        }
-
-        public void takeBookToReadingRoom(int bookIndex) {
-            listOfBooks.get(bookIndex).status = BookStatus.AT_READING_ROOM;
-            listOfBooks.get(bookIndex).setUserName(userName);
-            System.out.println(userName + " is now reading " + listOfBooks.get(bookIndex).getName() + " at the reading room.");
+        public void takeBookToReadingRoom(Book thisBook) {
+            thisBook.status = BookStatus.AT_READING_ROOM;
+            thisBook.setUserName(userName);
+            System.out.println(userName + " is now reading " + thisBook.getName() + " at the reading room.");
         }
     }
 }
