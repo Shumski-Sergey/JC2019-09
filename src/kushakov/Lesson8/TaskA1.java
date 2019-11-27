@@ -12,8 +12,7 @@ public class TaskA1 {
        mark =  createrandomArrayslist(arrayListLength, min, max);
         System.out.println("Оценки" + mark);
         for (int g = 0; g < 5; g++) {
-            if (g > 5)
-            System.out.println(g);
+            if (g > 5) System.out.println(g);
         }
     }
 }
