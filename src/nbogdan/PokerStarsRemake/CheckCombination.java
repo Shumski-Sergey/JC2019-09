@@ -1,84 +1,90 @@
-package nbogdan.FullPokerStars;
+package nbogdan.PokerStarsRemake;
 
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class HandChecker {
+class CheckCombination {
     private static String cards = "";
-    private static int index = 0;
-    static void setCards(String computerHand, String playerHand, int ind) {
-        String s, toRoyal;
-        s = computerHand;
-        s += playerHand;
+    //private static int index = 0;
+    static void setAllPlayers(ArrayList<Player> players) {
+        for (Player p : players) {
+            setCombinations(p);
+        }
+    }
+    private static void setCombinations(Player player) {
+        String s = "", toRoyal;
+        if (Game.computerHandNotNull()) s = Game.getStringComputerHand();
+        s += player.getStringHand();
         toRoyal = s;
         char[] forSort = s.toCharArray();
         Arrays.sort(forSort);
         s = new String(forSort);
         cards = s;
-        index = ind;
-        check1RoyalFlush(toRoyal);
+        check1RoyalFlush(toRoyal, player);
     }
-    private static void check1RoyalFlush(String unsorted) {
+    private static void check1RoyalFlush(String unsorted, Player player) {
         Pattern p = Pattern.compile("([\\u2666\\u2665\\u2663\\u2660])[1AJQK].*\\1[1AJQK].*\\1[1AJQK].*\\1[1AJQK].*\\1[1AJQK]");
         Matcher m = p.matcher(unsorted);
         if (m.find()) {
-            Hand.setPlayerCombination("Royal Flush, congratulations!", index);
-        } else {check3FourOfAKind();}
+            player.setCombination("Royal Flush");
+        } else {check3FourOfAKind(player);}
     }
     //static void check2StraightFlush(){}
-    private static void check3FourOfAKind() {
+    private static void check3FourOfAKind(Player player) {
         Pattern p = Pattern.compile("([123456789JQKA])\\1\\1\\1");
         Matcher m = p.matcher(cards);
         if (m.find()) {
             System.out.print("Нашлась четверка");
-            Hand.setPlayerCombination("Four Of A Kind", index);
+            player.setCombination("Four Of A Kind");
         } else {
-            check4FullHouse();
+            check4FullHouse(player);
         }
     }
-    private static void check4FullHouse() {
+    private static void check4FullHouse(Player player) {
         Pattern p = Pattern.compile("([123456789JQKA])\\1\\1.*([123456789JQKA])\\2");
         Matcher m = p.matcher(cards);
         if (m.find()) {
-            Hand.setPlayerCombination("Full House", index);
+            player.setCombination("Full House");
         } else {
             p = Pattern.compile("([123456789JQKA])\\1.*([123456789JQKA])\\2\\2");
             m = p.matcher(cards);
             if (m.find()) {
-                Hand.setPlayerCombination("Full House", index);
-            } else {check5Flush();}
+                player.setCombination("Full House");
+            } else {check5Flush(player);}
         }
     }
-    private static void check5Flush() {
+    private static void check5Flush(Player player) {
         Pattern p = Pattern.compile("([\\u2666\\u2665\\u2663\\u2660])\\1\\1\\1\\1");
         Matcher m = p.matcher(cards);
         if (m.find()) {
-            Hand.setPlayerCombination("Flush", index);
-        } else {check7ThreeOfAKind();}
+            player.setCombination("Flush");
+        } else {check7ThreeOfAKind(player);}
     }
     //static void check6Straight() {}
-    private static void check7ThreeOfAKind() {
+    private static void check7ThreeOfAKind(Player player) {
         Pattern p = Pattern.compile("([123456789JQKA])\\1\\1");
         Matcher m = p.matcher(cards);
         if (m.find()) {
-            Hand.setPlayerCombination("Three Of A Kind", index);
-        } else {check8TwoPairs();}
+            player.setCombination("Three Of A Kind");
+        } else {check8TwoPairs(player);}
     }
-    private static void check8TwoPairs() {
+    private static void check8TwoPairs(Player player) {
         Pattern p = Pattern.compile("([123456789JQKA])\\1.*([123456789JQKA])\\2");
         Matcher m = p.matcher(cards);
         if (m.find()) {
-            Hand.setPlayerCombination("Two Pairs", index);
-        } else {check9OnePair();}
+            player.setCombination("Two Pairs");
+        } else {check9OnePair(player);}
     }
-    private static void check9OnePair() {
+    private static void check9OnePair(Player player) {
         Pattern p = Pattern.compile("([123456789JQKA])\\1");
         Matcher m = p.matcher(cards);
         if (m.find()) {
-            Hand.setPlayerCombination("One Pair", index);
+            player.setCombination("One Pair");
         } else {
-            Hand.setPlayerCombination("High card", index);
+            player.setCombination("High card");
         }
     }
 }

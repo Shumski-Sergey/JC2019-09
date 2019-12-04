@@ -15,11 +15,16 @@ class Check {
     static void toGo() {
         Pattern p = Pattern.compile("[dDдД][aAаА]|(yes|YES)|[yY]|[lL][fF]");
         System.out.println("Продолжим?");
-        Matcher matcher = p.matcher(sc.nextLine());
-        if (!matcher.find()) {
-            System.out.println("Уверены, что хотите завершить выполнение программы? Ответьте да, чтобы завершить, нет, чтобы продолжить");
-            matcher.reset(sc.nextLine());
-            if (matcher.find()) {System.exit(0);}
+        String s = sc.nextLine();
+        if (s.length() != 0) {
+            Matcher matcher = p.matcher(s);
+            if (!matcher.find()) {
+                System.out.println("Уверены, что хотите завершить выполнение программы? Ответьте да, чтобы завершить, нет, чтобы продолжить");
+                matcher.reset(sc.nextLine());
+                if (matcher.find()) {
+                    System.exit(0);
+                }
+            }
         }
     }
 }
