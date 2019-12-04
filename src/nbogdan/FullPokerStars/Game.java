@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 class Game {
-    private static Scanner sc = new Scanner(System.in);
+    //private static Scanner sc = new Scanner(System.in);
     private static Random r = new Random();
     private static Player[] players = Hand.getPlayers();
     private static String[][] koloda = Hand.getKoloda();
@@ -22,19 +22,19 @@ class Game {
         }
         return "getCardFromKolodaError";
     }
-    static void round1() {
+    private static void round1() {
         for (int i = 0; i < numPlayers; i++) {
             players[i].setHand(new String[]{getCardFromKoloda(), getCardFromKoloda()});
         }
     }
-    static void round2() {
+    private static void round2() {
         for (int i = 0; i < 3; i++) {
             computerHand += getCardFromKoloda();
         }
     }
-    static void round3() {computerHand += getCardFromKoloda();}
-    static void round4() {computerHand += getCardFromKoloda();}
-    static void showComputerHand() {
+    private static void round3() {computerHand += getCardFromKoloda();}
+    private static void round4() {computerHand += getCardFromKoloda();}
+    private static void showComputerHand() {
         System.out.println("Раздача:");
         System.out.println(computerHand);
         /*for (String s: computerHand) {
@@ -42,7 +42,7 @@ class Game {
         }
         System.out.print("\n");*/
     }
-    static void showResult() {
+    private static void showResult() {
         for (int i = 0; i < numPlayers; i++) {
             HandChecker.setCards(computerHand, players[i].getHand(), i);
             System.out.println("Игрок " + (i + 1) + " " + players[i].getName() + ": " + players[i].getHand() + " " + players[i].getCombination());
