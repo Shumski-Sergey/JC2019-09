@@ -10,5 +10,6 @@
 /tmp
 /out
 /Ignore.java
-!/src/tereshko/File/GJjhkjh.java
-src/tereshko/Exceptions/
+GJjhkjh.*
+!/src/nbogdan/Lesson9/
+!/src/nbogdan/
