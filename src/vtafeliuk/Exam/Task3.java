@@ -19,6 +19,7 @@ public class Task3 {
                 result = integerIntegerEntry.getKey();
             }
         }
+
         System.out.println("Most common number: " + result);
     }
 }
