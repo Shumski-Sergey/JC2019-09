@@ -98,5 +98,47 @@ public class ArrayRandomizer {
         System.out.print("\n");
     }
 
+    /**
+     * Finds the element with maximal value in List of Integer
+     *
+     * @param list Given List of Integer to look for maximum element
+     * @return element with Maximal value
+     */
+    public static int FindMax(List <Integer> list) {
+        int max = list.get(0);
+        for (int x : list) {
+            if (x > max) max = x;
+        }
+        return max;
+    }
+
+    /**
+     * Finds the element with Minimal value in List of Integer
+     *
+     * @param list Given List of Integer to look for Minimal element
+     * @return element with Minimal value
+     */
+    public static int FindMin(List <Integer> list) {
+        int min = list.get(0);
+        for (int x : list) {
+            if (x < min) min = x;
+        }
+        return min;
+    }
+
+    /**
+     * Gets Summary of all element of List of Integer
+     * @param list Given List of Integer for counting summary value
+     * @return Summary value of all elements
+     */
+    public static int GetSum(List <Integer> list) {
+            int sum = 0;
+            for (int x : list) {
+                sum += x;
+            }
+            return sum;
+    }
+
 
 }
+
