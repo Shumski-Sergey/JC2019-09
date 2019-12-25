@@ -6,6 +6,7 @@ package vtafeliuk.Exam;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
 public class Task2 {
     public static void main(String[] args) {
         String[] months = new String[]{"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"};
